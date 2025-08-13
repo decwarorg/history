@@ -1,3 +1,3 @@
-# project history
+# decwar history
 
-collaboration around preserving this project
+collaboration around preserving decwar history
