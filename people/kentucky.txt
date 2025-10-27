@@ -1,0 +1,71 @@
+kentucky mystery 😄 'stan bartsch' ring any bells? 🤔
+jakydude — Yesterday at 19:47
+https://www.linkedin.com/in/stanbartsch
+hmm the name doesn’t ring a bell.  i looked up his linked in profile.  assuming the above is correct, i don’t recognize his picture. 
+what’s the context?  is it in the history above?
+Noah — Yesterday at 19:48
+cool! yep agreed!
+Inspired by DECWAR, a game was written on a PDP-11 system in Kentucky called D.I.S.K. back in the early 1980's. It was created by Stan Bartsch. I don't have much info on this game, but it was updated and ported to Unix in 1985 ...
+https://www.galcon.com/classic/history.html
+jakydude — Yesterday at 19:49
+well seems like we could have crossed paths.  if so, i don’t remember now.
+Noah — Yesterday at 19:51
+eric - thinking would be nice to invite him in here or something like that - some kinda socials - looks like very interesting guy to talk to 👍
+Eric — Yesterday at 20:10
+Well was wondering if that was part of the effort by the uky folks, what were their names, David Herron? Sean or Wayne something?
+that may be a different effort
+i dont htink they need to be here ,but would be good to contact and ask them what they remember for resarch
+Joel,  telnet decwarjs.com    it should be a lot further along now
+jakydude — Yesterday at 20:15
+yeah certainly possible i should remember him.  his linked in profile says he went to UofL.  i knew folks there as the DEC-10 was based there.  but the unix days afterwards with Sean and Herron were all UK. 
+i will check out decwarjs.com as soon as i have a keyboard.  just a phone for another week.  i am very excited though!!
+Eric — Yesterday at 20:56
+what was sean's last name
+jakydude — Yesterday at 20:56
+casey
+Eric — Yesterday at 20:56
+right
+this might work for you on phone  http://decwarjs.com:8090/
+was it david herron?  I remmeber kinda two david's i think
+like one rand that ATT computer lab and the other was connected to the mainframe center (what was that called?)
+jakydude — Yesterday at 20:59
+yeah that works.  i could have used telnet too but playing decwar is kinda hard on a phone.  i am in.  it looks cool.
+Eric — Yesterday at 20:59
+yea for sure
+jakydude — Yesterday at 21:00
+yeah david herron for sure.  he went to microsoft in late 80s.  probably has an island somewhere.  bill stoll is another.  he wrote uniwar.  went to at&t in the late 80s.  not sure about another david.
+jakydude — Yesterday at 21:02
+ken kubota, bill stoll, and eric herrin ran that AT&T lab in the classroom building.  there were some other folks too but can’t remember all of them.  i ended up running that lab later when it was a NeXT lab. 
+by mainframe center so you mean mcvey?  where the tvi910s were?  pr1me system, ibm 360, etc? 
+after i was banned from there i lost touch with those folks
+eric herrin and david herron are not related - looks like i made a typo but not the case 
+Eric — Yesterday at 21:05
+eric herrin! that is the ATT guy and he other was like David Herron or something?
+Def knew of Ken, trying to think of who bill was
+who was that woman that worked there, i think she used to be on you didn't she
+NeXT lab would have been cool
+mainframe = mcvey, yea
+jakydude — Yesterday at 21:06
+david herron may have been involved with the AT&T lab but i met him when i started work at math sciences over in the patterson office tower.  we ran the systems for CS, math, and stat departments.  eric herrin and ken kuhota as well.
+Eric — Yesterday at 21:06
+in my time i remember pr1me and 360, i don't reacll the exact terminal type
+i think it was Eric who did the AT&T
+over in patternson office tower? no no, it was that classroom building next to it i think
+if i'm remembering correctly
+jakydude — Yesterday at 21:08
+over at mcvey lavine thrillkill (think i have that spelled right) was likely the person you are thinking of
+Eric — Yesterday at 21:08
+what was that woman's name
+that is it i think!
+jakydude — Yesterday at 21:08
+eric was in the AT&T lab then moved to patterson
+Eric — Yesterday at 21:09
+https://www.legacy.com/us/obituaries/staugustine/name/lavine-thrailkill-obituary?id=25877205
+Legacy.com
+Lavine Thrailkill Obituary (1928-2006) - St. Augustine, FL - St. Au...
+View Lavine Zauche Thrailkill's obituary, send flowers and sign the guestbook.
+Image
+jakydude — Yesterday at 21:09
+kevin solie took over the lab (in the classroom building) from eric 
+yeah that’s her
+i remember asking for “password change” privileges on my dad’s dec-10 account.  and lavine said no one should be allowed to change their passwords.  it was a different time. 
