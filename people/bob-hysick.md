@@ -1,7 +1,7 @@
 
-this is the contents of a 2011 email written by bob hysick and sent to zach vowell at briscoe center utexas. zach was an archivist at briscoe and was helping harris newman to create the 2011 briscoe catalog items. zach had emailed bob and asked about the history of utexas decwar. zack forwarded this content to harris, who preserved it and forwarded it to us in 2025.
+this is the contents of a 2011 email written by bob hysick and sent to zach vowell at briscoe center utexas. zach was an archivist at briscoe and was helping harris newman to create the 2011 briscoe catalog items. zach had emailed bob and asked about the history of utexas decwar. zach forwarded this content to harris, who preserved it and forwarded it to us in 2025.
 
-currently these are the only know comments from the original decwar people, and almost the only known comments from anyone associated with the seventies utexas star trek games (uttrek basic, uttrek fortran aka super star trek, war, decwar).
+currently these are the only know comments from the original decwar people, and almost the only known comments from anyone associated with the seventies utexas star trek games (uttrek basic, uttrek fortran aka super star trek, war, decwar). there are some comments around the first two, the single player uttreks, especially from dave matuszek of uttrek fortran, here https://gitlab.com/esr/super-star-trek
 
 ------------------------------------------------------------------------------------------------
  
