@@ -1,0 +1,1575 @@
+note tk meant 'true klingon'. this was created by joe bickel.
+
+                                TK-WARS IV
+       Copyright (C) 1990, 1991, 1992 by Bird of Prey Software, Inc.
+           Copyright (C) 1993 by Concentric Research Corporation
+                           All Rights Reserved.
+
+                                USER GUIDE
+                             Document revision
+                                    1.5
+
+
+1.  INTRODUCTION
+================
+
+TK-Wars is a multi-player starship combat game, designed in the grand trad-
+ition  of  many  years  of  Trek  games.  It features real-time action with
+either two or three opposing fleets in up to seven different galaxies  with
+as many as twenty-six players in each galaxy.
+
+Each player in TK-Wars becomes a starship pilot, serving in  the  fleet  of
+one of the three great powers:  the Federation, the Klingon Empire, and the
+Romulan Empire.  The object is  to  travel  through  space,  capturing  new
+planets   and  building  bases,  and  destroying  enemy  bases  and  ships.
+Meanwhile, of course, players in the same fleet will work  to  assist;  and
+players in enemy fleets will try to destroy your own.
+
+Players may find  themselves  under  attack  from  enemy  ports  and  enemy
+planets,  harassed  by powerful alien devices, and hampered or destroyed by
+natural phenonena.  Players are armed with only photon  torpedos,  phasers,
+sublight  radio,  and "the will to survive."  Luckily, they may may dock at
+friendly planets and bases for supplies and repairs.
+
+
+OVERVIEW
+--------
+
+Each individual game occurs within a single galaxy.  A  galaxy  is  a  two-
+dimensional  grid  and consists of a fixed number of sectors.  Depending on
+the galaxy type selected during initialization, the number  of  sectors  in
+the  galaxy may range from 30x30 to 99x99.  The galaxy is hard-edged and no
+one can travel beyond the galactic borders.  A scan of a small  part  of  a
+galaxy looks like this:
+
+
+                 60  62  64  66  68  70
+              21 . . . . . . . . . . .  21
+              20 . . . . . . . . @ . *  20  @  Neutral planet
+              19 . . . . . . . . . . .  19  *  Star
+              18 . . . . . . . . . . .  18
+              17 . . . . . . . . . . .  17
+              16 . . . . . K . . . . .  16  K  Empire Ship
+              15 . . . . . . . . . . .  15
+              14 . . . . . . . . . . .  14
+              13 . . . . . . . . . . .  13
+              12 . . . . . . . . . . .  12
+              11 . . . . . . . . . . .  11
+                60  62  64  66  68  70
+
+
+Galaxies are filled with stars,  ships,  planets,  starbases,  and  strange
+astronomical phemonena, such as black holes and magnetic storms.  You pilot
+your ship through these hazards, trying along with your  fleet  to  destroy
+the enemy fleets and take absolute control of the galaxy.
+
+
+2.  PLAYING TK-WARS
+===================
+
+TK-Wars is avaiable from the CRIS Main  Menu  option  "Multiplayer  Games",
+under  the  option  "Space  Games".   You  can  also reach it from anywhere
+(except the Internet area) by typing "/GO  TKWARS",  which  will  take  you
+directly  to the game.  Once at the TK-Wars menu, the option "Play TK-Wars"
+will bring you into the game.
+
+After you have gone through the launch sequence, you will be presented with
+a  list  of galaxies from which to choose.  This list indicates which games
+are currently in progress, who is winning, and whether or not you can enter
+any  of  the games.  There are seven standard galaxies, and an eighth which
+you can make your own "private" galaxy for running closed games.
+
+You choose a galaxy by entering that galaxy's number at the prompt.
+
+
+HOW TO START A GAME
+-------------------
+
+     -   Select a galaxy to enter.
+
+     -   If it is not initialized, initialize it by selecting a galaxy con-
+         figuration  from the config menu. Option 1 (random) or 3 (standard
+         non-void) are good  beginner  galaxies.   For  a  standard  galaxy
+         setup, just answer "Y" when asked.
+
+     -   Choose a fleet to join.
+
+     -   If asked, select a ship class.   (new  players  automatically  fly
+         Trainers)
+
+     -   Choose an available ship to fly.
+
+     -   Start killing everything and everyone!
+
+
+PREGAME
+-------
+
+After you have chosen a galaxy, you will be given the option of going  into
+"pregame" mode instead of going directly into the galaxy.  In pregame mode,
+you are able to watch the galaxy,  read  the  help  files,  and  listen  to
+activity without actually being involved.  The pregame area is a good place
+to watch how TK-Wars operates and familiarize yourself with the game before
+you actually start playing.  You can go from the pregame area into the game
+itself at any time, or not at all, as you prefer.
+
+
+COORDINATES
+-----------
+
+All of the action in the game takes place in one  of  the  eight  galaxies.
+Each area of the galaxy (a dot, space, or symbol) is referred to as a "sec-
+tor".  Each sector is referenced as a number pair,  or  "coordinate  pair".
+The first number given is the vertical sector; the second is the horizontal
+sector. For example, in the following scan, a  neutral  planet  appears  at
+sector  20-68, a star at sector 20-70, and the Empire Star Ship "K" at sec-
+tor 16-65.
+
+
+                 60  62  64  66  68  70
+              21 . . . . . . . . . . .  21
+              20 . . . . . . . . @ . *  20  @  Neutral planet
+              19 . . . . . . . . . . .  19  *  Star
+              18 . . . . . . . . . . .  18
+              17 . . . . . . . . . . .  17
+              16 . . . . . K . . . . .  16  K  Empire Ship
+              15 . . . . . . . . . . .  15
+              14 . . . . . . . . . . .  14
+              13 . . . . . . . . . . .  13
+              12 . . . . . . . . . . .  12
+              11 . . . . . . . . . . .  11
+                60  62  64  66  68  70
+
+
+
+
+
+3.  SHIP DESIGN
+===============
+
+This section deals with the design  and  construction  of  starships,  both
+yours  and those of your enemies.  Ship design is fairly flexible, allowing
+you to build a ship to your own specifications.
+
+Starships appear as single letters as follows:
+
+        Federation ships:   E F I L N O P R S U V Y
+        Empire ships:       B C D G H J K M Q T W Z
+        Romulan ships:      A X
+
+Each starship has warp drive, impulse engines, phaser banks, photon torpedo
+tubes,  scanning  equipment,  shields, energy transfer booms, energy cells,
+matter/anti-matter pods, transporter beams, and a radio.
+
+Some ship types are equipped with tractor  beams,  extra-vehicular  docking
+bays, and mine-laying arms.
+
+
+
+SHIP FEATURES
+-------------
+
+Each ship class has a slightly different internal  energy,  shield  energy,
+hull  thickness,  warp  speed,  life support capacity, and subsystem damage
+threshold.  Some ship classes are able to pick up and deploy  photon  mines
+while  others  are  equipped  with  photon torpedo bays and holds.  A brief
+description of major ship features is given below.
+
+
+DAMAGE         A ship will "die" (be destroyed) when its  hull  is  damaged
+               too  severely.   Hull damage can only be repaired by docking
+               at a friendly planet or base.  Over time, your  ship's  hull
+               may  regenerate,  but  this process could take up to several
+               minutes of real time.
+
+ENERGY         A ship will also be destroyed when it runs out  of  internal
+               energy.   Energy  may  be  transferred  from ship shields to
+               extend life and range.  Energy may also be transferred  from
+               friendly  ships or obtained by docking at friendly ports, or
+               by docking with friendly ships equipped with docking rigs.
+
+ENGINES        Ships are equipped with warp  drives  and  impulse  engines.
+               Different ship classes have varying warp ranges.  Using warp
+               engines at high speeds consumes vast amounts of energy.
+
+               Impulse engines, while rather  slow,  use  hardly  any  ship
+               energy  and  are  useful  when energy levels are dangerously
+               low.
+
+SHIELDS        Shields protect your ship from attack and will absorb photon
+               torpedo  and  phaser  blasts  before they can penetrate your
+               hull.  Shields are slowly drained by the energy they deflect
+               until  they  reach  0%,  drop, and become useless.  Internal
+               ship energy may be transferred to your  shields  to  provide
+               more  hull  protection.   Performing  operations  with  your
+               shields down generally consumes far less energy  then  doing
+               so with them up.
+
+WEAPONS        Ships can fire photon torpedos, fire phasers, or drop photon
+               mines.
+
+               Phasers are pure energy weapons and  are  effective  against
+               enemy  ship  shields.  Phaser blasts require a great deal of
+               energy.
+
+               Photon torpedos, which are matter/anti-matter explosion dev-
+               ices,  are effective against ship hulls.  Torpedo blasts may
+               also displace objects that they hit -- something to note  as
+               it  is  often to the attacker's advantage to "push" a docked
+               enemy ship away from its port.  Torpedoes  consume  no  ship
+               energy; however, torpedo bays have a limited number of ready
+               photon torps and once your torpedo bays are empty, your must
+               dock  at  a  friendly  planet  or base to obtain more.  Some
+               ships are equipped with torpedo holds which can  reload  the
+               torpedo bays in space; however, this takes a few seconds and
+               is not always reliable.
+
+               Miner class starships can deploy and recover  photon  mines.
+               Photon  mines are simaliar in effect to photon torpedoes but
+               rather then fired at a target, they are "DROPPED" at a  sec-
+               tor  and  wait  for a enemy (or friendly!) ship to move into
+               them.  Photon mines may be destroyed by firing  photon  tor-
+               pedoes into them.
+
+
+SHIP SUBSYSTEMS
+---------------
+
+All ships contain subsystems or devices which control the operation of ship
+features  and abilities.  Subsystems are located throughout the ship's hull
+and may be protected by subsystem unit armor and may have increased ability
+to withstand damage; both unit armor and ability can be set in DRYDOCK.
+
+These are the various ship subsystems and devices:
+
+AM  The ANTI-MATTER PODS store ship's anti-matter, which  is  used  in  the
+    warp  drive.   If the device is damaged, a matter/anti-matter explosion
+    may occur inside your hull and cause severe damage.  Functioning  anti-
+    matter pods may also deliberately be rigged for self-destruction.
+
+AR  The AUTO-REPAIR HARDWARE will automatically  repair  the  ship's  hull,
+    other  subsystems,  and will replentish energy reserves.  If it is dam-
+    aged, your ship can neither repair nor regenerate while in flight.
+
+CO  The ship's MAIN COMPUTER is used for tracking enemy ships and  targets.
+    If  damaged  the COMPUTED and CLOSEST arguments to various commands may
+    not work, because the computer will be unable to calculate them.
+
+DB  The DOCKING BOOM is vital for docking with other ships and  ports.   If
+    the  unit  is  damaged your ship may not be able to perform or complete
+    docking operations, and it may be unable to  perform  energy  transfers
+    with ports or other ships.
+
+EC  The ENERGY CELLS hold ship energy reserves.  If the cells  are  damaged
+    various  amounts of hard (solid or liquid) and soft (energy) fuel types
+    may leak into outer space.  Energy transfer to  other  ships  and  from
+    friendly ports may not be possible if the ENERGY CELLS are damaged.
+
+HO  The TORPEDO HOLDS are used to store extra photon  torpedoes  which  are
+    reloaded into the torpedo bays for firing.  If the holds are damaged it
+    may take an extraordinary amount of time to perform the transfer.
+
+ID  The INTRUDER DEFENSES device is used to  prevent  spies  from  entering
+    your  ship;  it  can determine if unauthorized transmissions are taking
+    place; and is vital in tracking down spies once they've  snuck  aboard.
+    Once  a  spy  is found, defense systems may destroy the spy, or place a
+    holding beam around him or her until security can make an arrest.   The
+    ID  device  is  very  sensitive  and  the smallest amount of damage can
+    render it useless.  Obviously, spies tend to seek out the ID device  in
+    order to destroy it.
+
+IM  The IMPULSE ENGINES are a secondary source of ship motion; if  damaged,
+    impulse  distance  is  reduced.   Impulse engines require substantially
+    less energy than the warp engines, but they are much slower.
+
+LS  The LIFE SUPPORT subsystems are vital to preserving a normal life  sup-
+    port  environment  on your ship.  If damaged, life support may fail and
+    your entire crew will die!  Priority should always  be  given  to  life
+    support repairs.
+
+NC  The NAVIGATIONAL COMPUTER is vital for computing the absolute  location
+    of  objects  within the galaxy.  It references known star locations and
+    patterns. If the device is damaged, or if the stars which  are  guiding
+    your  ship are destroyed, you may not be able to see absolute locations
+    and instead must rely on relative locations.
+
+PH  The PHASER BANK CONTROL manages the firing of the  ship's  main  phaser
+    banks;  if  damaged, phasers simply can not be fired.  The phaser banks
+    can be damaged from excessive use, so they should be  allowed  to  cool
+    down between phaser blasts.
+
+RA  The INTERSTELLAR RADIO device must be working properly in order to send
+    and  receive  radio messages from other players or to hear attack warn-
+    ings from friendly ports.
+
+SE  The SENSORS are used for scanning and listing nearby objects.   If  the
+    sensor  array  is  damaged,  your ship's scan range will be reduced and
+    your ship will effectively be blinded.
+
+SH  The SHIELD CONTROL DEVICE maintains shield integrity.  If the device is
+    damaged  your  shields  may  drop  when hit by photon torpedoes, phaser
+    blasts -- or may even drop without warning.
+
+ST  The STABILIZERS are used to hold your ship at its current location.  If
+    the  device  is  damaged,  your ship may not be able to fight the solar
+    winds from nearby stars and will be moved about nearby sectors.
+
+TO  The TORPEDO TUBES must be functioning properly in order  for  torpedoes
+    to  be  fired  reliably.   Damaged torpedo tubes may misfire torpedoes;
+    misfired torpedoes seldom follow their proper  course  and  often  gain
+    energy  and momentum causing them to fly farther and hit objects harder
+    -- this is sometimes an advantage.  It is important to allow your  tor-
+    pedo tubes to cool down between vollies.
+
+TP  The main TRANSPORTER BEAM is used to transport energy, supplies, spies,
+    and other objects to other ships.  If it is damaged, transportation may
+    not be reliable and the DNA of transported lifeforms could  be  altered
+    catastrophically.
+
+TR  The primary TRACTOR BEAM is used to tractor crippled friendly ships  to
+    port and must be functioning in order to be used.
+
+WA  The WARP ENGINES, the primary source of  propulsion  on  any  starship,
+    must  be functioning properly in order to achieve maximum warp capabil-
+    ity.  Warp engine damage occurs when your ship attempts to stretch  the
+    warp envelope.
+
+
+SHIP CLASSES AND COMMAND RANKS
+------------------------------
+
+There are a variety of starships available in the  fleets.   The  class  of
+starship  that  you  can command depends upon your rank.  As you advance in
+rank, faster, stronger ships become available to you.  Beginners start  out
+at  the rank of "Cadet" and as such are only permitted to fly Trainer class
+Fighter starships.  Trainer class ships have more energy and shileds than a
+normal Fighter, but have only half of the weapon strength.
+
+Players move up through the  ranks  by  earning  "game  points"  and  "kill
+points".   Game  points  are given for normal game play, such as conquering
+planets and building bases.  Kill points are given for each individual ship
+you  destroy, and in addition, you receive a kill point whenever your fleet
+wins a complete game.
+
+As you earn more points of both types, you will move up the  ranks,  begin-
+ning as a lowly Cadet.  The ranks are as follows:
+
+                     Rank                   Game     Kills
+                Abr. Full Title             Points   & Won
+
+                CD - Cadet ............          0      0
+                EN - Ensign ...........     10,000      0
+                LJ - Jr. Lieutenant ...     20,000      0
+                LT - Lieutenant .......     40,000      2
+                LC - Lt. Commander ....     80,000      4
+                CO - Commander ........    100,000      8
+                CP - Captain ..........    200,000     16
+                CM - Commodore ........    400,000     24
+                RA - Rear Admiral .....    800,000     32
+                VA - Vice Admiral .....  1,000,000     48
+                AD - Admiral ..........  2,000,000     64
+                FA - Fleet Admiral ....  4,000,000    128
+                PC - Coun. President ..  8,000,000    256
+                SU - Sultan ........... 90,000,000    500
+
+
+Notice that you can advance as far as the rank of Junior Lieutenant  before
+you must either destroy a ship or win a game.
+
+The table below lists all ship classes with the minimum  rank  required  to
+fly each ship class:
+
+
+                Starship             Minimum Rank
+                Class Name           Required
+
+                TN - Trainer ....... Cadet
+                SC - Scout ......... Ensign
+                ES - Escort ........ Jr. Lieutenant
+                FT - Fighter ....... Lieutenant
+                CR - Cruiser ....... Lt. Commander
+                MN - Miner ......... Commander
+                FR - Frigate ....... Captain
+                WS - Warp Shuttle .. Commodore
+                FG - Flagship ...... Rear Admiral
+                DE - Destroyer ..... Vice Admiral
+                MO - Monitor ....... Admiral
+                AS - Assualt Ship .. Fleet Admiral
+                BB - Battle Ship ... Coun. President
+                GS - Gun Star ...... Sultan
+                DS - Dark Star ..... Sultan (playtest only)
+
+
+Cadets and Ensigns only score one half the points of higher ranks since the
+Trainer  class  starships  are rather strong.  A Trainer class starship can
+only be flown by the Cadets. The Dark Star class can only be flown  by  the
+Game Operator (in playtest mode).
+
+Note that for each rank a new ship type is available.
+
+
+SHIP CONFIGURATIONS
+-------------------
+
+Ship configurations vary with each ship class.  These are the defaults  for
+several main attributes of each ship class:
+
+           Ship Class           Energy  Shields  Damage  Warp
+
+           TN - Trainer .......  6,000    5,000   4,000    12
+           SC - Scout .........  5,000    4,000   3,000    15
+           ES - Escort ........  7,000    3,000   5,000    12
+           FT - Fighter .......  5,000    3,000   4,000    10
+           CR - Cruiser .......  6,000    3,500   3,000    12
+           MN - Miner .........  6,000    4,000   4,000     8
+           FR - Frigate .......  7,000    3,000   5,000    10
+           WS - Warp Shuttle ..  8,000    5,000   3,000    16
+           FG - Flagship ......  7,000    5,000   5,000     7
+           DE - Destroyer .....  7,000    4,000   4,000    10
+           MO - Monitor .......  9,000    7,000   7,000     5
+           AS - Assualt Ship ..  6,000    3,000   4,000    10
+           BB - Battle Ship ...  6,000    5,500   4,500     8
+           GS - Gun Star ......  6,500    5,000   5,500    10
+           DS - Dark Star ..... 60,000   60,000  60,000    99
+
+Ship configurations may also be customized in DRYDOCK.  In DRYDOCK, you may
+save  up  to  four  ship  designs, or configurations, per ship class.  Each
+design may be altered to your liking; however, you may only raise the value
+of  some  features  by  reducing  the  values of other features.  See "HELP
+DRYDOCK" for more information about using DRYDOCK and individual features.
+These are the features which can be customized for each ship design:
+
+     energy         the ship's maximum internal energy
+     shields        the ship's maximum shield energy
+     damage         maximum damage the ship's hull can withstand
+     warp           the ship's maximum warp speed
+     waenreduce     warp energy reduction factor
+     torptubes?     whether the ship has torpedo bays
+     #torps         the number of torpedoes in the bays
+     torpholds?     whether the ship has torpedo holds
+     #toinholds     the number of torpedoes in the holds
+     toenergy       the energy contained in each torpedo
+     phasers?       whether the ship has phaser banks
+     phenergy       maximum energy in ship's phaser blasts
+     mines?         whether the ship is able to deploy photon mines
+     #mines         number of mines onboard ship
+     udamage        amount of damage a subsystem unit can withstand
+     uarmor         amount of armor a subsystem unit has
+     uability       ability level of a subsystem unit
+     ecells         the number of energy cells the ship has
+     lsdays         number of days the ship can sustain life support
+     autofix        amount of energy for automatic system repair
+     autoxfer       amount of energy to transfer when the ship is low
+     sensor-rng     the ship's maximum sensor range (in sectors)
+
+
+
+4.  GALACTIC OBJECTS
+====================
+
+The galaxies in the TK-Wars universe are filled with a  wide  diversity  of
+objects, both natural and constructed.  It is essential for a good starship
+pilot to understand the variety of  phenomena  to  be  encountered  in  the
+exploration of the galaxy.
+
+On the grid map, each place is called  a  "sector."   No  two  objects  may
+occupy the same sector at the same time.
+
+Object symbols:
+
+
+                $$       Friendly base
+                //       Enemy base (first enemy fleet)
+                %%       Enemy base (second enemy fleet)
+
+                @        Neutral planet
+                ++       Friendly planet
+                --       Enemy planet (first enemy fleet)
+                ==       Enemy planet (second enemy fleet)
+
+                *        Star
+                o        Pulsar
+
+                |        Great Barrier
+                <space>  The Void
+
+                x        Star gates
+                #        Photon mine
+
+                ^        Super hole
+                <space>  Black hole
+
+
+
+A detailed description of each object is as follows:
+
+BARRIERS       The Great Barrier is an impenatrable and uncrossable area of
+               space; it may, in places, be destroyed by photon torpedoes.
+
+BASES          Each fleet has one or more starbases,  at  which  ships  may
+               dock,  perform  repairs, change configuration, and so forth.
+               Bases are constructed on planets by building  on  them  (see
+               "Building  Planets"  for  details).   By  default,  only  10
+               friendly bases may exist at any one time.
+
+               Enemy bases are very possessive  and  aggressive.  They  may
+               attack  you  from  as  far as 5 sectors away, and can attack
+               with great force.  Enemy bases cannot be  captured  --  only
+               destroyed.
+
+               Neutral bases can neither be captured nor  destroyed;  these
+               diplomatic  stations  exist  as  refueling points and may be
+               docked at by any ship regardless of side;  however,  neutral
+               bases refuse to refuel or repair weapon systems.
+
+               Some galaxies may have HEADQUARTERS (HQ) BASES; these  bases
+               are  incredibly powerful and have a fantastic weapons range.
+               All care should be taken to avoid their area of influence.
+
+               Some starbases may move in orbital  patterns,  regularly  or
+               irregularly,  while  others  will  simply hang motionless in
+               space.
+
+BLACK HOLES    Black holes are regions  in  space  which  contain  gigantic
+               amounts  of  matter compressed into extremely small regions.
+               Their gravitational fields are so strong that not even light
+               can  escape from them (hence the name).  If your ship strays
+               beyond the event horizon of a black hole, it will  instantly
+               be crushed by the singularity and utterly destroyed.
+
+MAG. STORMS    Magnetic storms  are  high-powered  energy  disturbances  in
+               space.  Ships entering them may find their engines, shields,
+               weapons, and communications  systems  damaged  or  weakened.
+               Magnetic  storms  are always moving and should constantly be
+               tracked.
+
+PLANETS        Ships may dock at friendly planets, but they  are  consider-
+               ably  slower  than  bases  in  performing repairs and energy
+               transfers.  Providing that your side  has  not  reached  its
+               base  quota,  friendly  planets  may be turned into bases by
+               placing 4-6 builds upon them.  The default  number  required
+               is 5.
+
+               Enemy planets may be captured but are harder to  capture  if
+               more  builds have been placed upon them.  Enemy planets have
+               a weapons range equal to the number of  builds  placed  upon
+               them (but not less then 2 sectors).
+
+               Neutral planets cannot be docked at until they are captured.
+               Neutral planets also attack but tend not to have very strong
+               offensive nor defensive weapons.
+
+               At times, planets may move in  either  regular  (stable)  or
+               irregular  (unstable)  orbits.   Building bases upon planets
+               can both stabilize and destabilize them.
+
+PULSARS        Pulsars are fixed stars that "pulse" or quasar  at  a  fixed
+               rate.   Their  energy  wave  is  incredibly powerful and may
+               spread for a large distance.
+
+STAR GATES     Star Gates were constructed by the ancient Organian  civili-
+               zation  and  were  used  as  their principal method of space
+               travel.  Many ancient Star Gates still operate  and  may  be
+               used  by starships to travel beyond the limits of warp tech-
+               nology.
+
+STARS          Stars are the engines of  life.   Planets  tend  to  cluster
+               around stars.  Stars often explode when photon torpedoes are
+               detonated deep inside their cores.  When a star explodes, it
+               may  go  nova, pulsar, or quasar and the vast energy wave it
+               releases can destroy any nearby objects.  Ship's shields are
+               usually  useless  against  a  star's  energy  wave.   It  is
+               inadvisable to bring your starship too close to a star.
+
+SUPER HOLES    Super holes are spectacular  astronomical  phenomena,  which
+               twist  the  fabric  of  space-time.   They warp space within
+               their boundaries  so  that  far-distant  points  touch,  and
+               therefore  it  is  sometimes possible to travel into a super
+               hole at one place in the galaxy, emerging instantly at  some
+               far distant super hole.  However, the possible gravitational
+               side effects of such a dangerous trip should always be  con-
+               sidered  first.   It  is  not known whether super holes were
+               constructed  by  some  long-vanished  race,  or  are  simply
+               incredible  natural  formations.   In modern parlance, super
+               holes are also known as "wormholes."
+
+THE VOID       The Great Void is a region of the galaxy in which an ancient
+               race  distorted the very fabric of the universe.  Because of
+               the powerful fields  and  distortions,  it  can  neither  be
+               penetrated nor crossed.  However, it is rumored that Romulan
+               cloaking devices have the ability to protect a ship  against
+               these fields.
+
+WRECKS         Starship wrecks should  be  avoided  as  their  matter/anti-
+               matter cores may still be intact but nearly ready to mix and
+               annihilate adjacent sectors.
+
+
+
+5.  COMMANDS
+============
+
+Commands may be abbreviated down to uniqeness, generally to two letters  or
+less.   For  example,  "W" can be used for the "WARP" command because there
+are no other commands that start with "W".
+
+Commands may be entered one per line or multiple commands may be entered on
+one line by separating them with a slash (/) character. For example:
+
+        WA 5 5/WA 5 5/LI 15/LI CL PO
+
+Typing "HELP <command>" will provide more details on any specified command.
+The  HELP  command will match to completeness, so for example, typing "HELP
+D" will provide help on all commands and topics starting with a "D".
+
+
+
+COMMAND SUMMARY
+---------------
+
+Here is a brief summary of game commands and their effects:
+
+
+Communications
+-------------------------------------------------------------------------
+   RADIO     Turn radio on or off
+   TELL      Send a radio message
+   TJ        Send message to another job
+   TM        Enter talk/radio mode
+   /EX       Exit talk/radio mode
+
+
+Informational
+-------------------------------------------------------------------------
+   LIST      List objects in the galaxy
+   BASES     List bases
+   PLANETS   List planets
+   TARGETS   List targets
+
+   SUMMARY   Show ship, planet, and base summaries
+   TYPE      Display I/O and galaxy settings
+
+   POINTS    Display points for all sides or ships
+
+   SCAN      Scan visible range
+   SRSCAN    Short range scan
+
+   JOBS      Show all jobs on-line
+   TIME      Display time of day and ship age
+   USERS     List users in galaxy
+
+
+
+Input
+-------------------------------------------------------------------------
+   SET       Set input, output, dual mode,
+             team name, etc
+
+   ALIASES   Display or alias a command
+   DEALIAS   De-alias or clear an alias/command
+
+   BG        Manage background tasks
+   EXEC      Read commands from an exec file
+   ECHO      Echo a line of text
+   SIGNAL    Send control terminal a signal
+
+
+
+Miscellaneous
+-------------------------------------------------------------------------
+   DECLARE   Declare war with other side
+
+   EXIT      Quit or exit the galaxy
+   OFF       Resign commission of your ship and log off
+   QUIT      Resign commission of your ship
+
+
+
+Planet Management
+-------------------------------------------------------------------------
+   BUILD     Build a planet
+   CAPTURE   Capture a planet
+
+
+Pregame Only
+-------------------------------------------------------------------------
+   ACTIVATE  Enter the game from pregame mode
+
+
+
+Records
+-------------------------------------------------------------------------
+   CHRONICS  Display historical chronicles
+   HONOR     Display the honor roll
+
+   HELP      Display list of commands
+   NEWS      Read the news
+   VERSION   Display recent changes to galaxy
+
+
+
+Ship Control
+-------------------------------------------------------------------------
+   DAMAGE    Display internal subsystem damage
+   DDOCK     Dry dock and configure your ship
+   DOCK      Repair and refuel your ship
+   ENERGY    Transfer energy to another ship
+   REPAIR    Repair subsystem damage
+   SD        Self destruct!
+   SHIELDS   Shields up, down, or transfer energy
+   STATUS    Show ship status
+
+
+
+Ship Motion
+-------------------------------------------------------------------------
+   DROP      Move and drop a mine
+   IMPULSE   Move using impulse engines
+   MOVE      Move using warp engines
+   WARP      Move using warp engines (same as MOVE)
+
+
+
+Weapons
+-------------------------------------------------------------------------
+   PHASERS   Fire phasers
+   TORPEDO   Fire photon torpedoes
+
+
+
+
+KEYWORDS AND ARGUMENTS
+----------------------
+
+A number of commands which involve maneuvering and combat can take a series
+of  additional  keywords  or  arguments.   These  arguments usually involve
+invoking the Main Computer to make a calculation about the  objects  around
+your ship, saving you the time and energy.
+
+Various commands (MOVE, WARP, DROP, IMPULSE, BUILD, CAPTURE,  PHASER,  TOR-
+PEDO,  LIST)  allow your computer to compute the location of nearby objects
+using the COMPUTED, OPPOSITE, or CLOSEST keywords.
+
+The COMPUTED and OPPOSITE keywords work with  the  WARP,  MOVE,  DROP,  and
+IMPULSE  commands,  and  are are used in conjunction with a ship name.  For
+example, during a battle it is desirable to move right  next  to  an  enemy
+ship before an attack; to do so, use the command:
+
+     WARP COMPUTED <shipname>
+     or
+     WA C <shipname>
+
+If you wish to flee from a ship during a battle, the OPPOSITE keyword  will
+do so; for example:
+
+     WARP OPPOSITE <shipname>
+     or
+     WARP O <shipname>
+
+The CLOSEST argument allows you to move to the nearest planet, base,  port,
+ship,  star,  black  hole,  etc.   The  CLOSEST argument also allows you to
+specified the side of the object, in relative terms or absolute terms, such
+as enemy, friendly, neutral, Federation, Empire, or Romulan.
+
+The CLOSEST argument  works  slightly  different  with  different  commands
+because  the  command  conditions  may  differ.  For example, "WARP CLOSEST
+PLANET" will, by default, try to move you to the closest  friendly  planet;
+while  the  command "TORP CLO PLA" (that is, "TORPEDO CLOSEST PLANET") will
+try to fire torpedoes at the closest enemy planet (it is assumed  that  you
+don't want to fire torpedoes at friendly planets!).
+
+These are the valid keywords associated with the CLOSEST argument:
+
+Syntax:
+
+     <command> CLOSEST <side> <object>
+
+Objects:
+
+     BASE, BH, PLANET, PORT, SHIP, STAR
+
+Sides:
+
+     EMPIRE, ENEMY, FEDERATION, FRIENDLY, NEUTRAL, ROMULAN
+
+Notice that, as with other command words,  the  keyword  "CLOSEST"  may  be
+abbreviated.   The  shortest acceptable abbreviation for "CLOSEST" is "CL",
+which is what the examples will show.  Examples:
+
+     WA CL EN BA   -  move/warp to closest enemy base
+     WA CL NE PL   -  move/warp to closest neutral planet
+     TO CL EM SH   -  fire torps at closest empire ship
+     CA CL NE PL   -  capture closest neutral planet
+     BU CL PL      -  build the closest planet
+
+The defaults associated with the CLOSEST argument vary from command to com-
+mand.   This  is  because  some  commands  automatically imply that you are
+referring to one side or another (such as BUILD or PHASER).  Here  are  the
+defaults:
+
+       COMMAND          OBJECT DEFAULT          SIDE DEFAULT
+
+       BUILD CL         planet under 5 build    friendly
+       BUILD CL PLA     planet under 5 build    friendly
+       BUILD CL PORT    planet (any build)      friendly
+
+       CAPTURE CL       planet                  neutral or enemy
+       CAPTURE CL PLA   planet                  neutral or enemy
+       CAPTURE CL PORT  planet                  enemy
+
+       PHASER CL        ship, base, planet      enemy
+       PHASER CL PORT   base, planet            enemy
+
+       TORPEDO CL       ship, base, planet      enemy
+       TRPEDOO CL PORT  base, planet            enemy
+
+       WARP CL          ship, base, planet      any
+       WARP CL PORT     base, planet            friendly
+
+The MOVE, IMPULSE, and DROP commands use the same defaults as the WARP com-
+mand.
+
+
+GLOBAL COMMANDS
+---------------
+
+There are a small number of global commands, which can be accessed  at  any
+time and interface directly with the CRIS system.  They are:
+
+;JOBS  - display other jobs online.
+;OFF   - logout.
+;MOTD  - display the message of the day.
+
+
+
+6.  GAME ACTIONS
+================
+
+This section describes the major activities that take place in TK-Wars.
+
+
+BUILDING PLANETS
+----------------
+
+Once a planet has been captured (see "Capturing  Planets"  below)  you  can
+build  upon  it.   Building  involves  adding  troops,  defensive  systems,
+weaponry, and so forth.  This makes it harder for the enemy to capture  the
+planet,  and  gives the planet a greater attack range with stronger weapons
+systems.  This is called "placing a build" upon  a  planet.   You  must  be
+adjacent to a planet to place a build on it.
+
+To build a fortress on a planet, use the "BUILD" command  followed  by  the
+coordinate  of  the planet.  Only captured, friendly planets (owned by your
+side) may be built upon.  Depending upon the  configuration  of  your  game
+galaxy,  between  4 and 6 "builds" may be placed on a planet.  If more than
+the maximum number are placed there, the planet will be  converted  into  a
+friendly starbase.  Note again, however, that there is a limit (usually 10)
+to the number of starbases your fleet can have at any one time.
+
+
+CAPTURING PLANETS
+-----------------
+
+Only neutral and enemy planets may be captured; enemy bases  must  be  des-
+troyed.   Planets  must  be  captured  before you can DOCK at or BUILD them
+(discussed below).
+
+To capture a planet, use the "CAPTURE" command followed by  the  coordinate
+of  the  planet.  You must be adjacent to the planet and enemy planets with
+builds placed upon them must be captured multiple times, or you must  knock
+down their build levels with phasers and torpedoes.
+
+Examples:
+
+     CA CL NE PL ("CAPTURE CLOSEST NEUTRAL PLANET")
+     CA CL ENEMY PL ("CAPTURE CLOSEST ENEMY PLANET")
+     CA R 1 1 ("CAPTURE (object at) RELATIVE 1 1")
+
+
+DOCKING
+-------
+
+A starship may only dock at a friendly port, and in some cases, a  friendly
+ship that is equipped with an external docking ring.
+
+Your ship must be adjacent to a friendly port in order to  use  the  "DOCK"
+command.  Docking replenishes all energy reserves, repairs hull and subsys-
+tem damage, and reload weapon systems.  While docked your ship will consume
+half  the  energy to do repairs or fire phasers, and will have access to an
+unlimited number of torpedoes.
+
+
+
+ENERGY TRANSFER
+---------------
+
+Your ship requires large amounts of energy to survive and function.  Energy
+is stored in energy cells for general use, and in shield control for use by
+the main shields.  Firing phasers, using warp engines,  capturing  planets,
+building  planets,  using the radio, scanners, etc., all require energy and
+such energy is drawn from the internal reserves.
+
+Energy is transferred with the "SHIELDS" command using the special argument
+"TRANSFER".   Either  a  positive or negative number can be given; positive
+means, transfer energy from the ship's cells to the shields, while a  nega-
+tive amount transfers energy from the shields to internal ship cells.
+
+For example, to transfer energy from shields to ship:
+
+     SH TR -1000
+
+To transfer energy from ship to shields:
+
+     SH TR 1000
+
+Energy may also be transferred to and from other friendly ships  using  the
+"ENERGY TRANSFER" command.
+
+
+FIRING WEAPONS
+--------------
+
+Use the "PHASER" and "TORPEDO" commands to fire weapons at enemy ships  and
+enemy ports.
+
+Phasers are the weapon of choice for attacking ships when their shields are
+at  full strength.  Phasers will draw large amounts of energy from an enemy
+ship's shields.  Phasers are more effective at close ranges and decrease in
+effectiveness  geometrically  over  space.   Phaser  banks will overheat if
+fired too rapidly.
+
+Torpedoes will normally "bounce off" ships with full  shields,  but  are  a
+useful  weapon  for  finishing off crippled ships.  Torpedoes are effective
+within your weapons range, but tend to go off course after 7-8 sectors  and
+are often misfired if fired too rapidly.
+
+To use either weapon system, issue the command following by the  number  of
+the  blast (amount of phaser power or number of torpedoes) and a coordinate
+or input coordinate keyword.
+
+Examples:
+
+     TORP C J      ... fire (default 3) torps at J's computed location.
+     TORP CL EN BA ... fire torps at closest enemy base.
+     TO 1 CL STAR  ... fire 1 torp at the closest star.
+     PH 500 CL EN  ... fire 500 units of phasers at closest enemy.
+
+
+LOOKING AROUND
+--------------
+
+When the game begins, you will not know the positions  of  any  neutral  or
+enemy  planets,  bases,  or ships.  You will need to SCAN the galaxy as you
+travel about, using your sensors, in order to find these things.  Once they
+have  been  located  by any member of your fleet, that data is available to
+all ships in your fleet.
+
+In order to scan around you, "SCAN" (or "SC")  followed  by  a  directional
+argument  (UP,  DOWN,  LEFT,  or  RIGHT).  Optionally, you may also specify
+WARNING, which indicate the range of any enemy ports by  an  "!"  over  the
+sectors  around  them.  This is a reminder that if you enter that area, you
+will be subject to enemy attack, either by phaser  or  photon  torpedo  (or
+both).
+
+You may also specify LONG or SHORT scan display.  A LONG display will  take
+two  spaces  for each sector, in order to give more detailed information; a
+SHORT scan will use only one.
+
+The "LIST" command gives detailed data on all objects known to your  fleet.
+You may enter any number of arguments to the LIST command, separated by "&"
+or "AND".  A simple number will list all objects within that number of sec-
+tors.   You  may  also  use  the  CLOSEST argument together with all of the
+objects it understands.
+
+For example, to list everything (known)  within  15  sectors  AND  friendly
+ships AND the closest friendly port, you might enter:
+
+     LI 15 & FR SH & CL FR PO
+     LI 15 AND FRIENDLY SHIPS AND CLOSEST FRIENDLY PORT
+
+If enemy bases or enemy ships are within your sensor range, you  will  also
+be given their current shield percentages when you request a LIST.
+
+The "USERS LONG" command can be used to show you who is flying which  ship,
+their  rank,  baud  rate,  flight  time, and number of kills in the current
+ship.
+
+The "JOBS" command can show you who is on-line and which galaxy  each  user
+is in.
+
+
+MOVING A STARSHIP
+-----------------
+
+The "WARP" and "MOVE" commands both move a starship using warp drive.   The
+"IMPULSE" command moves a starship using the impulse engines.
+
+Follow the command with a set of destination coordinates.  The  destination
+must  be  within  your  ship's warp and sensor range.  This is generally 10
+sectors, but varies from ship to ship.  If necessary, preceed  the  coordi-
+nate with an optional absolute or relative specifier or input keyword.
+
+In the following sample SCAN, "W" is at sector 15-28, "E" is at 12-31,  and
+a friendly base is at 13-26.
+
+
+                        23  25  27  29  31  33
+                      20 . . . . . . . . * . .  20
+                      19 . . * . . . . . . . .  19
+                      18 . . . . . . . . . * .  18
+                      17 . . . . . . . @ . . *  17
+                      16 . . . . . . . . . . .  16
+                      15 . * . . . W . . . . .  15
+                      14 . . . . . . . . . . .  14
+                      13 . . . $$. . . . . . *  13
+                      12 . . * . . . . . E . .  12
+                      11 . . . . . . . . . . .  11
+                      10 . . . . . . . . * . .  10
+                        23  25  27  29  31  33
+
+
+"W" can move to the base with any of the following commands:
+
+Using the CLOSEST argument:
+
+     MO CL FR BA   (move to closest friendly base)
+     MO CL BA      (move to closest base)
+     MO CL PO      (move to closest port)
+
+Specifying coordinates:
+
+     MO R -1 -1    (move rel. down 1, right 1)
+     MO A 14 27    (move abs to sector 14-27)
+
+If input coords are already set to RELATIVE, then:
+
+     MO -1 -1
+
+If input coords are already set to ABSOLUTE, then:
+
+     MO 14 27
+
+Ship "W" can move to the enemy ship "E" with the following commands:
+
+     MO C E        (move computed to E)
+     MO CL EN      (move to closest enemy)
+     MO CL EN SH   (move to closest enemy ship)
+     MO R -2 2     (move relative down 2, left 2)
+     MO A 13 30    (move absolute to sector 13-30)
+
+
+REPAIRING A STARSHIP
+--------------------
+
+If a subsystem becomes damaged during an attack, use the  "REPAIR"  command
+followed  by  an  optional  amount of energy to use during the repair and a
+list of subsystem names to repair.  Example:
+
+     REPAIR 500 LS DB
+
+The above example will repair LIFE SUPPORT and the DOCKING  BAY  using  500
+units of energy.
+
+Note that the "REPAIR" command does not repair damage to  the  hull.   This
+may  only  be done while docking.  Docking also speeds repairs to all other
+systems.
+
+
+SENDING RADIO MESSAGES
+----------------------
+
+Use your ship's radio to send messages to other ships or groups  of  ships.
+To  do  so,  use the "TELL" command followed by a ship name, series of ship
+names, or side names.  For example:
+
+     TELL ALL;THE GREAT KYLL IS HERE AND TONIGHT I HAVE BAD BREATH!
+     TELL FR;Hello friendly ships! Let's work together and get KAHN[ed]!
+     TELL N S;I shall kill both of you, N & S.
+
+Use the "RADIO OFF" command to turn your radio off. If you wish to "gag"  a
+ship  (that is, not to receive messages from that ship), use the "RADIO GAG
+<ship or side>" command.  See "HELP RADIO" for details.
+
+
+SPACE VIRUSES
+-------------
+
+Several dangerous strains of virus float constantly about  in  the  galaxy.
+Your  ship is normally immune, and can only catch the virus by capturing or
+building upon infected planets.  Once your ship  is  infected  you  can  no
+longer  dock  at uninfected friendly bases -- as a matter of fact, friendly
+bases may even open fire on you if you even attempt to dock  at  them!   If
+infected,  you  will  spread  the  infection to any planet you make contact
+with.
+
+A space virus will infect your ship for as long  as  three  minutes,  while
+your medical team searches for a cure.  It is sometimes possible to cure an
+infected planet of the virus by phasering it, if it has no builds upon  it.
+Infected  friendly  planets will show up as "[infected]" when the LIST com-
+mand is used.
+
+
+SPYING
+------
+
+All fleets have the ability to send out spies  to  infiltrate  enemy  star-
+ships.   Spies  may be placed on enemy ships by attempting to DOCK at them.
+If you successfully place a spy on an enemy ship, your spy will attempt  to
+do  as  much  damage  as possible to the enemy ship's subsystems until cap-
+tured.  They will also attempt to keep you informed  of  the  enemy  ship's
+location.
+
+Spies may also sneak aboard your ship from captured enemy planets.  Once  a
+spy  is  on  your  ship the spy may tell its fleet your location, or worse:
+sabotage your own ship's subsystems!
+
+See "HELP SPIES" for more details on spies and spying.
+
+
+USING SHIELDS
+-------------
+
+Generally, commands use one-half the amount of energy if you are docked and
+most  commands  use one-half the amount of energy if your shields are down:
+most notably, movement using your warp engines  will  consume  considerably
+less energy if you travel with your shields down.
+
+To raise and lower your shields, use the commands:
+
+        SHIELDS UP
+        SHIELDS DOWN
+
+For information on how to transfer energy between shields  and  the  ship's
+main energy cells, see "Energy Transfers" above.
+
+
+
+7.  GAME CONTROL
+================
+
+This section deals with input and output options for playing  TK-Wars.   It
+also discusses some of the advanced file features available, such as alias-
+ing and scripting.
+
+
+INPUT
+-----
+
+Input is given to the game at the command-line prompt.  Aside  from  normal
+text, there are a variety of additional commands, explained below.
+
+
+ESCAPE AND CONTROL COMMANDS
+---------------------------
+
+Input is given to the game at a command-line prompt.  In addition to normal
+text  commands,  the ESCAPE key acts as a "repeat" key, and if entered on a
+line by itself it will repeat the  previous  command.   When  you  hit  the
+ESCAPE key, a "$" or "^[" will be echoed on your terminal.
+
+The slash (/) character acts as a command separator  so  multiple  commands
+may be typed on the same command line.
+
+There are also several control-character commands:
+
+  Control-C aborts the current command stack.
+  Control-O disables output and throws it away (useful  for  slow  baud  rate
+            connections).
+  Control-P acts as a screen redraw in DUAL-MODE.
+  Control-Q start and stop output (may not work on all terminals).
+  Control-S start output (resume after Control-Q)
+  Control-U deletes the entire current input line.
+  Control-V redraws the current input line.
+  Control-W deletes the current word of the current input line.
+
+
+$ VARS
+------
+
+There are several internal variables available, which may be used in  radio
+messages.  These variables are:
+
+     $HERE - Your current coordinates in the galaxy (e.g., "1-57").
+     $AT   - Your coordinates as an argument pair (e.g., "1 57").
+     $NAME - Your name
+     $SHIP - The name of your starship.
+
+When they are combined with aliases, these internal variables can be  quite
+useful.  For example, the command
+
+     ALIAS GOTCHA TELL ALL;The Great $NAME just killed
+
+followed by the command:
+
+     GOTCHA Zeppo!
+
+will produce,
+
+     TELL ALL;The Great <insert your name here> just killed Zeppo!
+
+
+
+COORDINATES
+-----------
+
+Input coordinates to various commands may be specified in absolute or rela-
+tive  terms  by  indicating either ABS or REL before any input numbers.  If
+the ABS or REL keywords are not specified, then your current INPUT  setting
+is used.
+
+For example, setting input to relative via  the  "SET  INPUT  REL"  command
+implies that the command:
+
+     WARP 5 5
+
+means that 5,5 are relative coordinates (5 sectors up (north) and 5 sectors
+left (or east)). This is equivalent to typing:
+
+     WARP R 5 5 (or WARP REL 5 5)
+
+However, if your input setting is set to absolute, via the "SET INPUT  ABS"
+command, then the command:
+
+     WARP 6 9
+
+means that  you  desire  to  move  to  absolute  coordinate  6-9.  This  is
+equivalent to typing:
+
+     WARP A 6 9 (or WARP ABS 6 9)
+
+Regardless of your input setting, using the keywords REL and ABS guarantees
+the desired effect.  For example:
+
+     WARP R 5 5
+     WARP A 45 26
+
+will move, in the first example, relative 5,5 sectors  and  in  the  second
+example, to absolute location 45-26.
+
+The default is to use relative input coordinates, as most commanders prefer
+moving  in  relative  terms.   It  is important to note that there are many
+times when you wish to move to an absolute location -- for  instance,  when
+your ship is under attack and you wish always to remain at a fixed location
+during the attack (such as a sector next to a friendly base!).
+
+
+TALK MODE
+---------
+
+In talk mode, everything you type is automatically transmitted as  a  radio
+message.   The  command "TM" enters talk mode, and you leave talk mode with
+the "/EX" command.  As an optional argument to "TM",  "ENEMY",  "FRIENDLY",
+"ALL",  and  "ME"  will specify to whom the transmissions should be sent --
+only the enemy ships, only friendly ships, all ships, or your own starship.
+
+Optionally, a list of ships may be given with  "TM",  in  which  case  only
+those  ships  listed  will  see your transmissions.  See "HELP TM" for more
+information on talk mode.
+
+This is an ancient tactic of the "Great Stanley Kubrick" who would sit in a
+corner, talk to you about life, love, and the universe, then attack you out
+of the blue.
+
+
+OUTPUT
+------
+
+Most of the output messages you receive will be in  combat,  in  which  one
+object has hit another.  In those cases, the output is of this form:
+
+
+
+   <object> <loc> <shields> <action> <object> <loc> <shields> <;unit dam>
+
+   { ------- source object ------- } { --------- target object -------- }
+
+
+
+The amount of plaintext English or detail varies according to  your  output
+setting.   Use  the  "SET  OUTPUT"  command  to choice between LONG, MEDIUM
+(default), or SHORT output.  For example:
+
+SET OUTPUT SHORT   W  3-26 +100  223P  E  1-29  -2, +3  +98; SH57
+
+SET OUTPUT MED     W  3-26 +100%  223P hit on E  1-29  -2, +3 +98%; SH57
+
+SET OUTPUT LONG    WOLF  3-26 +100%  makes 223 unit phaser hit
+                   on ENTERPRISE 1-29  -2, +3  +98%  Shields damaged 57 units.
+
+All of the above lines indicate the same  thing:   That  the  starship  "W"
+(Wolf)  at  absolute  location 3-26, with shields of +100%, made a 223 unit
+phaser hit (that is, a phaser hit doing 223 units of hull  damage)  on  the
+"E" (Enterprise) at location 1-29, or -2,3 relative away from the observer.
+The Enterprise had 98% shields (after the hit)  and  the  hit  damaged  its
+shields by 57 units.
+
+
+COORDINATES
+-----------
+
+Generally, you will not need to change your OUTPUT COORDINATE setting; how-
+ever, this section describes how to do so for advanced players.
+
+Output coordinates may be customized so they are displayed in  absolute  or
+relative  numbers  or both.  The default is to display BOTH sets of coordi-
+nates when displaying objects  and  messages.  Some  commanders  choose  to
+display  only  ABSOLUTE coordinates and users of front-ends may also prefer
+ABSOLUTE coordinates.
+
+Use the "SET OCSET" command to  change  output  coordinate  settings  among
+ABSOLUTE, RELATIVE, or BOTH.  For example:
+
+     SET OCSET ABS     ... E  1-29  +98
+     SET OCSET REL     ... E  -2, +3  +98
+     SET OCSET BOTH    ... E  1-29  -2, +3  +98
+
+All of the above display the "E" (Enterprise) at absolute location 1-29, or
+relative -2,3 sectors away from the observer.
+
+
+FLEET DISPLAY SYMBOLS
+---------------------
+
+Object symbols in SCANS, LISTS, and MESSAGES are by default in  a  relative
+format.   That  is,  regardless of the side you have joined, friendly bases
+always appear as "$$" and friendly planets always as "++".  Enemy ports, in
+relative symbol mode, always appear as:
+
+                   // ... for primary enemy bases,
+                   -- ... for primary enemy planets,
+
+                   %% ... for secondary enemy bases, and
+                   == ... for secondary enemy planets.
+
+When "SYMBOL" types are set to RELATIVE, your primary and secondary enemies
+are:
+
+  Your                     Primary                 Secondary
+  Side       Base Planet   Enemy     Base Planet   Enemy     Base Planet
+  ======================   =====================   =====================
+  Federation  $$    ++     Empire     //    --     Romulan    %%    ==
+  Empire      $$    ++     Federation //    --     Romulan    %%    ==
+  Romulan     $$    ++     Federation //    --     Empire     %%    ==
+
+By using the "SET SYMBOL ABS" command, object symbols in SCANS, LISTS,  and
+MESSAGES  appear  constant,  or  absolute, regardless of the side you join;
+this setting may be useful for those  die-hard  players  who  never  change
+sides.
+
+When the "SYMBOL" types are set to ABSOLUTE, the sides appear as follows:
+
+                      Fleet      Base   Planet
+                      ========================
+                      Federation  <>      +@
+                      Empire      ()      -@
+                      Romulan     {}      =@
+
+
+CURSOR-POSITIONED OUTPUT (FULL-SCREEN MODE)
+-------------------------------------------
+
+If you are using a vt100, visual55, tek4404, vt125, gte100,  vt220,  vt102,
+vs100t,  z29,  wyse75, wyse85, or vt200 terminal, you may play TK-WARS in a
+half split-screen mode by using the 'SET DUAL ON' command.  Once  in  DUAL-
+MODE, the upper half of your screen will contain the SCAN, STATUS, and MES-
+SAGE windows; the lower portion of the screen will contain normalized  game
+I/O messages.
+
+
+DUAL-MODE causes your screen to appear as follows:
+
+                      ______________________________
+                      |          |     STATUS      |
+                      |   SCAN   |     WINDOW      |
+                      |  WINDOW  |-----------------|
+                      |          |     MESSAGE     |
+                      |          |     WINDOW      |
+                      |----------|-----------------|
+                      |        TEXT/SCROLL         |
+                      |          WINDOW            |
+                      |____________________________|
+
+
+See "HELP DUAL" for information about DUAL-MODE  and  the  various  related
+options.
+
+
+COLORED OUTPUT
+--------------
+
+If you are using an IBM-PC or color  VT-100  terminal  that  supports  ANSI
+color-code  escape  sequences,  you  may see the game in color by using the
+command "SET ANSI ON".  You can change your normal text color with the "SET
+TEXT <color>" command.
+
+In ANSI-COLOR mode, enemy and friendly objects  appear  as  unique  colors;
+alerts  and  important  messages  are also highlighted in different colors.
+See "HELP ANSI" for details on setting your ANSI mode.
+
+
+ALIASES
+-------
+
+A command alias is a way to invoke a command with a shorter string, or  one
+that  you  find easier to use or to remember.  In essence, when you make an
+alias, you tell TK-Wars, "Rather than typing your  command,  here  is  what
+I'll  type  instead."   Aliases are all stored in separate files, which you
+can load by typing "ALIAS X" where "X" is the file  number.   For  example,
+"ALIAS  5"  will  load  your fifth alias file.  Each user may have up to 99
+separate alias files; each alias file may have up to 30 aliases in it.
+
+When you first begin the game, a default alias  file,  file  number  1,  is
+loaded  automatically.  You can see the aliases currently available by typ-
+ing "ALIAS" with no argument.
+
+Aliases are of the form "<ALIAS-WORD> <EXPANSION>", where ALIAS-WORD  is  a
+single word of no more than 30 characters, and EXPANSION is a string (words
+and spaces) no more than 150 characters long.  Slashes (/) cannot  be  used
+in aliases.
+
+Aliases are very useful in setting up default  command  strings  or  attack
+macros. For example:
+
+     ALIAS DO DOCK ST D E S
+
+will alias the word "DO" to expand as:
+
+     DOCK ST D E S
+
+See "HELP ALIAS" for more information.
+
+
+EXEC FILES
+----------
+
+In many cases it is useful to be able to execute the same set  of  commands
+over  and  over  again.   An "exec" file will allow you to do this.  In the
+exec file, you specify a series of ordinary commands, and when  it  is  run
+the exec file will execute those commands one at a time.
+As with aliases, there can be up to 99 different exec files, all  of  which
+are  numbered  (1  through  99).   The exec files may be of unlimited size.
+Exec file number 1 is always run when you first enter the galaxy.
+TK-Wars has special facilities for editing  and  manipulating  exec  files.
+See "HELP EXEC" for more information.
+
+
+BACKGROUND TASKS
+----------------
+
+Often in TK-Wars you will want to execute some command  or  commands  on  a
+regular  basis.  It can become tedious to type these commands over and over
+again, even if they have been aliased for convenience.
+
+The purpose of background tasks is to  execute  commands  automatically  at
+specified  time  intervals.   There are three background tasks available at
+present (user-defined background  tasks  are  not  available  at  present):
+STAT,  SUMMARY,  and  DATE.   The first two operate identically to the user
+commands; the third gives the local date and time.
+
+It is possible to have multiple background tasks executing  simultaneously,
+with  different time intervals for each one.  For more information on back-
+ground tasks, see "HELP BG" (BG for background).
+
+NOTE:  If you are operating in DUAL-MODE, the output of a task will  appear
+in the MESSAGE BOX, no matter which task is executing.
+
+
+
+8.  CONFIGURING GALAXIES
+========================
+
+There are many different types of galaxy configurations with which to  ini-
+tialize  your  game.   Here  is a brief summary of the configurable options
+which may be asked for during setup:
+
+     o    galaxy size
+     o    galaxy reservations (teams or password)
+     o    time limit
+     o    endgame type
+     o    match type
+     o    status of the war (declared or not)
+     o    whether the romulans can play
+     o    the existence of pulsars, black holes, super holes
+     o    the existence of neutral bases and HQ bases
+     o    the existence of space viruses
+     o    the existence of moving ports and regenerating ports
+
+The following options are also set independently for each galaxy, but these
+are alterable in the galaxy's configuration file.
+
+     o    the maximum number of bases, HQ bases, NE bases,  and  ships  per
+          side
+     o    the maximum number of builds possible on a planet
+     o    whether scoring is allowed
+     o    initial number of bases, planets, stars, and other phenomena
+     o    regeneration type
+     o    location of initial ports and objects (from a map file)
+     o    whether the barrier can be struck with photon torpedoes
+     o    endgame
+     o    match type
+     o    time limit
+
+If you have an idea for a galaxy configuration, you are encouraged to map a
+galaxy map and to post it in the TK-Wars forum.
+
+Here are additional details on some of these features:
+
+DECLARED WAR   In pre-planned games, it is often useful to begin  the  game
+               in a state of truce, so that each side has time to do scout-
+               ing without the fear of sudden attack from another fleet.  A
+               galaxy  may be configured so that war must be declared by at
+               least one player on every active side before weapons systems
+               can be used or planets can be captured.
+
+ENDGAMES       The endgame condition may be set for  any  galaxy.   Endgame
+               conditions  include: ending the war when all the headquarter
+               bases are destroyed, when all neutral planets are destroyed,
+               or  when all enemy ports are destroyed.  See "HELP ENDGAMES"
+               for more details.
+
+MATCHES        The type of match is used to determine, at the  end  of  the
+               game,  who  won  the  war.  Types include winning based upon
+               number of ports left (this type is called  "WULFHEAD"),  the
+               side  with  the least number of ships used ("SLUGFEST"), the
+               side with the largest total number of points ("TOTAL"),  and
+               the side with the largest number of points, ports, and kills
+               ("PERSEUS").  See "HELP MATCHES" for details  on  this  set-
+               ting.
+
+MOVING PORTS   Some galaxy configurations contain moving ports.  At  times,
+               planets and bases may move in a random or fixed orbit.  Cap-
+               turing and building planets may stablize  or  destabilize  a
+               planet's orbit.
+
+TIMED-GALS     A galaxy may  be  configured  to  "expire"  in  30  or  more
+               minutes.  This feature is useful in pre-planned matches.
+
+REGEN-GALS     Some galaxy configurations contain  ports  that  regenerate.
+               This  feature  is  useful in a SLUGFEST match and may extend
+               the life of a galaxy endlessly.  Each time a  port  is  des-
+               troyed  a  new  port  will  appear  in roughly 30 seconds to
+               replace it.
+
+
+
+
+9.  TIPS FOR BEGINNERS
+======================
+
+As a beginner, it will probably be easiest for you to  understand  what  is
+happening  in the game if you get LONG output, rather than SHORT or MEDIUM.
+You can "SET OUTPUT LONG" when you  begin.   This  provides  no  additional
+information, but it is more legible than the terse formats.
+
+Don't forget about the slash (/) key, which will allow you to enter  multi-
+ple  commands on a single input line, with a slash in between each command.
+Also, remember that the ESCAPE key will repeat your previous command, which
+can be very useful, particularly in combat situations.
+
+Feel free to use your radio (via the "TELL" command) to ask  other  players
+for  help.  People are usually happy to be asked and happy to respond.  TK-
+Wars is a very complex game, and it takes a certain  amount  of  experience
+and  play to become familiar with all of its potential.  However, even as a
+new player, you can enjoy the experience.  Remember when  you  are  playing
+with  other  people that they are here to enjoy themselves as well (and try
+not to get too violent with those photon torpedoes).
