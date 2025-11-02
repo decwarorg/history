@@ -13,4 +13,15 @@ collaboration around preserving decwar history
 
 [utexas center for american history](https://briscoecenter.org/) catalog item [v2.3](https://repositories.lib.utexas.edu/items/7e2ccf50-e814-4bce-91d2-a7f6440eabe4) is source code ported circa 2011 by merlyn cousins from the compuserve decwar 2.3 source code to simh pdp10. harris newman received this code around 1995, as discussed elsewhere in this repo. it started as an original utexas 2.3 tape and had been modified by compuserve circa 1981 for commercial purposes. here's the instructions a compuserve player saw [november 20, 1981 v2.3 compuserve](docs/DECWAR23CIS.HLP). compuserve decwar had ten playable ships.
 
+other links
+
+- https://github.com/drforbin/decwar/discussions - decwar central
+- https://en.wikipedia.org/wiki/Decwar - wikipedia page
+- http://hsnewman.freeshell.org/decwar.htm - harris newman's decwar page
+- https://www.youtube.com/@statespacedev - 'bad vids'
+- https://gitlab.com/decwar/utexas - pure stone age 'going backwards' reconstruction of utexas 2.3
+- https://gitlab.com/decwar/merely-players - pure python robots
+- https://gitlab.com/decwar/galaxy - pure p5js galaxy display
+- https://gitlab.com/decwar/history - pure 'junkpile':)
+
 ![memory-stop](./images/msc/memory-stop.png)
