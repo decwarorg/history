@@ -48,6 +48,13 @@ project utexas was born - merlyn was half hearted - announced it on the goog gro
 Eric — 07:02
 yea
 
+This short video traces the origins and impact of DECWAR, the groundbreaking 1978 multiplayer computer game created at the University of Texas. The film opens by setting the stage: the late-1970s era of mainframes, shared terminals, and the early stirrings of online play. It then introduces the UT students who adapted the Star Trek–style strategy game into a uniquely competitive, simultaneous-multiplayer experience that pushed the limits of the DECsystem hardware.
+
+As the story unfolds, viewers see how DECWAR transformed a simple text interface into an intense tactical battlefield where dozens of players could join, compete, and cooperate in real time. Through reenacted terminal screens and narration, the video highlights the game’s innovations—persistent universes, team-based combat, and social dynamics that would foreshadow modern online gaming.
+
+The final arc explores DECWAR’s legacy: how a small campus passion project quietly influenced the design philosophies behind later networked games and helped define the culture of early multiplayer computing. The video concludes by reflecting on how a handful of students, limited tools, and a lot of curiosity helped spark concepts that now dominate the gaming world.
+
+
 # 20250603
 
 From: Harris Newman <harris.s.newman@gmail.com>
