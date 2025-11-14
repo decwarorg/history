@@ -1,4 +1,53 @@
 
+# 20251114
+
+Noah — 03:04
+one brainstorm to have on the radar - my 'cic' api and coming 'control center' webpages will be controlling decwar dec10 container and python robots telnetting into it -
+here's the thing - the python robots are 'merely other players' - to decwar dec10 they are 'just players'
+now - if the exact same robots can connect to decwarjs and play - we show that old and new are matching
+it's almost a bizarre kinda turing test? 😄  are the robots playing on a dec10, or on decwarjs?
+Eric — 03:05
+yea, what we really need to do is train an AI on it
+Noah — 03:05
+so making robots able to play with old and new is some kinda weird experimental something
+Eric — 03:05
+simliar to what deep mind did with the atari games
+just not sure what the right technique is
+has nothing to do with LLMs
+Noah — 03:06
+yep - this is the infrastructure for that - deploy 100 containers in the cloud (kubernetes) and let robots play
+or 1000 containers, 10k, etc - that's one of the points of containers and k8s
+so they learn to play well - the separate thing that i'm really about is giving them personalities -
+bringing back the vibe of san marcos 1983
+Eric — 03:12
+yea the deep mind technique will probably not result in personality, just ruthless players
+Noah — 03:12
+agreed - completely separate topics in my mind -
+
+yes! it does work, their instruction manual is decent for its
+Eric — 06:50
+yea, is fun to see the old MIT stuff though
+okay so all the games are under cwd games
+Noah — 06:52
+yep, did the tour myself and thankful for it - they did a great job putting it all together - it's lars's baby
+yep you'll see 'trek' or something like that there - for the star trek game 
+put your self in my shoes june 2024 - have played what's there and interesting, including star trek game - then think... hmmmm, that decwar code on github... can it run on this? 🤔
+that was me
+Eric — 06:54
+yea amazing
+Noah — 06:54
+you realize right away - ahha! need to try the tops10 config...! boom, goodbye its hello tops10 🙂
+Eric — 06:55
+yup! such a strange synergy all this was
+Noah — 06:56
+took me three four hard months to get decwar going, with help from merlyn
+round november was like alright - let's keep going and go all the way - build and run an entire decwar tops10 system from scratch (tape images) - got that working around new years?
+ok, yeah, then - early 2025 - allright - we gotta decwar dec10 from scratch - but it has 10 players!
+hmmm, can we reconstruct the utexas 18 player? and look at these files about the original tape structure...
+project utexas was born - merlyn was half hearted - announced it on the goog group and the rest you know 🙂 
+Eric — 07:02
+yea
+
 # 20250603
 
 From: Harris Newman <harris.s.newman@gmail.com>

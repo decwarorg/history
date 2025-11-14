@@ -34,8 +34,8 @@ well i guess more generally it is a javascript virtual machine running out of th
 Noah — 01:08
 k - thinking micserv3 will be pure js - so yeah node in there
 https://gitlab.com/decwar/utexas - pure stone age
-https://gitlab.com/decwar/merely-players - pure python robots, fastapi
-https://gitlab.com/decwar/galaxy - pure p5js / node 
+https://gitlab.com/decwar/merely-players - pure python robots, rest api 'cic'
+https://gitlab.com/decwar/galaxy - pure p5js
 will start learnn a bit more about 'servn' with node for galaxy - thanks! 👍
 ahha - here was first big step today - stone age in docker 😄 
 https://gitlab.com/decwar/utexas/-/blob/main/utexas.dockerfile?ref_type=heads
