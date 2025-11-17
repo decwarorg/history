@@ -1,3 +1,9 @@
+
+we build and run the source code.
+for fortran compiler we use tapes/BB-D480C-SB_FORTRAN10_V6.tap
+
+we have one set of source code files.
+
 we don't have any source code other than the mystery 1995 email with the compuserve code, which started as a utexas 2.3 tape sent from austin to compuserve.
 
 we have the help file from 2.2, that's true. but no source code to go with that.

@@ -1,0 +1,50 @@
+
+https://github.com/obsolescence/pidp10/issues/1
+
+
+larsbrinkhoff opened on Oct 15, 2023 · edited by larsbrinkhoff
+I'm grateful for receiving credit for my ITS work in the README and PiDP-10 Manual. But they overstate my role in reviving ITS. It was already running on Ken Harrenstein's emulator in 1992, and he did the work to make a Personal ITS distribution available. In the early 2000's it was also running on Supnik's SIMH. I only took over the torch in 2016.
+Also, please mention that Angelo wrote the Knight TV emulator.
+
+
+larsbrinkhoff on Mar 5, 2024 · edited by larsbrinkhoff
+Long before I was involved Ken Harrienstien had ITS running on his emulator, and somewhat later Bob Supnik repeated the feat for his SIMH suite. However, these two emulators "only" support the KS10, which doesn't have the full glory of AI lab hardware.
+Huge strides were enabled by @rcornwell adding ITS support to his KA10 emulator. (The emulator was built on Supnik's SIMH framework.) We worked together on this during fall 2017, ultimately booting successfully on January 8, 2018. Much of the following AI lab emulation came out of this.
+@philbudne added Type 340 support, which was the start of many additions to support the AI lab hardware. Actually, Chaosnet came before this, but to me it felt like the 340 kicked off something. Later @aap and I added the Knight TV which really added momentum.
+@eswenson1 and @atsampson did almost everything related to Maclisp, Macsyma, Muddle, and Zork.
+@bictorv is the cherished champion of Chaosnet.
+Without the effort of @lisper et al we probably wouldn't have the wealth of backup data to draw from. Without that, ITS would only have been a whisper of a ghost of its former grandeur.
+And of course, ITS preservation started already in the 80s with @bawden and many others, most of which are unsung heroes.
+
+
+larsbrinkhoff on Mar 23, 2024
+One more: @philbudne's 340 emulation was the first of the KA10 specific "exotic" devices. Not strictly specific to the AI lab, but am important one for many early MIT programs: TECO, DDT, SHRDLU, etc.
+
+
+larsbrinkhoff on Jun 8, 2024 · edited by larsbrinkhoff
+I wrote this comment for @CuriousMarc's video: https://www.youtube.com/watch?v=E0Pp63gsdZI
+I'll make a copy here. EDIT: strike out "first" (see below).
+I would like to add that many, many people have been involved over the years preserving, restoring, and reviving ITS. Oscar and I really are standing on the proverbal shoulders of giants.
+To tell a rambling story. Already in the 80s when ITS was still in use, people like Alan Bawden, Penny Berman, and David Moon preserved the old ITS backup tapes and transferred them to newer tapes. Much later Brad Parker et al did a huge job to read the bits off the tapes. There were thousands, not only from ITS but also other PDP-10s at MIT and other types of computers. Without this backup archive we would only have a small sliver of the full ITS environment we have today.
+In the early 90s, Ken Harrenstien made the first(see below) PDP-10 (model KS10) emulator and brought up ITS. In the early 2000s, hacker and DEC megastar Bob Supnik made another PDP-10 emulator (also KS10) which he made available to the public. Now anyone could run ITS on their computer.
+Björn Victor recreated the AI lab Chaos networking technology and made it work with Lisp machines and such.
+My own involvement started as a script to automate the ITS installation instructions. Very soon after I posted this online, Eric Swenson got in touch. He's a former Maclisp and Macsyma developer who had helped a lot with the GitHub project over the years. Many more people have chipped in, but I also want to credit Adam Samson who did magic debugging and restoring Muddle/MDL. Eric made use of that to get Zork running again in its native environment, a huge milestone.
+Much of the groundwork of writing emulators was enabled by Al Kossow's astounding Bitsavers collection of documentation, manuals, schematics, etc for old computers.
+Richard Cornwell wrote the first KA10 emulator. This is the PDP-10 model that was used in the AI lab, and has the most interesting zoo of weird and wonderful peripheral devices. This ushered in a new era of emulating almost all of the AI lab hardware. One of the first which was the Type 340 display, contributed by Phil Budne, which runs many iconic ITS and pre-ITS PDP-6 programs. Angelo Papenhoff provided the Knight TV hardware and the bitmapped raster displays.
+
+
+bictorv on Jun 10, 2024
+In the early 90s, Ken Harrenstien made the first PDP-10 (model KS10) emulator and brought up ITS.
+This could be seen as implying that KLH did the first PDP-10 emulator, which I don't think is entirely true. Stu Grossman's kx10 seems to precede it, as is acknowledged by KLH in his doc/history.txt and doc/backgrnd.txt.
+I would suggest rewriting it to e.g. say "the first PDP-10 emulator to run ITS" which (I guess) is more true. (AFAIK, kx10 only ran TOPS-20 (and possibly TOPS-10), but did it well.)
+
+
+bawden on Jun 10, 2024
+I'm not sure how to correctly describe the KLH10, but I think calling it "the first PDP-10 emulator to run ITS", while true, is a bit of a misrepresentation of what KLH set out to do. If I recall correctly, Ken was developing the KLH10 because he had a customer who wanted to continue to run some PDP10 software, but wanted to ditch their DEC equipment. That customer was surely not running ITS, and was probably not using a KS10. A KS10 with ITS paging was just Ken's first step. Why Ken's customer couldn't use Grossman's emulator, I don't know, but it surely wasn't because it didn't run ITS!
+
+
+larsbrinkhoff on Jul 30, 2024
+I received word from Stu that kx10 was running TOPS-20 as early as 1988-89.
+
+
+
