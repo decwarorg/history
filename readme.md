@@ -1,6 +1,6 @@
 # decwar history
 
-collaboration around preserving decwar history
+you realize what decwar really was. it was a whole universe. it was packed with danger and strategy and real human connection. it just wasn't a universe made of pixels. it was a universe built inside your own imagination. and that really brings us to the final question, doesn't it? a game like decwar, it demanded something from you. it was a partnership between the computer's text and your brain. and it just makes you wonder. today, in our world of photorealistic graphics and constant visual fireworks, what did we lose? what part of that deep, imaginative connection did we leave behind when we stopped having to type our way into other worlds?
 
 - 1971, [original single player star trek](https://en.wikipedia.org/wiki/Star_Trek_(1971_video_game)), written in basic for ucal irvine sds sigma 7, mike mayfield. in 1971, mike mayfield, then in his final year of high school, frequented a computer lab at the university of california, irvine, while teaching himself how to program. the lab operated both a sds sigma 7 and a dec pdp10. the pdp10 hosted a version of the 1962 pdp1 spacewar. mayfield had gained illicit access to the sigma 7 at the lab and wanted to create his own version of the game for the system. spacewar required a vector graphics display, however, and the sigma 7 only had access to a non-graphical teletype model 33.
 - 1972, rewrite of original, basic for hp 2000c at hp office near ucal irvine, mike mayfield
