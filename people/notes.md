@@ -1,4 +1,110 @@
 
+# 20251122
+
+Noah — 16:32
+and joel and me were saying during the game - too many planets, least for effectively a few players - twenty would have been fine
+would like to get python robots compatible - then a simple test can be - do they reach victory conditions in thirty forty minutes 🙂 
+Eric — 16:48
+i'm matching the codebase on that one
+const nplnet = 80; // to jibe with 2.2, start with 80, 20 of which will become bases
+are your bots just using the text interface or built into the codebase?
+Noah — 16:54
+they are pure text interface - exactly like a human - they use telnet, start game, play🙂 
+they are indistinguishable from a human telnetting in 👍
+https://statespace.dev/decwar-game-length.html
+statespace.dev
+decwar game length
+memory is that typical ‘all out’ decwar games, san marcos 83/84, were around thirty to forty minutes, and an ideal afternoon would be two or three intense games complete with ‘report to slave planet’ or ‘the galaxy is saved’ messages. then go swimming/tubing in the san marcos river. as project utexas and robots have gotten smoother o...
+nutshell - it's a 'control knob' on the game - can be changed for different environments 
+Eric — 16:59
+ah should be easy to get those working
+just have to make sure i'm totally in sync with original
+Noah — 16:59
+source code has commented out - 20 min, 80 max
+understood - am just giving some context
+Eric — 17:02
+yea 20 min would be bases only
+well maybe
+Noah — 17:02
+it's a control knob - not a canonical truth 
+Eric — 17:03
+question is, is 80 max what i have, or is that really 80 neutrals
+Noah — 17:04
+we're discussing number of planets at game start - in addition to the twenty bases at startup
+Eric — 17:05
+Good question for Bob
+if he remembers
+Noah — 17:06
+for me the source code is very clear - and excellent topic for bob🙂 
+jakydude — 17:06
+yeah i recall you could choose short, medium, or long game.  or provide a hash code of sorts.  if you chose to generate a game, it would generate a game - and it would provide a hash number of sorts that could be used to reproduce that same game later if you liked it.
+jakydude — 17:07
+i think that’s 80 neutral planets plus the 10 bases on each side
+
+jakydude — 17:16
+i could be remembering wrong.  or maybe mark hittinger did some custom coding.
+Eric — 17:16
+are you thinking short, medium, long output modes?
+jakydude — 17:16
+yeah sorry maybe mark wrote that code for the UofL version
+he was known to customize every facet of the DEC-10
+Noah — 17:17
+active variable was 60 and i tuned it to 20 for utexas
+Eric — 17:17
+Joel, that brings up a good point, we wnat to start interviewing folks (players and anyone with knowledge). You are first on the list, do you know others we should try to find or reach out to?
+Definitely want to ask Bob about the num planets
+jakydude — 17:19
+if mark H could be found, him for sure.  he would at least know others in louisville that were fans.  i haven’t been able to find mark.
+Noah — 17:19
+'planet fuel' - more for lots of players, less for fewer players
+Eric — 17:19
+what is his last name
+jakydude — 17:20
+there was a guy named david, forgot his last name.  went by “mole” (which fit pretty well).   smart guy but always seemed to be in life trouble.  somehow doubt he is still alive, but he would be good to contact if he could be found. 
+Eric — 17:20
+he was UK or UL
+jakydude — 17:21
+mark hittinger
+Eric — 17:21
+thanks, Mark H worked at UofL?
+jakydude — 17:23
+yes he ran the DEC-10.   knew it top to bottom.  moved to vax systems running VMS after the DEC-10 shut down.  part of that was at UL, but i think he moved a little while after.
+Eric — 17:23
+ok, no idea how old he was at the time?
+jakydude — 17:29
+i never met him (best to avoid the person who wants you off his system).   so can only guess.  he had a son in 1980 with his then wife (think they divorced).  her name was theresa i think?  just giving some data for web searches.  you can find him talking about his mazda (RX7??) in some old group archives.  anyway my guess is he is about 65-70 now.
+jakydude — 17:37
+probably explains why he isn’t showing up on social media, etc.  or he could have died.  i don’t know.
+Eric — 18:02
+yea, like that woman that ran the UK center did
+jakydude — 18:05
+yeah
+Noah — 18:05
+k, home on laptop - thinking this's another recurring theme - so started a new 'nutshell page' - how's this, up top, here? 🤔 
+https://gitlab.com/decwar/history/-/blob/main/technical/game-length.md?ref_type=heads 
+GitLab
+technical/game-length.md · main · decwar / history · GitLab
+collaboration around preserving decwar history https://www.youtube.com/@statespacedev
+Image
+can well believe should throw these nutshell pages into ai and make them clearer - may try that this weekend 👍
+hold on 
+just a sec - let me get it perfect
+markdown is having a hard time with the formatting
+Noah — 18:13
+it's really stuggling with the mac10 comments 
+well, it's best can do right now - will try to improve that and make it easier to read - but let's try link above for now 👍
+Noah — 19:08
+ahha! realized could build and test 🙂  fired up docker containers (utexas does a fresh build on every startup), telnetted in, got super powers, and did list - result is included at link above now 👍 
+Eric — 19:51
+what is currently the best way for me to run the old version
+PiDP or something else
+Noah — 19:53
+oh dear, excellent question....
+we're smack in the middle of this transition
+eric if you have docker desktop on your daily driver - let's please try nextgen docker
+it will be pain - but there's gonna be speed bumps any direction we go right now 😳
+please get docker desktop going, where you can do one of their 'hello world' deals - and then we can step by step create the readme for nextgen? 🤔 
+
 # 20251114
 
 Noah — 03:04
