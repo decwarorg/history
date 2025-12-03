@@ -1,4 +1,4 @@
-# project utexas notes
+# notes
 
 ## sections
 
