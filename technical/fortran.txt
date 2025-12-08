@@ -1,0 +1,1311 @@
+
+
+idea is to build on rich's work for scripted setup of a baseline tops10 for decwar
+
+based on the steubentech image modified by merlyn that we have and that does work, we want scripted install from tape of fortran-10 v6 from https://pdp-10.trailing-edge.com/ - here's download of tape image https://pdp-10.trailing-edge.com/tapes/BB-D480C-SB_1981.tap.bz2 
+
+# itr1 - getr goin
+
+ctrl-e in simh to get control
+
+    noah@raspberrypi:~/tops703 $ ./pdp10-kl load-decwar1.ini
+    noah@raspberrypi:~/tops703 $ ./pdp10-kl run-decwar1.ini 
+
+was trying the run.ini 'as is' and it ended like so
+
+    if "%SIM_NAME%" != "KL-10" goto KS
+    load -c bts/boot.exb
+    goto BOOT
+    :KS
+    boot %DSK%0
+    :BOOT
+
+from rich - You can't boot directly to the RP06 on KL10. You need to load "bts/boot.exb", then continue to get it running, You get a BOOT prompt, pressing return will load and execute "dsk:system.exe[1,4].
+
+below works! the 'continue' is the magic, and the script makes it all the way to logged in and tty stomper ready to get ctrl-c
+
+    if "%SIM_NAME%" != "KL-10" goto KS
+    load -c bts/boot.exb
+    continue
+    goto BOOT
+    :KS
+    boot %DSK%0
+    :BOOT
+
+# itr2 - kl only cleanup, kermit, decwar account
+
+first off, need kermit. can worry about fortan in itr3. with some good discussion with rich and merlyn, we're going with [1,27] username decwar pwd disabled. more notes about this below, under 'rando notes'. seems to be working good!
+
+    noah@raspberrypi:~/tops703 $ ~/kermit/wermit 
+    (~/tops703/) C-Kermit>set transfer mode manual
+    (~/tops703/) C-Kermit>set file type binary
+    (~/tops703/) C-Kermit>set host localhost 2030 /raw-socket
+    (~/tops703/) C-Kermit>c
+    Connecting to host localhost:2030
+    Escape character: Ctrl-\ (ASCII 28, FS): enabled
+    Type the escape character followed by C to get back,
+    Connected to the KL-10 simulator TTY device, line 0
+    KL703 11:13:56 TTY4 system 1025
+    Connected to Node KL10(1) Line # 4
+    Please LOGIN
+    .login decwar
+    Job 2  KL703  TTY4
+    .r k10mit
+    TOPS-10 KERMIT version 3(135)
+    Kermit-10>set file byte-size 36-bit
+    Kermit-10>server
+
+here's the scripts at this stage https://github.com/drforbin/decwar/blob/minimalist/docs/tops703/load-decwar2.ini and https://github.com/drforbin/decwar/blob/minimalist/docs/tops703/run-decwar2.ini
+
+# itr3 - fortran and compiling
+
+doing first compiles on scripted tops10 and will just share what am seeing - this is with the scripted fortran install from tape rich already has there in the library -
+
+    .R FORTRA
+    *^C
+    .VERSION
+    FORTRA 10(2530) +
+
+we're just trying it to see - believe we're gonna need fortran-10 v6 scripted install from tape of fortran-10 v6 from https://pdp-10.trailing-edge.com/ - tape image https://pdp-10.trailing-edge.com/tapes/BB-D480C-SB_1981.tap.bz2
+
+    .LOGIN DECWAR
+    Job 3 KL703 CTY
+    .COMP PARAM
+    FORTRAN: PARAM
+    ...snip...
+    %FTNWRN MAIN. No fatal errors and 28 warnings
+    .COMP LOWSEG
+    FORTRAN: LOWSEG
+    ...snip...
+    ?FTNFTL MAIN. 18 fatal errors and 1 warning
+
+do have to suspect if we can install the fortran v6 tape, those two shooooooould work... now starting to really focus on that v6 tape image - https://pdp-10.trailing-edge.com/tapes/BB-D480C-SB_1981.tap.bz2 and eventual 'do fort10v6.do' command and subscript to have right in here... comment out 'do fort10.do', uncomment 'do fort10v6.do'...?:)
+
+    ;do fort10.do
+    do fort10v6.do
+    do kermit.do
+
+got that tap file in among rich's collection now
+
+    noah@raspberrypi:~ $ cd tops703/tapes/
+    noah@raspberrypi:~/tops703/tapes $ ls -hl
+    ...snip...
+    -rw-r--r-- 1 noah noah  11M Dec 23 09:07 BB-D480C-SB_FORTRAN10_V6.tap
+    -rw-rw-r-- 1 noah noah  19M Apr 16  2022 BB-D480F-SB_FORTRAN10_V10.tap
+    ...snip...
+
+beginning to learn about tap files - from zero - beginners brain! first of all, clone the repo for https://github.com/simh/simtools/blob/master/extracters/backup/backup.txt and compile a backup exe. copy that over to our tape folder, and then can do like so, should be some helpful info available in here...
+
+    noah@raspberrypi:~/tops703/tapes $ ./backup -tf BB-D480C-SB_1981_FORTRAN10_V6.tap 
+    backup: opening BB-D480C-SB_1981_FORTRAN10_V6.tap for input
+    1  10doc.dir
+    2  forddt.doc
+    3  forddt.hlp
+    ...etc...
+
+ahha! but before very many hours digging into that tape - took a step back and thought 'even though it would be amazing if it worked, let's try the current fort10.do install script from rich, just replace the tap file name...' miraculously, it seems to somewhat work! at least didn't get lots of obvious errors during the install from tape.
+
+took the fort10.do script from rich and simply changed the tap file name to point to the f10v6 tap - in a christmas miracle, this ran with very very few complaints - think there may have been one or a very few at the very end about copying/installing things - this may be relevant below
+
+kermitted in the needed files and did the commands we've used in the past
+
+    .compile @com1
+    .compile @com2
+    .r link
+    *@can1
+
+!!!the compiles all looked good!!!:) really started to think we got it! the linker died though
+
+    .R LINK
+    *@CAN1
+    %LNKFLE LOOKUP error (0) file was not found SYS:FORLIB.REL
+    [       Please retype the incorrect parts of the file specification]
+
+guess right now is that slight glitch in the fort10.do script may not have copied that FORLIB.REL to the right place - could be if we get that FORLIB.REL going, we'll get it all! did that and with a bit of trial and error tinkering, got f10v6 going - committed the three key scripts in here https://github.com/drforbin/decwar/tree/minimalist/docs/tops703
+
+# notes around getting f10v6 and decwar going
+
+first off, strictly the facts, or as many as can remember from a very confusing day. got f10v6 going, tap file is specified here
+
+    expect "\r\n." send "r backup\r"; at %TAP%0 -r tapes/BB-D480C-SB_FORTRAN10_V6.tap;  continue
+
+commented out second line here. evidently this mac file was not in v6 but was in v10. it was causing trouble before commenting out, for sure.
+
+    expect "\r\n*" send "FOROP.REL=FOROP.MAC\r"; continue
+    ;expect "\r\n*" send "FOROPN.REL=FOROPN.MAC\r"; continue
+    expect "\r\n*" send "FOROTS.REL=FOROTS.MAC\r"; continue
+
+and change the last lines to
+
+    expect "\r\n." send "copy sys:<055>=FORLIB.REL\r"; continue
+    expect "\r\n." send "copy sys:<055>=FORDDT.REL\r"; continue
+    expect "\r\n." send "copy sys:<055>=FORO10.EXE\r"; continue
+
+they were written a bit differently before and this seems to have been why forlib.rel was not where it should be. in any case, this new way certainly does work for forlib.rel. there are apparently still troubles with foro10.exe, maybe it was not in v6 at all?
+
+note '\xxx' is octal
+
+    expect "\r\n*" send "\003"; continue     ^c, ctrl-c, end of text, 'eom', 'etx'
+    expect "\r\n*" send "\3"; continue       ^c, ctrl-c, end of text, 'eom', 'etx'
+    expect "\r\n*" send "\032"; continue     ^z, ctrl-z, 'sub' substitute
+    expect "\r\n*" send "\32"; continue     ^z, ctrl-z, 'sub' substitute
+    expect "\r\n*" send "\033"; continue     ^[, escape
+
+when creating the base system from tape via mongen etc, the first line below is important because it effectively kill some kind of disk process that hangs - this 'set cty stop' is useful, kind of the strongest medicine available within a simh script? one bizarre thing is the space before the ';' seemed to matter somehow. could have been confused about that. it also appears at the end, as in the second line.
+
+    expect "Disk Reads:" set cty stop ; continue
+    expect "\r\n." echo "Stopping"; set cty stop; continue
+
+now for some 'softer' notes. the ordering of things, and building in delays via 'send -t after=100k' and 'send -t after=1000k'
+seemed to have strangely powerful effects, especially when there were troubles, as in the f10v6 issues. even giving an odd sensation of async 'multi threaded' behaviour, which doesn't make any sense in the pdp10 context! this is why kermit install ended up before fortran install
+
+    do kermit.do
+    do decwar3-fort10v6.do
+
+maybe 'out of order' output starts coming because of some kind of buffering, that gets overwhelmed when there's lots of messages? in any case, pauses at strategic points seems important! seems 'standard' for login commands, like this one
+
+    expect "\r\n." send -t after=1000k "login 10,7\r"; continue
+
+# rando notes
+
+here's some comments from merlyn
+
+    The original place where decwar was placed was 5,30 which was the GAM:
+    ersatz device, CIS was using [1,27] was the multiplayer decwar directory.
+    Everyone would be handed off from their original hosts to that HOST and logged onto that directory.
+    The CIS source is Always referencing it.
+
+and another from merlyn 20241223
+
+    I could change it! But the cis code is looking for the stat (history) files in 1,27.
+    The standard utexas code does run fine in sys: [1,4].
+    If you guys can find the original ut code I'd love to look at it.
+    I think the reference to 1,27 is in warmac.mac...look there.
+
+    You dont have to login as 1,27
+    it just looks for the stat files in 1,27
+    The executable should be able to be placed elsewhere as well, I think?
+    Have a look at warmac.mac and search for 1,27
+    There should be a function called stat or something like that which is called to handle the history files.
+    The swap file of course follows whereever the executable is. You would have to change decfix.exe
+    because it does look in 1,27 also.
+
+seems, at utexas the build was done in [10,30,decwar] and then deployed to gam: which was a 'logical device name' assigned to [5,30].
+
+at compuserve, the build was deployed to [1,27]. not clear yet where they did there build, hopefully doesn't really matter too much?
+
+note to self, if it's not already there, create p,pn [1,27] using react, then copy DECWAR.EXE, DECWAR.GRP, DECWAR.HLP, DECWAR.NWS to its home folder to 'deploy/install' it. [1,27] is where decwar was deployed for compuserve. for utexas it was logical device name 'gam:', assigned to [5,30].
+
+## decwar.imp has mucho learnings about 'building decwar from tape'
+
+this is clearly some important stuff. hence the '.imp' extension. and note it's first thing listed in decwar.tap file. in fact, decwar.imp and decwar.tap match up perfectly. 
+
+one useful thing could be that [10,30,DECWAR] was an important folder / sfd at some point, probably for the build from tape described in decwar.imp, so p,pn 10,30 and sfd [10,30,decwar] were important back then, and could still be! in fact it's even possible that if we were 10,30 and in [10,30,decwar] then everything would magically work. this may be something to try asap.
+
+for our possible 'include' troubles, note especially
+
+    Files INCLUDEd in DECWAR.FOR (extracted from WARMAC.MAC by TECO macros):
+    PARAM.FOR	Parameters (constants).
+    HISEG.FOR	High segment common block.
+    LOWSEG.FOR	Low segment common block.
+
+    Tools used to build game (.SAV files generated from TECO macros):
+    PARAM.SAV	Build PARAM.FOR from WARMAC.MAC.
+    HISEG.SAV	Build HISEG.FOR from WARMAC.MAC.
+    LOWSEG.SAV	Build LOWSEG.FOR from WARMAC.MAC.
+    EXTERN.SAV	Build EXTERN.FOR from MSG.MAC.
+    SETEXT.SAV	Build SETEXT.FOR from SETMSG.MAC.
+
+    TECO macros used to build game (require TECO 124):
+    PARAM.TEC	Source for PARAM.SAV.
+    HISEG.TEC	Source for HISEG.SAV.
+    LOWSEG.TEC	Source for LOWSEG.SAV.
+    EXTERN.TEC	Source for EXTERN.SAV.
+    SETEXT.TEC	Source for SETEXT.SAV.
+
+hmmm, don't have teco 124, potential trouble? wasn't for merlyn! but potentially could be for a 'build from tape'?
+
+    .teco param.tec
+    [2K Core]
+    *^C
+    .version
+    TECO 24A(235) + 
+
+## merlyn's build workflow and the 'steubentech descendant'
+
+with kermit rolling and files prepped over from raspi side to tops10 side, time this weekend to start digging into merlyn's instructions from the file 'changes' in the repo.
+
+    CAN1.CMD is linker control file for building executable.
+    DECCMP.CMD full compile control file.
+    
+these two @com1, @com2 are splitting up and equiv to @deccmp. @can1 gets used for r link.
+
+    .compile @com1
+    .compile @com2
+    .r link
+    *@can1
+    .get decwar
+    .ssave
+    then create p,pn [1,27] and install DECWAR.EXE, DECWAR.GRP, DECWAR.HLP, DECWAR.NWS in that p,pn. then
+    .dir [1,27]
+    .r [1,27] decwar
+
+the one already there decwar in [1,27] is definitely working. and looks like there's also another older one already there in [5,30]
+
+    .dir [5,30]
+    .r [5,30] decwar
+
+target is to be able to make, use, remake decwar.tap tape file, all on top of our scripted tops10 setup, with automations that make it simpler to keep the 'know how' alive going forward.
+
+# tape drive fair warning!
+
+to read from tape, the following has to come first in simh script. it may not be obvious but this actually enables the tape drive for use! without it, no tape read. 
+
+    expect "\r\n." send "r opr\r"; continue
+    expect "OPR>" send "\r"; continue
+    expect "OPR>" send "\r"; continue
+    expect "OPR>" send "set tape mta0 unavailable\r"; continue
+    expect "Enter text and terminate with ^Z" send "installing software\r\32"; continue
+    expect "OPR>" send "\r"; continue
+    expect "OPR>" send "exit\r"; continue
+    expect "\r\n." send "k/f\r"; continue
+
+# write decwar file with back10
+
+here's our initial automation for writing decwar.tap
+
+    rm -rf ./decwar-files
+    mkdir ./decwar-files
+    cp ~/decwar/utexas/*.* ./decwar-files
+    cp ~/decwar/compuserve/*.* ./decwar-files
+    cp ~/decwar/scripts/COM1.CMD ./decwar-files
+    cp ~/decwar/scripts/COM2.CMD ./decwar-files
+    cp ~/decwar/scripts/CAN1.CMD ./decwar-files
+    ./back10 -cf ./decwar.tap ./decwar-files/*
+    ./back10 -lf ./decwar.tap
+
+# read decwar tap file
+
+assuming opr has prepped the tape drive as noted first thing above in 'tape drive fair warning', following will make the files we wrote to the tap file appear in current users sfd decwar. we usually want to be user dist [10,7] for this, so sfd [10,7,decwar]
+
+    expect "\r\n." send "r backup\r"; at %TAP%0 -r decwar.tap;  continue
+    expect "\r\n/" send "tape mta0:\r"; continue
+    expect "\r\n/" send "rewind\r"; continue
+    expect "\r\n/" send "inter\r"; continue
+    expect "\r\n/" send "files\r"; continue
+    expect "\r\n/" send "rest [,,decwar]*.*=*.*\r"; continue
+    expect "\r\n/" send "exit\r"; continue
+
+# build and install decwar
+
+we're user dist [10,7] - change directory into [10,7,decwar]
+
+    expect "\r\n." send "r setsrc\r"; continue
+    expect "\r\n*" send "cp [10,7,decwar]\r"; continue
+    expect "\r\n*" send "\3"; continue
+    
+alright, build
+
+    expect "\r\n." send "compile @com1\r"; continue
+    expect "\r\n." send "compile @com2\r"; continue
+    expect "\r\n." send "r link\r"; continue
+    expect "\r\n*" send "@can1\r"; continue
+    expect "\r\n." send ""; continue
+    expect "\r\n." send "get decwar\r"; continue
+    expect "\r\n." send "ssave\r"; continue
+    expect "\r\n." send "k/f\r"; continue
+
+if you don't do the send "" line you get a bizarre 'race condition' where the next line beats the '@can1\r' send to the linker - iterated on this many tens of times, it's real and it's weird - tried 'pauses', 'delays', 'sleeps', etc - only real workaround was to 'win the race' with 'nothing'!:0
+
+now install. compuserve code is expecting directory [1,27] for keeping some global data, so create that now as part of install.
+    
+    expect "\r\n." send -t after=1000k "login 1,2\r"; continue
+    expect "\r\n." send "r credir\r"; continue
+    expect "Create directory:" send "[1,27]/prot:777\r"; continue
+    expect "Create directory:" send "\3"; continue
+    expect "\r\n." send "copy sys:<055>=dskb:[10,7,DECWAR]*.exe\r"; continue
+    expect "\r\n." send "copy hlp:<055>=dskb:[10,7,DECWAR]*.hlp\r"; continue
+    expect "\r\n." send "k/f\r"; continue
+
+# additional notes
+
+there's more available we may end up using, beyond the above
+
+    noah@raspberrypi:~/tops703/tapes $ ./back10 -h
+    Usage: ./back10 [action] [options] [args]
+    
+        Action is one of the following:
+    
+        -c           -- create a backup tape containing the files in arglist.
+    
+        -l           -- list files on tape.
+        -p           -- peek at tape data.
+        -s           -- show the structure of the tape.
+        -t           -- type file list as .DIR MTA0: does.
+        -x           -- extract files matching any of the args in arglist,
+                        or any regexp given to a -R option.
+    
+        Options are:
+    
+        -b           -- build tree of output files.  (extract)
+        -d           -- omit device from output tree.  (extract)
+        -f <file>    -- operate on tape file for input/output.
+                        "-" means stdin/stdout.
+        -h           -- print help text.
+        -i           -- interchange flag.
+        -n           -- number of items to print.  (peek)
+        -q           -- quiet (extract)
+        -v           -- increase verbose mode.
+    
+        -A           -- set disk mode to ascii.
+        -B           -- set disk mode to binary.
+        -C           -- set disk mode to core-dump.
+        -D           -- turn on debugging.
+        -H           -- set disk mode to high-density.
+        -I           -- set disk mode to industri-standard.
+        -M <str>     -- set system name.  (write)
+        -O opt=val   -- set option to value.
+        -P <bits>    -- set/clear print control bits.  (peek)
+        -R <exp>     -- set regexp of files to match.  (extract, list)
+        -S <str>     -- set SaveSet name.  (write)
+        -T <fmt>     -- set tape container format.
+                        format is raw, tap, e11 or tpc.
+                        default is tap.
+        -U <str>     -- set device and UFD. (write)
+                        format is "device:p,pn".
+
+# f66 vs f77
+
+decwar is a fusion of fortran and assembly. roughly speaking, much of the real work happens in assembly, it's usually interacting with the high segment memory where the overall game state for multiple players/jobs lives. the fortran is somewhat of an i/o layer, interacting with the players. it's doing quite a bit of text i/o. now here's the thing. very roughly speaking the assembly code is 'six bit ascii' and expects the same with fortran, which means the f66 fortran66 ascii standard, hollerith characters, etc. f77 fortran77 ascii standard brought breaking changes with 'seven/eight bit ascii', character data type, suppression of hollerith, etc. here's the two relevant tapes for decwar.
+
+    tapes/BB-D480C-SB_FORTRAN10_V6.tap   f66  'six bit ascii'
+    tapes/BB-D480F-SB_FORTRAN10_V10.tap  f77  'seven/eight bit ascii'
+
+we gotta care about that f66 tape. decwar is 'natively' f66. will discuss below 'porting' decwar to f77, it seems possible, but probly means breaking changes in the assembly code as well.
+
+good question is which direction the 'math stuff' in docs/algebra and docs/inverse will go. f77 makes things 'easier' at least superficially... but does it make sense to 'stay old school' with f66, especially in light of 7090/7094, cdc, etc - in other words - for matrix inverse and simplex, fifties and sixties style - f66? or f77?:)
+
+# f66
+
+    noah@raspberrypi:~/decwar/tops703 $ ./back10 -xvf tapes/BB-D480C-SB_FORTRAN10_V6.tap ins
+    fortra.ins -> fortra.ins
+    noah@raspberrypi:~/decwar/tops703 $ head fortra.ins     
+    FORTRAN-10 Version 6 Installation Guide
+    December 1981
+
+f66 installation guide is appended at the end below.
+
+# f77
+
+did indeed get decwar building and running on f10v10 f77 'ok-ish' - was actually playing with two players/jobs etc - but there's definitely i/o gremlins and looks like a major job to fix all that - to say the least:) set that aside in arc/utexas-f77 and focusing on f66 for now!
+
+# f66 installation guide
+
+                               CONTENTS
+
+CHAPTER 1       SUMMARY
+
+
+CHAPTER 2       INSTALLATION AND TESTING OF STANDARD FORTRAN
+
+        2.1     INSTALLATION OF STANDARD FORTRAN . . . . . . . . . 2-1
+        2.2     TESTING OF STANDARD FORTRAN  . . . . . . . . . . . 2-3
+
+
+CHAPTER 3       INSTALLATION AND BUILDING OF NONSTANDARD FORTRAN
+
+        3.1     BUILDING THE FORTRAN COMPILER FROM SOURCES . . . . 3-1
+        3.1.1     Using The FORTRAN Compiler With DDT  . . . . . . 3-2
+        3.2     BUILDING A SINGLE-SEGMENT VERSION OF FORTRAN . . . 3-2
+        3.3     BUILDING FOROT6.EXE AND FORLIB.REL FROM SOURCES  . 3-3
+        3.3.1     Using A Non-standard QUASAR Interface  . . . . . 3-4
+        3.3.2     Building A FOROT6 With Symbols . . . . . . . . . 3-4
+        3.4     BUILDING FORDDT FROM SOURCES . . . . . . . . . . . 3-4
+        3.5     APPLYING SOURCE PATCHES TO THE FORTRAN PRODUCT . . 3-5
+
+
+CHAPTER 4       BUILDING DBMS VERSION 5A WITH FORTRAN-10
+
+
+CHAPTER 5       BUILDING SORT VERSION 4C WITH FORTRAN-10
+
+
+
+
+
+
+
+
+
+
+
+
+
+                              CHAPTER 1
+
+                               SUMMARY
+
+
+
+This document describes the procedures for  installing  the  following
+software:
+
+
+     1.  Version 6(1144) of the FORTRAN compiler
+
+     2.  Version 6(2033) of FOROTS (the FORTRAN object-time system)
+
+     3.  Version 6(2033) of FORLIB (the FORTRAN library)
+
+     4.  Version 6(154) of FORDDT (the FORTRAN debugger)
+
+FORTRAN, FORLIB, FOROTS, and FORDDT should be installed on  SYS:,  and
+.HLP files should be installed on HLP:.
+
+The release is in the form of a 1600  BPI  FORTRAN  distribution  tape
+written in BACKUP interchange mode containing six savesets.
+
+The distribution tape consists of the following savesets:
+
+     1.  <FORTRAN-DOCUMENTATION>
+
+         This saveset includes all FORTRAN  documentation  files.   It
+         also includes .HLP files.
+
+     2.  <FORTRAN-SYSTEM>
+
+         This saveset includes the .EXE and .REL files that should  be
+         installed on SYS:.
+
+     3.  <FORTRAN-TEST>
+
+         This saveset includes the UETP tests and .VER file.  It  also
+         includes  a  .CTL  file  that will run the same tests without
+         using UETP.
+
+     4.  <FORTRAN-OTS-DEBUGGER>
+
+         This saveset includes the sources for FOROTS and FORDDT,  and
+         all  intermediate  files  generated  when building FOROTS and
+SUMMARY                                                       Page 1-2
+
+
+         FORDDT.
+
+     5.  <FORTRAN-COMPILER>
+
+         This saveset includes the sources for the compiler,  and  all
+         intermediate files generated when building the compiler.
+
+     6.  <FORTRAN-TOOLS>
+
+         This saveset  includes  the  miscellaneous  system  utilities
+         needed  to  build the compiler and FOROTS.  This includes the
+         BLIS10 compiler, HELPER, and other tools.
+
+
+
+
+
+
+
+
+
+
+
+
+
+                              CHAPTER 2
+
+             INSTALLATION AND TESTING OF STANDARD FORTRAN
+
+
+
+
+The following files comprise  the  FORTRAN  compiler  and  object-time
+system.   Merely  copying  these  files  from  the  distribution  tape
+provides a working FORTRAN system.  The FORTRAN software  works  on  a
+KI10, KL10, or KS10 processor.  The files are:
+
+     FORTRA.HLP
+     FORTRA.EXE
+     FORTB.EXE
+     FORTC.EXE
+     FORTD.EXE
+     FORTE.EXE
+     FORTF.EXE
+     FORTG.EXE
+     FOROT6.EXE
+     FORLIB.REL
+     FORDDT.REL
+     FORDDT.HLP
+
+
+
+2.1  INSTALLATION OF STANDARD FORTRAN
+     ____________ __ ________ _______
+
+Perform the following steps to install the FORTRAN system:
+
+(1)  LOGIN as the operator.
+
+(2)  Mount the FORTRAN distribution tape.
+
+(3)  Use the CREDIR program to create directories for the contents  of
+     the  FORTRAN  distribution tape.  You may use directories of your
+     choice.  Type the following commands:
+
+          .R CREDIR
+          Create directory:dev:[proj,prog,DOC-directory]
+          Create directory:dev:[proj,prog,RUN-directory]
+          Create directory:dev:[proj,prog,TESTS-directory]
+          Create directory:dev:[proj,prog,FOROTS-directory]
+          Create directory:dev:[proj,prog,COMPILER-directory]
+          Create directory:dev:[proj,prog,TOOLS-directory]
+INSTALLATION AND TESTING OF STANDARD FORTRAN                  Page 2-2
+
+
+(4)  Use the BACKUP program to restore the files from the distribution
+     tape  to  disk.  If you wish not to restore a particular saveset,
+     just replace  the  particular  RESTORE  command  with  a  SKIP  1
+     command.  Type the following commands:
+
+          .R BACKUP
+          /TAPE MTAn:
+          /REWIND
+          /INTERCHANGE
+          /FILES                           !OPTIONAL
+          /DENSITY 1600
+          /RESTORE [DOC-directory]*.*=*.*       !SAVE SET 1
+          /RESTORE [RUN-directory]*.*=*.*       !SAVE SET 2
+          /RESTORE [TESTS-directory]*.*=*.*     !SAVE SET 3
+          /RESTORE [FOROTS-directory]*.*=*.*    !SAVE SET 4
+          /RESTORE [COMPILER-directory]*.*=*.*  !SAVE SET 5
+          /RESTORE [TOOLS-directory]*.*=*.*     !SAVE SET 6
+          /EXIT
+
+(5)  Follow the "SPECIAL INSTRUCTIONS" (if any)  at  the  end  of  the
+     cover  letter.   Also,  read the FORTRAN Beware file for any last
+     minute instructions.
+
+(6)  It is recommended that you save the old  version  of  FORTRAN  in
+     case they are needed again.  Type the following commands:
+
+          .COPY OLD:=SYS:FOROTS.EXE
+          .COPY OLD:=SYS:FORLIB.REL
+          .COPY OLD:=SYS:FORTRA.EXE
+          .COPY OLD:=SYS:FORTB.EXE
+          .COPY OLD:=SYS:FORTC.EXE
+          .COPY OLD:=SYS:FORTD.EXE
+          .COPY OLD:=SYS:FORTE.EXE
+          .COPY OLD:=SYS:FORTF.EXE
+          .COPY OLD:=SYS:FORTG.EXE
+          .COPY OLD:=SYS:FORDDT.REL
+          .COPY OLD:=HLP:FORTRA.HLP
+          .COPY OLD:=HLP:FORDDT.HLP
+
+(7)  Install the new FORTRAN system software by giving  the  following
+     commands:
+
+          .COPY SYS:*.*=[RUN-directory]*.*
+          .COPY HLP:*.*=[DOC-directory]*.HLP
+
+     Note that FOROTS and FORLIB have been built to  run  on  a  KI10,
+     KL10,  or  KS10  processor.   This  configuration is the only one
+     supported.  A slight  improvement  in  speed  and  space  can  be
+     obtained  on  a KL10 or KS10 with the following procedure.  First
+     remove the line:
+
+          ftki=-1
+
+     and insert the line:
+INSTALLATION AND TESTING OF STANDARD FORTRAN                  Page 2-3
+
+
+          ftkl=-1
+
+     into file B10FRS.CTL, which creates F1SHR.MAC and F1REL.MAC.
+
+(8)  Decide if you want to destroy the directories you created in step
+     (3).   For each directory you wish to destroy, give the following
+     commands.  (Note:  a directory cannot be deleted  unless  all  of
+     its subdirectories have been deleted.)
+
+          .DELETE [proj,prog,name-of-directory-to-destroy]*.*
+          .DELETE [proj,prog]name.SFD
+
+
+
+2.2  TESTING OF STANDARD FORTRAN
+     _______ __ ________ _______
+
+Perform the following procedures to test the FORTRAN system:
+
+(1)  Install the FORTRAN UETP test  module  by  giving  the  following
+     commands:
+
+          .COPY UTP:=[TESTS-directory]*.FOR
+          .COPY UTP:=[TESTS-directory]FORTRA.VER
+
+(2)  In the file UTP:UETP.DIR, add the line:
+
+          FORTRA.VER
+
+     Also make sure that the file UTP:FORTRA.SFD<777> exists.
+
+(3)  If desired, run the standalone FORTRAN test  module  provided  by
+     giving the following command:
+
+          .SUBMIT F10TST.CTL
+
+     The test expects to find all the FORTRAN  system  components  and
+     the  distributed  FORTRAN  test  programs on logical device DSK:.
+     The test also copies certain required system software  components
+     to DSK:, for the duration of the test run.
+
+     When the test batch job is completed, the F10TST.LOG file must be
+     examined  to  make  sure  that  none of the tests branched to the
+     error label UERR::.
+
+(4)  Once the FORTRAN system components have been  installed  in  SYS:
+     (see  Step 7 above), you may run the UETP test module provided by
+     giving the following commands:
+
+          .RUN UTP:UETP
+          UETP>ENABLE FORTRA/DEPTH:VERIFICATION
+          UETP>ENABLE 
+          UETP>BEGIN
+          UETP>EXIT
+
+     If any errors occur, UETP will report them at your  terminal  and
+INSTALLATION AND TESTING OF STANDARD FORTRAN                  Page 2-4
+
+
+     in  the  file  EXCEPT.LOG  in the UTP:  subdirectory FORTRA.  The
+     files FORTRA.LOG, RUN.LOG, and EXCEPT.LOG  may  be  deleted  from
+     that  subdirectory.   For  more information on UETP, see the UETP
+     Procedures/Reference Manual.
+
+     Run your own tests if desired.  If you run  your  own  tests,  be
+     sure that SYS:  is defined to include [RUN-directory].
+
+
+
+
+
+
+
+
+
+
+
+
+                              CHAPTER 3
+
+           INSTALLATION AND BUILDING OF NONSTANDARD FORTRAN
+
+
+
+
+This chapter describes building the FORTRAN compiler from  sources  if
+modifications to the standard compiler are desired.  It also describes
+building FOROTS, FORLIB, and FORDDT from sources.
+
+
+
+
+
+3.1  BUILDING THE FORTRAN COMPILER FROM SOURCES
+     ________ ___ _______ ________ ____ _______
+
+Required software:
+
+     BLIS10 7E(227)
+     LINK 4A
+     MACRO 53A
+     SCAN 7B
+     WILD 7
+     HELPER 5(41)
+
+Running the control file B10FTN.CTL will build the compiler  from  its
+sources   and  produce  the  binary  files.   This  control  file  has
+successfully built and loaded the compiler at  the  Digital  Equipment
+Corporation  - Marlboro computer facilities.  This, however, in no way
+guarantees its operation or support.
+
+The control file used to build the compiler in-house  uses  a  private
+pack  called  DSKP:,  and  references field-image software from ersatz
+device  DEC:   ([10,7]).   BLIS10.EXE  7E(227)  is  included  on   the
+distribution  tape.   One  source  file (COMMON.MAC) references [5,11]
+(REL:) for several files.
+
+Building the FORTRAN compiler from  the  sources  provided  is  not  a
+trivial  computational  task.   It  requires  a considerable amount of
+computer resources.  All of the modules will  compile  within  70K  of
+user  core  with  the exception of LEXICA.BLI which requires 75K.  The
+complete execution of B10FTN.CTL requires at least 2 and 1/2 hours  on
+a  KL10  processor.   It  takes longer on a KI or KS processor.  It is
+advised that  only  installations  desiring  to  modify  the  compiler
+consider completely rebuilding it.
+INSTALLATION AND BUILDING OF NONSTANDARD FORTRAN              Page 3-2
+
+
+In addition, it should be noted that the supplied  control  files  are
+divided  into  clearly  commented  sections  so  that it can easily be
+determined which phases need to be reloaded if modifications are made.
+Therefore,  installations  inserting  their own modifications into the
+compiler usually need only recompile the modules  changed  and  reload
+the  overlays  affected  without  rebuilding the entire compiler.  See
+MODULE.MEM for a list of which modules are in which phases.
+
+
+                                 NOTE
+
+               When loading the programs LEFT72, LEFTFM
+               and  BUILD,  undefined  globals  will be
+               encountered.  These should  be  ignored,
+               as  indicated  by  comments  in the .CTL
+               file.
+
+
+
+The control file called L10FTN.CTL will  produce  a  complete  set  of
+source listings of the compiler.
+
+To submit a control file to run on a KL10, use the following command:
+
+     .SUBMIT filename/RESTART/TIME:3:0:0/UNIQUE:0
+
+
+
+3.1.1  Using The FORTRAN Compiler With DDT
+       _____ ___ _______ ________ ____ ___
+
+The distribution tape contains a version  of  the  segmented  compiler
+loaded  with  DDT  under  the  names  DORT*.EXE.   These files must be
+renamed to FORT*.EXE before use.
+
+If for some reason it is desired to load the compiler with DDT,  there
+is  a  series of LINK indirect files included which are similar to the
+*.CMD files used in B10FTN.CTL.  They are D*.CMD files and are used in
+the same fashion as the *.CMD files.
+
+Since only breakpoints in the low segment are phase  independent,  the
+standard  technique  to  set  a  break point is to set one in FORTRA -
+module MAIN at GETSG+53 and then SAVE the segment.  This will cause  a
+break  point  to  occur at the beginning of each phase of the compiler
+just after it is loaded.  At this point, break points can  be  set  in
+the  particular  phase.   These  phase-dependent breakpoints should be
+removed prior to bringing the next segment into core.
+
+
+
+3.2  BUILDING A SINGLE-SEGMENT VERSION OF FORTRAN
+     ________ _ ______________ _______ __ _______
+
+The LINK indirect file ALL.CMD  (and  the  DDT  version  DALL.CMD)  is
+included  on  the  distribution  tape  and  can  be  used  to  load  a
+single-segment  version  of  the  compiler.   This   is   particularly
+attractive  for  installations where the job mix contains many FORTRAN
+INSTALLATION AND BUILDING OF NONSTANDARD FORTRAN              Page 3-3
+
+
+compilations of several small  subroutines,  especially  if  they  are
+handled   in   batch  mode.   Note  however  that  the  single-segment
+configuration is not supported.
+
+The single-segment version is comprised of the  same  modules  as  the
+multisegment   version,   except   the  modules  DOPT.MAC,  DGCMN.MAC,
+DNPT.MAC, ERROV?.BLI, and OWNDM.MAC are not needed, and ONESEG.REL  is
+used  instead  of  MAIN.REL.   ONESEG  is  simply  a  recompilation of
+MAIN.BLI, recompiled with the compilation control variable  FT1SEG  in
+the  REQUIRED  file FT1SEG.REQ (built as FT1SEG.REQ in B10FTN.CTL) set
+to  1  rather  than  0.   This  eliminates  the  GETSEGs.   Note  that
+ONESEG.REL  as  well  as  SINGLE.EXE,  as  well  as  other modules are
+included on the distribution tape.
+
+If you wish to use the  single-segment  compiler  type  the  following
+command:
+
+     .COPY SYS:FORTRA.EXE=SINGLE.EXE
+
+FORTB.EXE, FORTC.EXE, and so on will no longer be used.
+
+
+
+3.3  BUILDING FOROT6.EXE AND FORLIB.REL FROM SOURCES
+     ________ __________ ___ __________ ____ _______
+
+This section describes the  procedures  for  building  FOROT6.EXE  and
+FORLIB.REL  from  sources  if modifications to the standard FOROTS and
+FORLIB are desired.
+
+The control file B10FRS.CTL can be used to  build  FOROTS  and  FORLIB
+from  the  sources.   The  build  process  uses  structure  DSKP:  and
+field-image software from ersatz device DEC:  ([10,7]).
+
+This control file has successfully built and  loaded  the  FOROTS  and
+FORLIB  at  the  Digital  Equipment  Corporation  -  Marlboro computer
+facilities.  This, however, in no  way  guarantees  its  operation  or
+support.
+
+To run the control file use the following command:
+
+     .SUBMIT B10FRS.CTL/RESTART/TIME:0:30:00/UNIQUE:0
+
+
+                                 NOTE
+
+               The GALAXY  Version  2  QSRMAC.UNV  file
+               must be used to build FOROTS on TOPS-10.
+               A sample V2 QSRMAC.UNV  is  included  on
+               the  distribution  tape  in  the saveset
+               <FORTRAN-TOOLS>, but we  recommend  that
+               you  provide  your  own file to preserve
+               your  installation's   QUASAR   specific
+               parameters.
+INSTALLATION AND BUILDING OF NONSTANDARD FORTRAN              Page 3-4
+
+
+3.3.1  Using A Non-standard QUASAR Interface
+       _____ _ ____________ ______ _________
+
+If your site has  modified  the  QUASAR  system  file  QSRMAC.MAC,  to
+include  new  fields  in  the  "CREATE"  message for example, you must
+rebuild FOROTS from sources.  If you have  added  non-standard  fields
+that  should  not  be  left blank, you must modify FOROPN.MAC near the
+label "CLSQ", otherwise FORTRAN programs will not be able to  use  the
+DISPOSE='<queue>' options of the CLOSE statement.
+
+
+
+3.3.2  Building A FOROT6 With Symbols
+       ________ _ ______ ____ _______
+
+FOROT6.EXE does not normally contain symbols.  This configuration  was
+assumed  to  be the generally most desirable for TOPS-10 sites so that
+memory can be conserved as much as possible.  However,  this  prevents
+easy   debugging  or  patching  of  FOROT6.   To  build  symbols  into
+FOROT6.EXE, you must edit the file  F10OTS.CCL  and  comment  out  the
+first  line  containing  the /SET switches, and remove the ";" comment
+character from the next line that contains the /SET switches.  This is
+the  configuration  that  loads  symbols.   You  will notice that more
+memory must be allocated (The PSECT origins are lower).
+
+If the FOROTS you  are  building  contains  patches  or  is  otherwise
+different  from  the  vanilla  released  FOROTS,  you  may encounter a
+problem when FOROTS is rebuilt using this updated LINK  command  file.
+The likely problems and their recovery procedures are:
+1.  PSECT overlap - You must move F.CODE and/or F.ERR down;  LINK will
+provide the information you need in the error message.
+2.  Not enough room for symbols after  F.ERR  -  You  must  move  down
+F.CODE and F.ERR origins.
+3.  ?Page UUO error 4 - You must move up F.CODE and F.ERR origins.
+
+
+
+
+3.4  BUILDING FORDDT FROM SOURCES
+     ________ ______ ____ _______
+
+This section describes the procedures for building FORDDT from sources
+if modifications to the standard FORDDT are desired.
+
+The control file B10FDT.CTL can be used to build FORDDT from  sources.
+The  build process uses structure DSKP:  and field-image software from
+ersatz device DEC:  ([10,7]).
+
+This control file has successfully built and loaded the FORDDT at  the
+Digital  Equipment  Corporation - Marlboro computer facilities.  This,
+however, in no way guarantees its operation or support.
+
+To run the control file use the following command:
+
+     .SUBMIT B10FDT.CTL/RESTART/TIME:0:30:00/UNIQUE:0
+INSTALLATION AND BUILDING OF NONSTANDARD FORTRAN              Page 3-5
+
+
+3.5  APPLYING SOURCE PATCHES TO THE FORTRAN PRODUCT
+     ________ ______ _______ __ ___ _______ _______
+
+Source patches (edits) are  published  in  the  DECsystem-10  Software
+Dispatch  as  a problem description, accompanied by one or more FILCOM
+files  which  detail  some  number  of  source  module  changes.   The
+specified  problem  is  eliminated by insertion of the source changes,
+and rebuilding  the  affected  FORTRAN  product  component  using  the
+procedures described above.
+
+In general, each edit to the product consists of a new  entry  in  the
+revision  history comments, a change to the edit number of the product
+component, and some number of changes to the code.  Code  changes  are
+pinpointed by a line of commentary (banner line) that accompanies each
+non contiguous set of source line changes.
+
+The component revision histories and edit number definitions are found
+in  REVHST.MAC  for  the compiler, FOROTS.MAC for the library and OTS,
+and FORDDT.MAC for the debugger.  In  addition,  the  compiler  source
+modules  all  have  a local edit number and revision history, found at
+the beginning  of  each  source  module.   All  new  revision  history
+comments  will  always  precede  the  line "***** End Revision History
+*****".
+
+Banner lines, which are provided only as a tool for  patch  insertion,
+are  NOT  to  be added to the sources.  They are comment lines, taking
+the forms:
+
+!**;[nnnn] Where field 1, Where field 2, XXX, Date - for BLIS10 sources
+                         or
+;**;[nnnn] @ TAG + (or -) mL, Action, XXX, Date - for MACRO sources
+
+         Where field 1:  Routine, module, or macro name.
+
+         Where field 2:  @ line mmmm:    where mmmm is the line number
+                                         taken from a compiler listing
+                                         of the module. The word "line"
+                                         may not always appear.
+
+                         @ text:         where text is used to describe
+                                         positioning when line numbers
+                                         are not available (such as
+                                         REQUIRE files).
+
+         TAG:            Closest unique MACRO tag to the source change.
+                         May be qualified with feature test indicators.
+
+         mL:             The change goes at m Lines down (+) or up (-)
+                         from the specified TAG. Using an editor to
+                         position to the line defining the TAG, and
+                         then advancing m lines will assure correct
+                         positioning for the actual source change.
+
+         Action:         The usual 3 are: inserted x lines, deleted
+                         x lines, or replaced x lines.
+INSTALLATION AND BUILDING OF NONSTANDARD FORTRAN              Page 3-6
+
+
+The BLIS10 line numbers referenced are those produced by compiling the
+distributed version of the module, using the distributed REQUIRE files
+(if any are required).  Distributed means exactly as  they  appear  on
+the FORTRAN distribution tape, with no edits installed.
+
+In situations where lines of  code  are  deleted,  a  single  line  of
+commentary will be left behind containing the edit number that removed
+the code.  This line MUST remain in the sources (just as banner  lines
+must  NOT  appear).   Failure  to  adhere  to  these  rules  may cause
+difficulties with later edits that give line counts from MACRO  module
+TAGs used in previous edits.
+
+Each changed line of source code (where  feasible),  will  be  flagged
+with an edit indicator [nnnn] in commentary associated with the source
+line.  For MACRO changes, this text will usually appear as  the  first
+item in the comment field, such as:
+
+                 MOVEI   T1,3            ;[1234] Get error count
+
+For BLIS10 changes, this text will  generally  appear  down  the  left
+margin of the source module, such as:
+
+         %[1234]%        T1 _ 3;         !Get error count
+but may also appear as the first item in the comment field.
+
+
+
+
+
+
+
+
+
+
+
+
+                              CHAPTER 4
+
+               BUILDING DBMS VERSION 5A WITH FORTRAN-10
+
+
+
+
+This chapter describes how to build FORTRAN-10 with DBMS Version 5A.
+
+First, install the accompanying LINK patches (see the  FORTRAN  Beware
+file).   These  patches  enable  PSECTED  FOROTS and TWOSEG DBMS to be
+combined  into  a  single  module.   This  version  of  LINK  is   not
+recommended for any other use.
+
+Make sure you have:
+FOROTS.RLS
+FORCNV.RLS
+FORDBM.RLS
+FOREND.RLS
+FORERR.RLS
+FORFMT.RLS
+FORIO.RLS
+FORMEM.RLS
+FOROP.RLS
+FOROPN.RLS
+FORTRP.RLS
+FORXIT.RLS
+FORHAK.REL
+and a non-DBMS FORLIB.REL in your build area.   Create  the  following
+file, called 10500.FIX:
+
+     .EDIT 10500
+     .MODULE DBGATE
+     .INSERT OTSCALL+10,REPLACE,<PUSHJ P,DBMS.>
+            PUSHJ   P,DBMS%##
+     .ENDI
+     .ENDE
+
+In the DBMS10.CTL file, at label QFORT, change the following .R MAKLIB
+command sequence:
+
+     .R MAKLIB
+     *FORLIB=FORLIB/DELETE:FORDBM
+     *FORLIB=FORLIB,DBSFOR/APPEND,DBS10/APPEND,DBSANY/APPEND,SCHIO1/APPEND
+     *FORLIB=FORLIB/INDEX
+BUILDING DBMS VERSION 5A WITH FORTRAN-10                                Page 4-2
+
+
+to
+
+     .R MAKLIB
+     *DBSFOR=DBSFOR,10500/FIX
+     *FORLIB=DBSFOR,DBSANY/APP,DBS10/APP,SCHIO1/APP,FUNDEF/APP,FORLIB
+     /APP
+     *FORLIB=FORLIB/INDEX
+
+Then change the following .R LINK command sequence:
+
+     .R LINK
+     *@DBSCS1F
+     .SAVE FDBOTS
+
+to
+
+     .R LINK
+     *@F1DOTS
+     .RU FDBOTS
+     .SSAVE FDBOTS
+     When you are satisfied that the build has gone correctly,
+     rename FDBOTS.EXE to be FOROT6.EXE.
+
+
+
+
+
+
+
+
+
+
+
+
+                                   CHAPTER 5
+
+                    BUILDING SORT VERSION 4C WITH FORTRAN-10
+
+
+
+To install SORT Version 4C with FORTRAN-10, just restore the file FSORT.EXE from
+the  SORT  distribution tape and place on SYS:.  The necessary interface routine
+is built into FORLIB.REL.
+
+
+
+[End of FORTRA.INS]
+
+
+
+
+merlyn, [11/29/25 12:55]
+Does your version of decwar compile cleanly?
+
+Noah Smith, [11/29/25 12:56]
+there are a few warnings -
+
+merlyn, [11/29/25 12:56]
+loop warnings?
+variable changed in loop?
+
+Noah Smith, [11/29/25 12:57]
+will show ya - just a sec
+
+merlyn, [11/29/25 12:57]
+If so I fixed all that
+not one warning now
+At some point I'd like you to stress test my version to see if my lock code works
+
+Noah Smith, [11/29/25 12:58]
+utexas-1  | PLACE   
+utexas-1  | 00719               call phadam (2, j, id, phit, .FALSE.)       !hit him
+utexas-1  | !
+utexas-1  | %FTNDIM Line:00719 Possible DO index modification inside loop
+utexas-1  | 
+utexas-1  | %FTNWRN   PLNATK        No fatal errors and 1 warning
+utexas-1  | PLNRMV  
+utexas-1  | POINTS  
+utexas-1  | PRIDIS  
+utexas-1  | PRLOC   
+utexas-1  | PROMPT  
+utexas-1  | RADIO   
+utexas-1  | REPAIR  
+utexas-1  | ROMDRV  
+utexas-1  | 00696             if (dispc (i,j) .ne. DXSTAR)  goto 100        !star?
+utexas-1  | %FTNDIM Line:00696 Possible DO index modification inside loop
+utexas-1  | %FTNDIM Line:00696 Possible DO index modification inside loop
+utexas-1  | 
+utexas-1  | %FTNWRN   ROMSTR        No fatal errors and 2 warnings
+utexas-1  | ROMTOR  
+utexas-1  | SCAN    
+utexas-1  | 00795             if (dispc (i,j) .eq. DXBHOL)  call setdsp (i, j, 0)
+utexas-1  | %FTNDIM Line:00795 Possible DO index modification inside loop
+utexas-1  | %FTNDIM Line:00795 Possible DO index modification inside loop
+utexas-1  | %FTNDIM Line:00795 Possible DO index modification inside loop
+utexas-1  | %FTNDIM Line:00795 Possible DO index modification inside loop
+utexas-1  | 
+utexas-1  | %FTNWRN   SET           No fatal errors and 4 warnings
+utexas-1  | SHIELD  
+utexas-1  | 00700               object = dispc (V,H)
+utexas-1  | %FTNDIM Line:00700 Possible DO index modification inside loop
+utexas-1  | %FTNDIM Line:00700 Possible DO index modification inside loop
+utexas-1  | 00710               call setdsp (V, H, 0)
+utexas-1  | %FTNDIM Line:00710 Possible DO index modification inside loop
+utexas-1  | %FTNDIM Line:00710 Possible DO index modification inside loop
+utexas-1  | 
+utexas-1  | %FTNWRN   SNOVA         No fatal errors and 4 warnings
+utexas-1  | STATUS
+
+Noah Smith, [11/29/25 12:59]
+like that
+
+merlyn, [11/29/25 12:59]
+variable mod in loop
+all fixed
+yeah do a diff
+and then do the call with it
+
+merlyn, [11/29/25 1:05]
+the decfix.mac program does that
+well, decfix.mac simply renames the executable to itself
+it's a real hack
+
+merlyn, [11/29/25 1:06]
+when the executable is renamed the swapper removes the high segment
+There is no UUO to do this
+it's like when the endflg is set
+
+Noah Smith, [11/29/25 1:07]
+ok, think am understanding
+
+merlyn, [11/29/25 1:07]
+see the two decwar versions
+one is from gam:
+the other is 1,27
+the gam is the UT version
+the HIGH segment is how the jobs share data
+the decfix.mac program will remove the high segment
+There is also some code
+at lest in the cis version
+which will create another high segment if the max players are exceeded
+I don't remember exactly how it works...I think it renames the executable and then reruns the game
+this maps to a NEW high segment with the NEW name
+
+merlyn, [11/29/25 1:11]
+It's used in CIS version so if the game is full and more players
+wish to play a new galaxy will be created
+It's in SETUP.FOR I think and then calls routines in WARMAC.MAC
+I only got it to work once
+because I had to create more than 10 telnet clients
+it does work
+
+Noah Smith, [11/29/25 1:12]
+is there a tops10 command to remove something from high seg?
+can't remember right now
+
+merlyn, [11/29/25 1:13]
+no...It's a total hack the rename trick
+you can yuse rename command
+rename the executable to itself
+remove is del in tops10
+see dec10s used segment offset registers to map the high segment
+it was only later in the kl10s that true paging became real
+and that was because of tenex (tops20)
+
+Noah Smith, [11/29/25 1:15]
+sorry hit return - is that sys command to see segment offset registers?
+
+merlyn, [11/29/25 1:15]
+you can look at high segments with sys d
+sys d will show the high segments and if they are swapped
+it only show dormant high segments
+dormant being defined as segments which are NOT referenced
+by any job
+of course tops20 was fully demand paged
+that was something DEC got from BBN
+
+Noah Smith, [11/29/25 1:18]
+cool - yep i see it - sys d is a good one
+
+Noah Smith, [11/29/25 1:18]
+i need to keep all these notes - copypaste time! haha
+
+merlyn, [11/29/25 1:19]
+try this
+r sysans
+like top
+
+Noah Smith, [11/29/25 1:20]
+it's top!
+hahahah
+
+merlyn, [11/29/25 1:20]
+tops10/20 was so far ahead of its time
+1960(s)
+thats for vt100
+
+merlyn, [11/29/25 1:22]
+ever run r opr ?
+or opser?
+opser is like tux or screen
+allows multiple terminals of one login
+so the operator for example could run multiple jobs on one terminal
+and switch between them
+
+merlyn, [11/29/25 1:27]
+Status of Colossus at 18:28:03 on 28-Nov-125
+No operator on duty
+Uptime 321:36:08, 125% Null time = 124% Idle + 1% Lost, 6% Overhead
+20 Jobs in use out of 50.  20 logged in, 13 detached.
+Job    Who     Line#  What   Size(P)  State  Run Time
+ 1    [OPR]  DET53  STOMPR  9+8  SL         4 01
+ 2    [OPR]   1  SYSTAT  21+SPY  RN      8:21
+ 3    [OPR]  CTY  OPSER  5+6  HB         0
+ 4    [OPR]  DET53  MX  121+45  HB      1:42
+ 5    [OPR]  P0J3     4  ^C         0
+ 6    [OPR]  DET53  ACTDAE  70+39  SL   2:49:00
+ 7    [OPR]  DET53  DAEMON  20+SPY  SL   5:01:25
+ 8    [OPR]  DET53  FILDAE  17  HB         0
+ 9    [OPR]  DET53  QUASAR  61+39  SL     51:08
+10    [OPR]  DET53  PULSAR  65+39  HB         0
+11    [OPR]  DET53  CATLOG  30+39  HB         0
+12    [OPR]  DET53  ORION  75+39  SL   2:05:50
+13    [OPR]  DET53  BATCON  45+39  SL         2
+14    [OPR]  DET53  NML  13+135  HB   3:25:36
+15    [OPR]  P1J3     4  ^C         0
+16    [OPR]  DET53  LPTSPL  73+39  HB         0
+17    [OPR]  DET53  MIC  5+15  SL        10
+18    [OPR]  P2J3     4  ^C         0
+19    [OPR]  P3J3     4  ^C      8:21
+20    [OPR]  P4J3  FAL-10  96+39  SL        47
+n means job runs in HPQ n
+Jnn is the controlling job, Pnn corresponds to TTY55+
+
+merlyn, [11/29/25 1:27]
+notice the P terminals
+
+Noah Smith, [11/29/25 1:28]
+yep - those p terminals are opser?
+
+merlyn, [11/29/25 1:28]
+yes

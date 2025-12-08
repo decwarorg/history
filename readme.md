@@ -15,13 +15,11 @@ you realize what decwar really was. it was a whole universe. it was packed with 
 
 other links
 
-- https://github.com/drforbin/decwar/discussions - decwar central
 - https://en.wikipedia.org/wiki/Decwar - wikipedia page
-- http://hsnewman.freeshell.org/decwar.htm - harris newman's decwar page
-- https://www.youtube.com/@statespacedev - 'bad vids'
-- https://gitlab.com/decwar/utexas - pure stone age 'going backwards' reconstruction of utexas 2.3
+- https://www.youtube.com/@statespacedev - some videos
+- https://gitlab.com/decwar/utexas - pure 'going backwards' reconstruction of utexas 2.3 sdt
 - https://gitlab.com/decwar/merely-players - pure python robots
 - https://gitlab.com/decwar/galaxy - pure p5js galaxy display
-- https://gitlab.com/decwar/history - pure 'junkpile':)
+- https://gitlab.com/decwar/history - pure history
 
 ![memory-stop](./images/msc/memory-stop.png)
