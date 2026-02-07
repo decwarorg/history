@@ -11,7 +11,7 @@ we have the help file from 2.2, that's true. but no source code to go with that.
 
 # important files
 
-as part of cleanup 'post project push button' - collected current understandings of 'primodial tape'. that's all a nutshell readme now - https://gitlab.com/decwar/utexas/-/tree/main/staging
+as part of cleanup 'post project push button' - collected current understandings of 'primodial tape'. that's all a nutshell readme now - https://github.com/decwarorg/utexas/-/tree/main/staging
 
 can note we're the very first people known to have paid much attention to the five files discussed here - have always asked and heard only noise on this topic - actually, this topic is really one of the things that fully kicked off 'project utexas' 
 

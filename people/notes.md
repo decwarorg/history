@@ -81,7 +81,7 @@ jakydude — 18:05
 yeah
 Noah — 18:05
 k, home on laptop - thinking this's another recurring theme - so started a new 'nutshell page' - how's this, up top, here? 🤔 
-https://gitlab.com/decwar/history/-/blob/main/technical/game-length.md?ref_type=heads 
+https://github.com/decwarorg/history/-/blob/main/technical/game-length.md?ref_type=heads 
 GitLab
 technical/game-length.md · main · decwar / history · GitLab
 collaboration around preserving decwar history https://www.youtube.com/@statespacedev

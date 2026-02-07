@@ -15,9 +15,9 @@ other links
 
 - https://en.wikipedia.org/wiki/Decwar - wikipedia page
 - https://www.youtube.com/@statespacedev - some videos
-- https://gitlab.com/decwar/utexas - pure 'going backwards' reconstruction of utexas 2.3 sdt
-- https://gitlab.com/decwar/merely-players - pure python robots
-- https://gitlab.com/decwar/galaxy - pure p5js galaxy display
-- https://gitlab.com/decwar/history - pure history
+- https://github.com/decwarorg/utexas - pure 'going backwards' reconstruction of utexas 2.3 sdt
+- https://github.com/decwarorg/merely-players - pure python robots
+- https://github.com/decwarorg/galaxy - pure p5js galaxy display
+- https://github.com/decwarorg/history - pure history
 
 ![memory-stop](./images/msc/memory-stop.png)
