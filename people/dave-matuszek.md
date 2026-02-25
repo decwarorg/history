@@ -1,14 +1,33 @@
-wrestled with esr’s file sst-doc.xml and here’s what can somewhat make sense of
+
+A great topic to explore with Dave Matuszek is the role of time-sharing in the early days of the UTCC. When they received the first CDC machine in 1966, time-sharing probably wasn't a priority; operations were likely limited to pure, sequential batch processing (single-user jobs without simultaneous processing).
+
+It would be interesting to investigate how multi-user time-sharing evolved at the UTCC—specifically, who was responsible for it and how it was implemented. We know they eventually bought smaller CDC machines to handle some time-sharing duties before bringing in DEC hardware. We should investigate that transition: Was the primary motivation for acquiring the DEC hardware specifically to facilitate time-sharing? That is the key question.
+
+main thing is - let’s just go direct to the person who was actually on the cdc6600?:)  
+dave matuszek [https://www.linkedin.com/in/david-matuszek-018a2/](https://www.linkedin.com/in/david-matuszek-018a2/)   
+upenn theme seems to be emerging. dave matuszek is currently a cs prof at upenn.
+
+* 1973, ut trek, written in basic, grady hicks and jim korp on utexas cdc6600  
+* 1974, ut fortran, aka super star trek, single player fortran on utexas cdc6600, dave matuszek and paul reynolds  
+* mid 70s, war, fortran two player version written for utexas cdc6600, author unknown, rewritten by robert schneider
+
+first three lines of [ut-trek.basic](https://gitlab.com/esr/super-star-trek/-/blob/e36322086680276af30cd3e881b51bba5e04eee9/historic/UT-Trek.basic) 
+
+1  PRINT "U. OF TEXAS STAR TREK GAME BY GRADY HICKS AND JIM KORP."  
+2  PRINT "GENERAL IDEA STOLEN FROM PENN. U. BY HICKS."  
+3  PRINT "VASTLY IMPROVED, AND ADAPTED TO TAURUS BY KORP, 5 APRIL 73."
+
+wrestled with eric raymonds’s file sst-doc.xml and here’s what can somewhat make sense of
 
 # 1971 mike mayfield
 
 The original Star Trek seems to have been written by Mike Mayfield at the beginning of the 1970s. His first version was in BASIC for a Sigma 7 in 1971; in 1972 he rewrote it in Hewlett Packard BASIC. The source is included in the SST2K repository. In January 1975 it became part of the DECUS library under the name SPACWR. While some people claim to have recollections of playing Trek games in the late 1960s, the earlier ones seem actually to have been variants of SPACEWAR, the earlier space-combat game on the PDP-1. Mayfield wrote in 2000 that he invented the Trek-style galactic grid, and the evidence seems to back that up. Some of the confusion probably stems from the fact that Mayfield's original and several early descendants were distributed under the name SPACWR. Many different versions radiated from Mayfield's original.
 
-Most of the ones in BASIC are descended from a SPACWR version that David Ahl published in 101 BASIC Computer Games, July 1973\. This was a port of Mayfield's version obtained from the HP Contributed Programs library.
+Most of the ones in BASIC are descended from a SPACWR version that David Ahl published in 101 BASIC Computer Games, July 1973. This was a port of Mayfield's version obtained from the HP Contributed Programs library.
 
 # 1973 grady hicks
 
-Our SST2K is descended from a Taurus BASIC program by Grady Hicks dated 5 April 1973\. This does not appear to have been derived from Ahl's SPACWR. The header says "GENERAL IDEA STOLEN FROM PENN.U.", and the game has several features not present in SPACEWR: notably, the Death Ray, ramming, and the Klingon summons to surrender. And, of course, it predates Ahl's book. The source is included in the SST2K repository.
+Our SST2K is descended from a Taurus BASIC (CDC 6600) program by Grady Hicks dated 5 April 1973. This does not appear to have been derived from Ahl's SPACWR. The header says "GENERAL IDEA STOLEN FROM PENN.U.", and the game has several features not present in SPACEWR: notably, the Death Ray, ramming, and the Klingon summons to surrender. And, of course, it predates Ahl's book. The source is included in the SST2K repository.
 
 # 1973 dave matuszek, paul reynolds
 
