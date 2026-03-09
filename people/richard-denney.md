@@ -1,0 +1,79 @@
+On Mon, Mar 9, 2026 at 3:15 PM Richard Denney <rich.denney53@gmail.com> wrote:
+re: are there technical topics about use of the material and how it can become Archived ... 
+
+Noah - Clive is way more the historian on this than myself and I don't really know much to add w.r.t. archiving the material. I've given a few things to the Briscoe, and of course to the AHC, but really don't know the ropes per se.
+
+I have some more photos I can send later but staff wise I think those I sent pretty much covers most everyone. Well .. Cecil one of the operators was missing .. he left in 82. And Debbie (Rice?) that replaced Norma is not included .. 
+
+Clive .. there's also the topic of DEC-10 users ... Mary Jo (?) I remember .. those folks in the Linguistic group .. there were a number in the offices on the floor that surrounded the DEC-10.
+
+Noah - You mentioned the Comanche; I was lucky enough to host the Elder Council visit to Austin in 2017, and get the Comanche Peak marker up in 2023. Those stories and more are written up here:
+
+https://traviscountyhistorical.blogspot.com/
+
+Keep me posted .. :-)
+
+On Sun, Mar 8, 2026 at 5:22 PM Richard Denney <rich.denney53@gmail.com> wrote:
+Noah - attached a zip file w/ photos from Halloween night before they shut down the DEC-10 .. so goes w/ Clive's Soul of an Old Machine. Of particular interest to you might be the one w/ t-shirts DR. FONKEN NEVER PLAYED DECWAR. 
+
+So to complete your run of managers, after David Phillips, Tommy Loomis was manger (check me on that Clive?). Or maybe he took over after the shutdown with the DEC-20. That was around when I left so a bit fuzzy.
+
+- Rich
+
+Noah - went back and looked at photo I sent. That is Rick Watson (rip). Clive can tell you a lot more about him. In that photo left to right:
+
+Kathleen (programmer new hire .. went on to bunches of companies, Tandem, IBM .. had lunch w/ her just a week ago), Mildred (help desk, rip), Norma (secretary), Dawn (programmer rip .. Clive can give you a lot more on her as they stayed in close touch), Bob Hysick (sp?), Doug DeGroot (programmer, PhD later etc.), George, David (manager), Rick Watson, and of course Elissa V operator
+
+Noah, I'm on the Travis Co. Historical Commission .. funny this is now "history" .. Ill look through old photos .. Clive is of course wayyyy more qualified to talk about the Dec-10. I was there 77-83 .. did my masters under Elaine Rich in AI, then went on ride the AI til the big crash (AI winter #2). 
+
+Attached is a page from the DECUS library .. and don't ask me where I found that; I stumbled on it online somewhere. That's me w/ D2D
+
+Keep me posted! 
+
+ re: me far right 
+
+No, I was taking the photo on this one .. I was and am still a big photo nut so was always taking photos of something
+
+On 3/7/2026 7:39 PM, Noah H Smith wrote:
+Excellent photos Rich, and I think I recognize you on the far right?:)
+Thanks for discussing these names, it's very helpful as we're just
+beginning to really identify people and contact them to hopefully get
+their stories. Probably our main idea is to add all we can to the
+archive that's already at the Briscoe Center for American History,
+there in the LBJ School complex. We've also got a couple book projects
+underway, and one of those is aimed to be a historical dissertation of
+the 58 to 82 period and join in as part of the archive. Would love to
+tell you both more about it:)
+
+Cheers,
+Noah
+
+On Sat, Mar 7, 2026 at 8:00 PM Richard Denney <rich.denney53@gmail.com> wrote:
+Was reading the link below; saw the photo from 76 with Melissa Vogel (I think it was Melissa not Elissa .. but ...) in photo at the console. Her going away part in 78. Also George Culp mentioned. And David Phillips had taken on manager of the Dec-10 by 77 when I got there.
+
+Not sure where Clive was that day? At least three of teh good people in that photo have left us RIP
+
+:-)
+
+
+On 3/7/2026 7:32 AM, Noah H Smith wrote:
+
+Fantastic, thanks Rich - I remember Clive's Soul of an Old Machine from back in the day and was very happy to rediscover it now as well:) Would like to do a post about it soon actually, and hoping to gather some more vintage photos for that - something building on this post from last week:) Would be very happy to have you both onboard for the ride as things keep rolling along. It's very relaxing somehow:)
+
+https://www.reddit.com/r/vintagecomputing/s/4kuXGNCNUE
+
+Cheers,
+Noah
+
+On Sat, Mar 7, 2026, 2:19 PM Richard Denney <rich.denney53@gmail.com> wrote:
+Hi Noah - I'm CCing Clive Dawson here .. he's worked w/ some folks on a similar topic w/ meetings at UT etc. He's way more qualified than myself to help you out.
+
+- Rich
+
+On 3/6/2026 10:22 PM, Noah H Smith wrote:
+
+Hi Richard, I'm with a small org researching the old CC, especially during the seventies and early eighties (https://decwar.org). Just today I learned about your photo collection at the Austin History Center, and a little about your time working in the CC. I'd very much like to chat and discuss with you. We are gathering Oral History interviews and would be very excited to do one with you.
+
+Best regards,
+Noah
+
