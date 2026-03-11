@@ -5,7 +5,7 @@ Many links found googling "dp10 dungeon daglow source" including an ita note in 
 https://github.com/PDP-10/its/issues/388
 but I don't know what that is about. Does it mean it is in the its kit?
 
-On Fri, Feb 6, 2026 at 6:11 PM Robert Robichaud via groups.io <robichaud74=gmail.com@groups.io> wrote:
+On Fri, Feb 6, 2026 at 6:11 PM Robert Robichaud via groups.io <robichaud74=gmail.com_at_groups.io> wrote:
 Hi All,
 
 I'm currently trying to do some research on a long lost PDP-10 game by the well-known designer Don Daglow. This would be "Dungeon", which he wrote circa 1975-1976 while a grad student at Claremont Graduate University in California. He continued to expand and refine it over the next few years, and it apparently made it out through some limited DECUS tape distributions, but unfortunately none of these have ever been found. There may have also been an HP3000 port at some point, and I've put out some inquiries about that, as well as reaching out to CGU and Mr. Daglow himself.

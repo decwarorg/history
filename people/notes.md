@@ -84,7 +84,7 @@ k, home on laptop - thinking this's another recurring theme - so started a new '
 https://github.com/decwarorg/history/-/blob/main/technical/game-length.md?ref_type=heads 
 GitLab
 technical/game-length.md · main · decwar / history · GitLab
-collaboration around preserving decwar history https://www.youtube.com/@statespacedev
+collaboration around preserving decwar history https://www.youtube.com/_at_statespacedev
 Image
 can well believe should throw these nutshell pages into ai and make them clearer - may try that this weekend 👍
 hold on 
@@ -163,11 +163,11 @@ The final arc explores DECWAR’s legacy: how a small campus passion project qui
 
 # 20250603
 
-From: Harris Newman <harris.s.newman@gmail.com>
+From: Harris Newman <harris.s.newman_at_gmail.com>
 Date: Tue, 3 Jun 2025 06:57:04 -0700
 Subject: Re: history question
-To: Noah Smith <noah@statespace.dev>
-Cc: eric.freeman@utexas.edu
+To: Noah Smith <noah_at_statespace.dev>
+Cc: eric.freeman_at_utexas.edu
 
 I was on usenet (alt.sys.pdp10) in the early 90's searching, pleading for
 someone to release the code.  I at that time used sdf.org for email.  (If
@@ -200,7 +200,7 @@ Vowell,
 Hope this helps,  So, when can we play a game?
 HN
 
-On Mon, Jun 2, 2025 at 8:47=E2=80=AFPM Noah Smith <noah@statespace.dev> wro=
+On Mon, Jun 2, 2025 at 8:47=E2=80=AFPM Noah Smith <noah_at_statespace.dev> wro=
 te:
 
 > hi harris - just curious, and have cc'd eric here because we were just
@@ -753,7 +753,7 @@ Eric — 01:27
 ok
 Command: 
 Command: 
-Step expired, PC: 000001 (DATAO 774,@35034(14))
+Step expired, PC: 000001 (DATAO 774,_at_35034(14))
 sim>
 that is on current
 not your new one
@@ -821,11 +821,11 @@ these three can be skeleton for expanded utexas user guide
 20250629
 
 ---------- Forwarded message ---------
-From: Harris Newman <harris.s.newman@gmail.com>
+From: Harris Newman <harris.s.newman_at_gmail.com>
 Date: Sat, Jun 28, 2025 at 8:52 PM
 Subject: Re: history question
-To: Noah Smith <noah@statespace.dev>
-Cc: Eric Freeman <eric.freeman@austin.utexas.edu>
+To: Noah Smith <noah_at_statespace.dev>
+Cc: Eric Freeman <eric.freeman_at_austin.utexas.edu>
 
 
 I looked on the Texas Scholarworks for the item I gave to UT in 2011, and now it only has 1 file and it's a license:
@@ -849,11 +849,11 @@ Over time we accomplished our  goal, producing a number of versions of Decwar.  
 -Harris
 
 ---------- Forwarded message ---------
-From: Noah Smith <noah@statespace.dev>
+From: Noah Smith <noah_at_statespace.dev>
 Date: Sun, Jun 29, 2025 at 3:40 AM
 Subject: Re: history question
-To: <harris.s.newman@gmail.com>
-Cc: Eric Freeman <eric.freeman@austin.utexas.edu>
+To: <harris.s.newman_at_gmail.com>
+Cc: Eric Freeman <eric.freeman_at_austin.utexas.edu>
 
 
 harris, this is fantastic!!!:) thank you! comments directly from bob hysick - beautiful!:)

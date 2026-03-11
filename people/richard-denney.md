@@ -1,4 +1,4 @@
-On Mon, Mar 9, 2026 at 3:15 PM Richard Denney <rich.denney53@gmail.com> wrote:
+On Mon, Mar 9, 2026 at 3:15 PM Richard Denney <rich.denney53_at_gmail.com> wrote:
 re: are there technical topics about use of the material and how it can become Archived ... 
 
 Noah - Clive is way more the historian on this than myself and I don't really know much to add w.r.t. archiving the material. I've given a few things to the Briscoe, and of course to the AHC, but really don't know the ropes per se.
@@ -13,7 +13,7 @@ https://traviscountyhistorical.blogspot.com/
 
 Keep me posted .. :-)
 
-On Sun, Mar 8, 2026 at 5:22 PM Richard Denney <rich.denney53@gmail.com> wrote:
+On Sun, Mar 8, 2026 at 5:22 PM Richard Denney <rich.denney53_at_gmail.com> wrote:
 Noah - attached a zip file w/ photos from Halloween night before they shut down the DEC-10 .. so goes w/ Clive's Soul of an Old Machine. Of particular interest to you might be the one w/ t-shirts DR. FONKEN NEVER PLAYED DECWAR. 
 
 So to complete your run of managers, after David Phillips, Tommy Loomis was manger (check me on that Clive?). Or maybe he took over after the shutdown with the DEC-20. That was around when I left so a bit fuzzy.
@@ -48,7 +48,7 @@ tell you both more about it:)
 Cheers,
 Noah
 
-On Sat, Mar 7, 2026 at 8:00 PM Richard Denney <rich.denney53@gmail.com> wrote:
+On Sat, Mar 7, 2026 at 8:00 PM Richard Denney <rich.denney53_at_gmail.com> wrote:
 Was reading the link below; saw the photo from 76 with Melissa Vogel (I think it was Melissa not Elissa .. but ...) in photo at the console. Her going away part in 78. Also George Culp mentioned. And David Phillips had taken on manager of the Dec-10 by 77 when I got there.
 
 Not sure where Clive was that day? At least three of teh good people in that photo have left us RIP
@@ -65,7 +65,7 @@ https://www.reddit.com/r/vintagecomputing/s/4kuXGNCNUE
 Cheers,
 Noah
 
-On Sat, Mar 7, 2026, 2:19 PM Richard Denney <rich.denney53@gmail.com> wrote:
+On Sat, Mar 7, 2026, 2:19 PM Richard Denney <rich.denney53_at_gmail.com> wrote:
 Hi Noah - I'm CCing Clive Dawson here .. he's worked w/ some folks on a similar topic w/ meetings at UT etc. He's way more qualified than myself to help you out.
 
 - Rich

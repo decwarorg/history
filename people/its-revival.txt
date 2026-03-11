@@ -9,20 +9,20 @@ Also, please mention that Angelo wrote the Knight TV emulator.
 
 larsbrinkhoff on Mar 5, 2024 · edited by larsbrinkhoff
 Long before I was involved Ken Harrienstien had ITS running on his emulator, and somewhat later Bob Supnik repeated the feat for his SIMH suite. However, these two emulators "only" support the KS10, which doesn't have the full glory of AI lab hardware.
-Huge strides were enabled by @rcornwell adding ITS support to his KA10 emulator. (The emulator was built on Supnik's SIMH framework.) We worked together on this during fall 2017, ultimately booting successfully on January 8, 2018. Much of the following AI lab emulation came out of this.
-@philbudne added Type 340 support, which was the start of many additions to support the AI lab hardware. Actually, Chaosnet came before this, but to me it felt like the 340 kicked off something. Later @aap and I added the Knight TV which really added momentum.
-@eswenson1 and @atsampson did almost everything related to Maclisp, Macsyma, Muddle, and Zork.
-@bictorv is the cherished champion of Chaosnet.
-Without the effort of @lisper et al we probably wouldn't have the wealth of backup data to draw from. Without that, ITS would only have been a whisper of a ghost of its former grandeur.
-And of course, ITS preservation started already in the 80s with @bawden and many others, most of which are unsung heroes.
+Huge strides were enabled by _at_rcornwell adding ITS support to his KA10 emulator. (The emulator was built on Supnik's SIMH framework.) We worked together on this during fall 2017, ultimately booting successfully on January 8, 2018. Much of the following AI lab emulation came out of this.
+_at_philbudne added Type 340 support, which was the start of many additions to support the AI lab hardware. Actually, Chaosnet came before this, but to me it felt like the 340 kicked off something. Later _at_aap and I added the Knight TV which really added momentum.
+_at_eswenson1 and _at_atsampson did almost everything related to Maclisp, Macsyma, Muddle, and Zork.
+_at_bictorv is the cherished champion of Chaosnet.
+Without the effort of _at_lisper et al we probably wouldn't have the wealth of backup data to draw from. Without that, ITS would only have been a whisper of a ghost of its former grandeur.
+And of course, ITS preservation started already in the 80s with _at_bawden and many others, most of which are unsung heroes.
 
 
 larsbrinkhoff on Mar 23, 2024
-One more: @philbudne's 340 emulation was the first of the KA10 specific "exotic" devices. Not strictly specific to the AI lab, but am important one for many early MIT programs: TECO, DDT, SHRDLU, etc.
+One more: _at_philbudne's 340 emulation was the first of the KA10 specific "exotic" devices. Not strictly specific to the AI lab, but am important one for many early MIT programs: TECO, DDT, SHRDLU, etc.
 
 
 larsbrinkhoff on Jun 8, 2024 · edited by larsbrinkhoff
-I wrote this comment for @CuriousMarc's video: https://www.youtube.com/watch?v=E0Pp63gsdZI
+I wrote this comment for _at_CuriousMarc's video: https://www.youtube.com/watch?v=E0Pp63gsdZI
 I'll make a copy here. EDIT: strike out "first" (see below).
 I would like to add that many, many people have been involved over the years preserving, restoring, and reviving ITS. Oscar and I really are standing on the proverbal shoulders of giants.
 To tell a rambling story. Already in the 80s when ITS was still in use, people like Alan Bawden, Penny Berman, and David Moon preserved the old ITS backup tapes and transferred them to newer tapes. Much later Brad Parker et al did a huge job to read the bits off the tapes. There were thousands, not only from ITS but also other PDP-10s at MIT and other types of computers. Without this backup archive we would only have a small sliver of the full ITS environment we have today.
