@@ -1,3 +1,42 @@
+
+---------- Forwarded message ---------
+From: Richard Denney <rich.denney53@gmail.com>
+Date: Sun, Mar 15, 2026 at 2:31 PM
+Subject: Re: Tangent thread not about computers in any way
+To: Noah H Smith <noahhsmith@utexas.edu>
+
+TCHC does a lot of work on African American freedom cemeteries, and communities. I don't know anything about that one specifically. 
+
+Speaking of SWT, be sure to ask Clive about the "sister" Dec-10 that was there. I remember attending a LOTALUG meeting there a time or two (Louisiana, Oklahoma, Texas, Arkansas Local User Group) .. 
+
+
+---------- Forwarded message ---------
+From: Richard Denney <rich.denney53@gmail.com>
+Date: Sun, Mar 15, 2026 at 2:58 PM
+Subject: Re: UT Austin Computation Center and Photograph Collection
+To: Noah H Smith <noahhsmith@utexas.edu>
+Cc: <cohen@texas.email>, Clive Dawson <clivedaw@gmail.com>
+
+Close knit, definitely .. which is why we cont'd to meet at El Patio for so long! 
+
+Mildred Joseph married into the Joseph family in Austin that started El Patio. I shared an office w/ Mildred, and Clive (different times; two person offices) over the years. 
+
+I wouldn't count myself as being at the "heart" of the group (intellectually), but Clive and Rick Watson would definitely fit that description. Some of the group were even buds on the side .. Kathleen, Doug DeGroote (https://profiles.utdallas.edu/doug.degroot), I think Dawn, Cecil Wyche .. we all did some caving w/ UT cave club. Doug and I bought houses off Onion Creek about the same time (razed, all flood zone now). Norma moved to Colorado; visited her a time or two up there. She's back in Texas and her and Kathleen are still best friends. I remember Dawn, Debbie Rice, and Cecil hitting bars a time or two.
+
+Cecil and I are still close friends though he lives in SC now. 
+
+A lot of close friendships were formed in that time.
+
+Clive - I actually met up w/ Kathleen and her sister Lisa (who I hung out w back in the day) and other sister and a friend at El Patio couple weeks ago. I'm also proud to say my son and his girlfriend now consider El Patio the place to dine!
+
+Working at the HRC on the drag in the 70s and 80s was pretty special. Before Austin became the hot mess it is now. I remember the darn fire escape stairs at the HRC .. there were times you'd take the stairs to the 1st floor only to find the darn door locked :( 
+
+Oh, another staff member .. Don Blais was an operator; Cecil, Don and I hung out quite a bit. Photo of us at Bat Cave back in the day.
+
+Also attached a photo w/ Mildred and Sammy (his back to us). And then there was the time Clive's fiance (then) deleted her dissertation only to find we couldn't locate the backup tape .. still not sure how that happened .. I can't remember how the break room sat in the floor plan. Must have been between our office and David P's somewhere.
+
+
+
 On Mon, Mar 9, 2026 at 3:15 PM Richard Denney <rich.denney53_at_gmail.com> wrote:
 re: are there technical topics about use of the material and how it can become Archived ... 
 
