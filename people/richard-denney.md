@@ -1,6 +1,37 @@
 
 ---------- Forwarded message ---------
 From: Richard Denney <rich.denney53@gmail.com>
+Date: Mon, Mar 16, 2026 at 3:21 PM
+Subject: Re: UT Austin Computation Center and Photograph Collection
+To: Noah H Smith <noahhsmith@utexas.edu>
+
+Noah - working on this stuff as Im talking w/ IRS .. whew .. updated photo w/ Tommy Loomis called out. We need to get confirmation from Clive that Tommy took over .. I remember he had an office down the hall. Tommy was Board of Control, today's Comptroller Office. They had a 10 .. were located north of the Capitol building. When Tommy moved to UT I don't recall exactly. But the first time we met he was at BOC
+
+Both Rich C and Tommy wound up at Semantic Designs years later; Ira Baxter's company .. Ira and I were both at Schlumberger and had a common good friend Jorge Boria RIP, also at Schlumberger. Then later I wound up consulting at the company Jorge was with, TeraQuest Meterics .. software process consulting.
+
+https://www.infoworld.com/article/2211263/borland-acquires-consultancy-teraquest-metrics.html
+
+One of the principals at TQ is Joyce Statz who is now our neighorhood president and I do history articles for the newsletter.
+
+Small interconnected world
+
+---------- Forwarded message ---------
+From: Richard Denney <rich.denney53@gmail.com>
+Date: Mon, Mar 16, 2026 at 2:29 PM
+Subject: Re: UT Austin Computation Center and Photograph Collection
+To: Noah H Smith <noahhsmith@utexas.edu>
+Cc: Clive Dawson <clivedaw@gmail.com>
+
+re: Or, it could be that Clive and Rich were really at the heart of the UT DEC-10 group
+
+I'd remove me from being at the heart of the group lol !  Would suggest Clive proof read .. my "senior brain" does make mistakes ..  I remembered Elissa's name wrong :-(  
+
+I'm still foggy on who managed the 10 after David, and when David left actually. I remember Tommy taking over (?) .. but Clive did you then manage the 20 down the road and if so what did Tommy do? 
+
+83 my head was started to focus on the transition so recollection of events was foggier than even normal
+
+---------- Forwarded message ---------
+From: Richard Denney <rich.denney53@gmail.com>
 Date: Sun, Mar 15, 2026 at 2:31 PM
 Subject: Re: Tangent thread not about computers in any way
 To: Noah H Smith <noahhsmith@utexas.edu>
