@@ -1,4 +1,60 @@
 
+---------- Forwarded message ---------
+From: Clive Dawson <clivedaw@gmail.com>
+Date: Wed, Mar 18, 2026 at 8:11 AM
+Subject: Re: UT Austin Computation Center and Photograph Collection
+To: Noah H Smith <noahhsmith@utexas.edu>
+Cc: Richard Denney <rdenney@utexas.edu>, Rich Cohen <cohen@texas.email>, Donald Blais <0blaisde@gmail.com>
+
+Noah, please send Donald an invite to the Google group in case he’d like to join.
+
+Rich, the person you are thinking about across the hall at the Linguistics Research Center (LRC) was Dr. Helen Jo Hewitt, aka “HJ”.  She was a BIG fan of TECO, and was one of my “power” users.  She was one of the early “font hackers”, and I had developed a bunch of TECO macros for her.  She would come across the hall and pose an interesting problem, and a few minutes, or hours, or days(!) later, I would present her with another TECO macro for her growing collection. These tools would enable her, for example, to use a meta-language of her own creation to insert diacritics into a document, and then apply the appropriate macro to convert the meta-language into actual escape-sequence commands for the robotic typewriter to backspace, make micro-adjustments to the carriage, and type the appropriate symbol(s) to produce the desired diacritic at j-u-s-t the right position.
+Later on, as her daisy-wheel collection of different type-fonts grew, a macro would be used to type a partially-filled page of text, then command the typewriter to roll the page back to the beginning and pause. She could then switch in, say, the Greek daisy-wheel, after which the job would continue with the typewriter skipping directly to each blank spot where a Greek character needed to be typed.
+
+HJ and I stayed friends for years after she left UT until her death in 2017.  It helped that she was also a night owl!
+
+
+On Wed, Mar 18, 2026 at 7:52 AM Clive Dawson <clivedaw@gmail.com> wrote:
+Donald, please read through “this post here” below.  It probably needs some tweaking.
+
+Noah,  your plan for the oral history sounds fine.  We just have to find a good time.  (Tax day is approaching on April 15, and I have about 6 tax returns for myself and various relatives and friends I have to work on!)
+
+Rich, here’s my stab at the DEC-10 office layout, but my memory is fuzzy.   Starting clockwise from the south wall, east corner:
+There was an office with a window into the machine room. I remember George Culp occupied it for a brief time.  I also think you might have been there, as well as Dawn Cizmar.
+Next was the big room (party room!?) where the secretary was.  Debbie Rice, Norma, and before that was Janet Powell.  Do you remember her?  She was there for only about one year in 1977.  As I recall, her husband was in the Air Force at Bergstrom and she left when he got transferred.  That room was big enough that it must have had more occupants.  Maybe some desks for consultants, including Mildred?
+Next we proceed to the west wall, which had three offices.  First was the manager’s office, occupied by Pat Caroom and then by David Phillips.
+The middle office was me and Tommy Loomis, and maybe you at some point?  Perhaps also Doug DeGroot?
+The right hand office was Rick Watson and maybe Bob Hysick and/or Donald Blais?
+Proceeding to the north wall, we come to the printer room.  I don’t recall that anybody had an office in there.  Maybe there was a desk for the operators?
+The east wall had no doors, and was occupied by the entire row of DEC-10 cabinets.
+
+I will insert a brief anecdote about the printer room.  Because the main machine room was on a raised floor, you had to step down about 6 inches to go into any of the offices from the machine room.  But when they installed the raised floor, they did not increase the height of any of the doors.  Normally this was not a problem, since those doors were still about 78-80 inches high, so just about everybody (including me at 6’ 4”) could go through without stooping.  Except for one Saturday night.  I was always a night owl, and you could usually find me there in the wee hours of the morning working at my terminal.   On this particular occasion I was making some extensive changes to TECO 124.  We didn’t have WYSIWYG screen editors then, so every 30 minutes or so I would print out the file to get fresh copy to continue editing.  I would have to leave my office and walk across the machine room to go through the door of the printer room to retrieve my printout.  I guess I got a bit too excited after one particular edit, and I remember enthusiastically bounding across the machine room toward the printer room door in a rush to get the printout.  The next thing I knew I was lying on my back, having crashed into the top of the doorway.  I had blood spewing from a gash on my forehead and a sharp pain in my lower back where I had landed on the step!  Since there was nobody around to help me, I ended up phoning the UT Police who transported me to the University Health Center up on 26th Street to get patched up.  The most interesting part of the story is that unbeknownst to me, the Heath Center reported my accident to the UT Safety Office.  On Monday morning they sent somebody to inspect the doorways into the DEC-10 machine room.  They declared it a safety violation, and in less than two weeks had modified all the doors/doorways by extending their height by 6 inches!
+
+I was sad to hear about Robert Schneider’s death.   The T-shirt he was wearing was made especially for the DEC-10 going-away party in 1982.  The decision to shut down the -10 was hotly protested by staff and users alike.  It ended up going all the way up the UT Vice President for Research, Dr. Gerhard Fonken, who made the final decision.  Many, including Robert, had the view that the move had been made by a clueless UT executive who probably didn’t have any familiarity with the DEC-10, and that if he had played DECWAR even once, he might have changed his mind.  Wishful thinking…!
+
+Cheers,
+
+Clive
+
+On Wed, Mar 18, 2026 at 7:01 AM Clive Dawson <clivedaw@gmail.com> wrote:
+Hi All,
+
+I’m way behind in responding to all your emails.   Will try to partially catch up, going through items in roughly reverse order…
+
+I’m attaching a file that may be useful.  It is a list of all the “classified” employees of the Computation Center, from its founding to 8/31/1996.  I have taken the liberty of marking the people who were associated with the DEC-10 either because they worked there or had an office in the HRC where the DEC-10 was.  There are some notable people missing from the list, in particular: Bob Hysick!  I think maybe he was not a “classified” employee, even though I’ve forgotten what that term meant.  Maybe work-study students weren’t considered classified?   
+
+But my memory is faulty, so probably Rich D. will remember some others.   
+
+Also, I think it would be good to include Donald Blais in this discussion.  He has an excellent memory, and I’m sure he’ll have a lot to add once he gets up to speed on the discussion.
+
+Rich, as I recall, David Phillips was the last manager of the DEC-10.  The list shows that he left the CC in 1983, so that would make sense.  Several staff members had moved over to the Academic DEC-20, but I don’t remember who the manager was.  Maybe Don Kassebaum, who also managed the Research DEC-20 after I departed UT.    I left the DEC-10 around 1980 when the R20 arrived and stayed until 1985 when I went to MCC.
+
+I don’t remember what Tommy Loomis did after the DEC-10.  But he was around until 1985, so maybe he was one of the ones who went to the A20.
+
+More coming up…
+
+Clive
+
 Clive Dawson
 Mar 10, 2026, 12:44 AM (1 day ago)
 to Rich, me, Richard
