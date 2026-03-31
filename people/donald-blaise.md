@@ -19,50 +19,50 @@ Later I acquired hours at the IBM site in Graduate School of Business.
 Here are staff people I think I remember...
 
 
-DEC-10 people in 1980:
-
-Blais, Donald
-Boyd, Robert
-Cizmar, Dawn
-Culp, George
-Dawson, Clive
-Denney, Richard
-Harlow, Kathleen
-Joseph, Mildred
-Loomis, Thomas
-Mooney, Rickey
-Otken, John
-Phillips, David
-Simmons, Norma
-Watkins, G Morgan
-Wyche, C Cecil
+    DEC-10 people in 1980:
+    
+    Blais, Donald
+    Boyd, Robert
+    Cizmar, Dawn
+    Culp, George
+    Dawson, Clive
+    Denney, Richard
+    Harlow, Kathleen
+    Joseph, Mildred
+    Loomis, Thomas
+    Mooney, Rickey
+    Otken, John
+    Phillips, David
+    Simmons, Norma
+    Watkins, G Morgan
+    Wyche, C Cecil
 
 
 DEC-10 people prior to my arrival:
 
-Difelice, Lewis
-Watson, Richard
-(? Cox, C Lano ?)
+    Difelice, Lewis
+    Watson, Richard
+    (? Cox, C Lano ?)
 
 
 DEC-10 / Academic DEC-20 additional people after 1980.
 
-Desai, Nandkishore "Nandu"
-Jimenez, Carlos
-Donald Kassebaum
-Merworth, Boyd
-Nettle, P Kay
-Padgett, Stephen
-Rissmeyer, Carla
+    Desai, Nandkishore "Nandu"
+    Jimenez, Carlos
+    Donald Kassebaum
+    Merworth, Boyd
+    Nettle, P Kay
+    Padgett, Stephen
+    Rissmeyer, Carla
 
 
 Research DEC-20 (in Painter Hall)
 
-Blais, Donald
-Brown, William
-Dawson, Clive
-Galvin, Peter
-Karimi, Ezat
+    Blais, Donald
+    Brown, William
+    Dawson, Clive
+    Galvin, Peter
+    Karimi, Ezat
 
 
 I've forgotten the chronology for many people.  Apologies if misplaced.
@@ -93,9 +93,9 @@ people had IDs which reflected their initials.
 
 The ones I think I remember are...
 
-CCCD001 Clive Dawson
-CCDP001 David Phillips
-CCLC001 Lano Cox
+    CCCD001 Clive Dawson
+    CCDP001 David Phillips
+    CCLC001 Lano Cox
 
 For the DEC-10 office layout, I remember the northernmost west wall
 office as being occupied by Rich Denney in January 1980.

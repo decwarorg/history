@@ -1,4 +1,13 @@
 
+
+ClivedawMarch 31, 2026 at 3:42 AM
+The IMP arrived on the UT campus in 1977 and was installed alongside the DEC-10 in the HRC. This was because originally there were hopes that the DEC-10 would become the first ARPANET host on the Texas node. But DEC never offered support for the ARPANET on the DEC-10’s standard OS, TOPS-10. The only DEC-10 OS's that supported a connection were TENEX (developed at BBN), ITS (the Incompatible Timesharing System at MIT), and several heavily customized versions of TOPS-10 at places like CMU, Harvard, and Wharton. The Stanford AI Lab ran WAITS (the West-coast Alternative to ITS) on their DEC-10s. So the DEC-10 in HRC was never connected to the ARPANET. Meanwhile, there was a PDP-11 running UNIX in the Daily Texan composing room at TSP (Texas Student Publications). A hacked version of UNIX from the U. of Illinois was installed, and the IMP was moved across campus to the Communications Building. Thus, a PDP-11/45 running UNIX became UTEXAS, the first ARPANET host on campus. The select few who knew about this would connect to the 11 via dialup modems and from there could venture out to the rest of the ARPANET.
+
+Sometime around 1978-80, a newer IMP was delivered by BBN and installed in the Computation Center. A PDP-11/70 was installed there to connect to the new IMP, and so the UTEXAS host was rehomed from TSP to the Comp. Center. It was only when the first DEC-20 arrived and was installed in Painter Hall that the PDP-11 became UTEXAS-11 and the 20 was named UTEXAS-20. As I recall, the 11 retained the host nickname of UTEXAS.
+
+At about the same time, specialized research hardware was acquired by the Certifiable Minicomputer Project (CMP) for the purpose of providing secure encrypted communications. This required that a very thick cable with 32 twisted pairs of copper be run from the 21st floor of the tower, down the elevator shaft and through the steam tunnels to the Comp. Center, where it plugged into the IMP. When the CMP project was completed several years later and the hardware decommissioned, the cable was left in the elevator shaft, as it was not worth the trouble to remove it. I wonder if the folks currently remodeling the Tower have come across it?! (Hat tip to Rich Cohen and Clyde Hoover for filling in some details of this story.)
+
+
 ---------- Forwarded message ---------
 From: Clive Dawson <clivedaw@gmail.com>
 Date: Wed, Mar 18, 2026 at 8:11 AM
