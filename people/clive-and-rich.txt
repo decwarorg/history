@@ -1,0 +1,83 @@
+UTmail Mail	Noah H Smith <noahhsmith@utexas.edu>
+The Computer Science Dept. locations on the UT Campus
+10 messages
+Clive Dawson <clivedaw@gmail.com>	Wed, Apr 8, 2026 at 7:39 AM
+To: Noah H Smith <noahhsmith@utexas.edu>
+Cc: Richard Denney <rdenney@utexas.edu>, Rich Cohen <cohen@texas.email>
+Hi Noah,
+
+I very much enjoyed reading Dave Matuszek’s oral history post.  His difficulty in recalling the names and locations of some of the campus buildings inspired me to put together the following.   It’s a bit removed from the subject of Decwar, but if you think it fits along with some of the other historic postings, please feel free to use it in the blog.
+
+Cheers,
+
+Clive
+
+-------------------------
+
+The Computer Sciences Department Locations on the UT Campus
+
+This is what I remember about the buildings that the Computer Sciences Dept. occupied over the years.  When I arrived in the Fall of 1971, CS was housed in Waggener Hall together with Classics and Philosophy.  Pearce Hall was to the south, across Inner Campus Drive, just west of the Business Building (BEB).  It housed an RJE (Remote Job Entry) terminal which is where Dave Matuszek remembers going to submit card decks and retrieve printouts.  These functions could also be performed in the Computation Center proper.  
+
+A year later ('72), CS moved to Painter Hall, north of the Main Building, where it stayed for many years.  We shared it with the Physics Department, and it also housed the Painter Hall Telescope.  If any building can be dubbed the “Home of Star Trek”, it would be Painter, just as the HRC was the “Home of Decwar”.
+
+In the early ’80’s  there was talk about constructing a new dedicated building for CS.  A “slot” was even reserved in the UT construction schedule for this, but much to the dismay of many CS faculty, this slot was “stolen” by the new MCC building at Braker and Mopac around 1986-88.
+
+The Taylor Hall Annex on the corner of 24th and Speedway housed another of the Comp. Center’s RJE sites, together with several CC user services (consulting) offices.  It was torn down in the early ’90’s to make room for the ACES building.  By then, the CS Department had moved from Painter into Taylor Hall proper. 
+
+In 2010, the plan was to tear down Taylor Hall to make room for the Gates Computer Science Complex and Dell Hall, commonly known as the Gates-Dell Complex (GDC).  So the CS Department was scattered to various places on campus, including the ACES building as well as a temporary building in the parking lot on the northeast corner of 24th and Speedway.  The CS Department Office was moved to this temporary building.
+
+Finally, in 2013, the GDC was completed.  Some CS people who had a significant affiliation with ACES (now known as the O’Donnell Building) stayed there, but the bulk of the CS Department moved into GDC where it remains today.
+
+Noah H Smith <noahhsmith@utexas.edu>	Wed, Apr 8, 2026 at 8:22 AM
+To: Clive Dawson <clivedaw@gmail.com>
+Cc: Richard Denney <rdenney@utexas.edu>, Rich Cohen <cohen@texas.email>
+Wonderful Clive! Fantastic! Thank you so much for this!:) These are exactly the kinds of things we're gathering and collecting, will begin integrating this into our org's works right away this morning!:) And Clive a top wish is for yourself to be the second Oral History Interview, conducting that late April when things calm down. That's what we're working towards, learning many things about how to do these interviews, it's an Art!:)
+
+Am realizing that the DecwarOrg name could be a bit deceptive, since we're actually climbing an even higher mountain:) Am starting in on the second pass through the dissertation, adding more muscle to the skeleton, and would like to simply let you guys glance at that and have a rough feel for where it's headed. The idea is to begin shopping it around to grad programs on campus second half of this year. Everything we're collecting together will absolutely flow into this as well and strengthen this whole 58-82 style concept:) Here's a link, will try to config it so any and all comments and feedbacks can flow in as well. Ahha, and did try sending an invite just now as well!
+
+https://docs.google.com/document/d/1Cmr-VnswSRdmKEOALv8bE5cWK644AxmDDhYm-IdhXVU/edit?usp=sharing 
+
+Cheers,
+Noah
+ 
+Richard Denney <rich.denney53@gmail.com>	Wed, Apr 8, 2026 at 4:38 PM
+Reply-To: rdenney@utexas.edu
+To: Clive Dawson <clivedaw@gmail.com>, Noah H Smith <noahhsmith@utexas.edu>
+Cc: Rich Cohen <cohen@texas.email>
+
+Painter Hall .. ahhh. I got to UT my sophomore year which would have been 72. Didn't know that's when it opened! Thanks, Clive. Fond memories of each year going to the coop to buy a large box of cards :-) And taking classes from Siklossy where you were coding in LISP .. and trying to match parens across 100s of cards in a card deck. LOL. Spent sooooo many hours there, nights and weekends .. it was a community event everybody huddle around a big table. It was like gambling .. submit your card deck and wait to see if you WON .. i.e. it ran :-)
+ 
+Richard Denney <rich.denney53@gmail.com>	Wed, Apr 8, 2026 at 4:56 PM
+Reply-To: rdenney@utexas.edu
+To: Clive Dawson <clivedaw@gmail.com>, Noah H Smith <noahhsmith@utexas.edu>
+Clive - here's a question; when I got to UT in 72 there still wasn't even a CS degree plan, so I started in the Math dept w/ the promise it was on the way. Do you remember when the CS degree plan started?
+
+The other thing I remember .. I had taken German in high school and freshman year at U of Mo Columbia. When I got to UT I wanted to switch to Spanish .. but no .. that wasn't a scientific language for reading the literature. Years later they dropped that, and years later I had the opportunity to consult w/ TeraQuest Metrics and others on process improvement work in Mexico when Spanish would have made wayyyy more sense.
+
+;-)
+
+On 4/8/2026 9:38 AM, Richard Denney wrote:
+Painter Hall .. ahhh. I got to UT my sophomore year which would have been 72. Didn't know that's when it opened! Thanks, Clive. Fond memories of each year going to the coop to buy a large box of cards :-) And taking classes from Siklossy where you were coding in LISP .. and trying to match parens across 100s of cards in a card deck. LOL. Spent sooooo many hours there, nights and weekends .. it was a community event everybody huddle around a big table. It was like gambling .. submit your card deck and wait to see if you WON .. i.e. it ran :-)
+
+
+On 4/8/2026 12:39 AM, Clive Dawson wrote:
+
+A year later ('72), CS moved to Painter Hall
+Clive Dawson <clivedaw@gmail.com>	Wed, Apr 8, 2026 at 8:46 PM
+To: rdenney@utexas.edu
+Cc: Noah H Smith <noahhsmith@utexas.edu>, Rich Cohen <cohen@texas.email>
+I don’t remember when the CS degree plan started, but I suspect the answer could be found be examining back issues of the UT Natural Sciences Catalog.
+
+I, too, had a run-in with UT (specifically the Grad School) over language.  There was a requirement that all Ph.D. candidates had to pass a basic proficiency test in either French, German, or Russian.  The rationale was that any worthwhile (non-English) scientific paper or journal used one of these languages.  Since I was a native Spanish speaker, I petitioned the Grad School saying that they should enter the modern era and allow other languages like Spanish.  As evidence, I listed several papers written in Spanish by Computer Science scholars.  They accepted my petition, but told me I needed to take a standardized test to demonstrate proficiency.  I suppose this was my young and arrogant period, so I considered that insulting. Besides, I didn’t want to pay any money to take one of the standardized tests.  I showed them my 800 score on the College Board Spanish Achievement Test and offered to prove my proficiency in person with any UT Spanish instructor.  They gave in, and my language requirement was fulfilled!  :-)
+ 
+Richard Denney <rich.denney53@gmail.com>	Wed, Apr 8, 2026 at 10:03 PM
+Reply-To: rdenney@utexas.edu
+To: Clive Dawson <clivedaw@gmail.com>
+Cc: Noah H Smith <noahhsmith@utexas.edu>
+re: either French, German, or Russian.  The rationale was that any worthwhile (non-English) scientific paper or journal used one of these languages.
+
+LOL. Yep, that was the rational I got .. "any worthwhile (non-English) scientific paper or journal was in French, German or Russian"
+
+I asked Google AI ;-) about the start of a UT CS program:  1974: The undergraduate program launched with an initial enrollment of 350 majors.
+
+it cites UT CS linkedin .. that jives w/ my memory, spent a year in math then moved to CS .. 72-73 year would have been in math, then 73-74 in CS
