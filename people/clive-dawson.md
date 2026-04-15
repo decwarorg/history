@@ -1,5 +1,69 @@
 
 
+
+---------- Forwarded message ---------
+From: Noah Smith <noah@statespace.dev>
+Date: Wed, Apr 15, 2026 at 11:29 AM
+Subject: Re: Welcome Donald!:) And discussion of Dual KL?
+To: Clive Dawson <clivedaw@gmail.com>
+Cc: DecwarOrg <decwarorg@googlegroups.com>, Tommy Loomis <tommy@loomisnet.com>
+
+
+Fantastic info Clive, thank you!!! This fits very exactly with some other info we have. Am going to try to add a little of that right here on-the-fly so we have it all in one place! We have the following from https://sites.google.com/site/mthompsonorg/Home/pdp-10/pdp-10-serial-numbers
+
+690 TOPS-10 University of Texas Austin, TX KI10 ------> HRC!:)
+
+On Wednesday, April 15, 2026 at 10:52:25 AM UTC+2 clivedaw@gmail.com wrote:
+Any report of DECWAR being played on a TOPS-10 Dual KL would not have occurred on the UT Austin campus.  The Texas State Board of Control, which later became Texas State Purchasing and General Services Commission, had at least one KL, possibly a dual KL.  I believe that Tommy Loomis, a systems programmer who worked with me on the KI DEC-10, moved over there sometime after the demise of the KI, so maybe he took DECWAR with him?!  
+1114 TOPS-10 Texas St. Purc. Austin, Texas KL10B CPU1? -------> AHHA! Now Texas St. Purc makes sense!!! Thank you Clive:)
+1360 TOPS-10 Texas St. Purc., Austin, TX KL1099D CPU0?
+
+Another nearby KL (possibly dual?) was at Southwest Texas State University in San Marcos (now Texas State University).  I’m pretty positive that DECWAR was running on that system.
+2403 TOPS-10 (MARS::) Southwest Texas University, San Marcos, TX KL 1095 --------> this is where teenage me played DECWAR, circa 83 to 85!:)
+2908 TOPS-10 (SATURN::) Southwest Texas University, San Marcos, TX KL1095
+
+An intriguing question is whether DECWAR was ever ported to TOPS-20.  It never ran on the Research 20 (I would’ve known about it) but perhaps it found its way to the Academic 20?   DEC supplied a piece of software called PA1050 (aka “the compatibility package”) which allowed most TOPS-10 programs to run on TOPS-20.  But the memory organization of both operating systems was very different, so I’m guessing that porting DECWAR would have required a bunch of extra effort (i.e. a complete rewrite of the MACRO code) considering the tricks it employed with the shareable high segment.
+This makes complete and total sense!:) For now, am going to simply picture that Decwar is TOPS-10 only!:)
+
+On Wed, Apr 15, 2026 at 10:52 AM Clive Dawson <clivedaw@gmail.com> wrote:
+I am not aware of a dual KL DEC-10 on the UT Austin campus.   The KI DEC-10 was in the Humanities Research Center (HRC)  (Now known as the Harry Ransom Center).  The Research DEC-20, named "UTEXAS-20" on the early ARPANET and R20.UTEXAS.EDU after the domain system came about in 1983, was in Painter Hall.  The Academic DEC-20, named the A20, was housed in the Graduate School of Business (GSB) which was, incidentally, built on the site of the old Pearce Hall.
+
+Any report of DECWAR being played on a TOPS-10 Dual KL would not have occurred on the UT Austin campus.  The Texas State Board of Control, which later became Texas State Purchasing and General Services Commission, had at least one KL, possibly a dual KL.  I believe that Tommy Loomis, a systems programmer who worked with me on the KI DEC-10, moved over there sometime after the demise of the KI, so maybe he took DECWAR with him?!  Another nearby KL (possibly dual?) was at Southwest Texas State University in San Marcos (now Texas State University).  I’m pretty positive that DECWAR was running on that system.
+
+An intriguing question is whether DECWAR was ever ported to TOPS-20.  It never ran on the Research 20 (I would’ve known about it) but perhaps it found its way to the Academic 20?   DEC supplied a piece of software called PA1050 (aka “the compatibility package”) which allowed most TOPS-10 programs to run on TOPS-20.  But the memory organization of both operating systems was very different, so I’m guessing that porting DECWAR would have required a bunch of extra effort (i.e. a complete rewrite of the MACRO code) considering the tricks it employed with the shareable high segment.
+
+Regards,
+
+Clive
+
+P.S.  Copying Tommy Loomis in case he can remember other details.
+
+On Apr 15, 2026, at 2:11 AM, noah@statespace.dev wrote:
+
+Welcome Donald, just now saw your pending status and immediately approved, thank you for joining in! We're making this all up as we go, very early days, hope it can be fun and relaxing:)
+
+And we've got a very interesting topic this morning, crossing over from the pdp-10 google group and Lars. Will jump forward to where things are right now. Just in the last hour we were picturing that there were actually more than three PDP-10 CPUs at UT? Does this picture here make any sense?:)
+KI in HRC that Decwar was created on
+Dual KL DEC-10 in ???, maybe even the old UTCC machine room? Completely explains reports of playing Decwar on a TOPS-10 Dual KL!
+DEC-20 in Painter Hall, named UTEXAS-20 (and not listed in that list of CPUs up above)
+And thinking it may connect up with this note from Clive from a few weeks back? 
+David Phillips was the last manager of the DEC-10.  The list shows that he left the CC in 1983, so that would make sense.  Several staff members had moved over to the Academic DEC-20, but I don’t remember who the manager was.  Maybe Don Kassebaum, who also managed the Research DEC-20 after I departed UT.    I left the DEC-10 around 1980 when the R20 arrived and stayed until 1985 when I went to MCC.
+DEC-20 in Painter Hall could be Research DEC-20 or Academic DEC-20? Seem to have an extra DEC-20 though, hahaha? Could it be that the proper picture is actually
+KI in HRC that Decwar was created on
+Dual KL DEC-10 in ???, maybe even the old UTCC machine room? Completely explains reports of playing Decwar on a TOPS-10 Dual KL!
+DEC-20 in Painter Hall, named UTEXAS-20, and Research or Academic
+DEC-20 in ???, Research or Academic, whichever UTEXAS-20 was not:)
+Cheers,
+Noah
+
+
+--
+You received this message because you are subscribed to the Google Groups "DecwarOrg" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to decwarorg+unsubscribe@googlegroups.com.
+To view this discussion visit https://groups.google.com/d/msgid/decwarorg/fb61cdde-dcd7-43be-a949-0327c7fe7800n%40googlegroups.com.
+For more options, visit https://groups.google.com/d/optout.
+
+
 ClivedawMarch 31, 2026 at 3:42 AM
 The IMP arrived on the UT campus in 1977 and was installed alongside the DEC-10 in the HRC. This was because originally there were hopes that the DEC-10 would become the first ARPANET host on the Texas node. But DEC never offered support for the ARPANET on the DEC-10’s standard OS, TOPS-10. The only DEC-10 OS's that supported a connection were TENEX (developed at BBN), ITS (the Incompatible Timesharing System at MIT), and several heavily customized versions of TOPS-10 at places like CMU, Harvard, and Wharton. The Stanford AI Lab ran WAITS (the West-coast Alternative to ITS) on their DEC-10s. So the DEC-10 in HRC was never connected to the ARPANET. Meanwhile, there was a PDP-11 running UNIX in the Daily Texan composing room at TSP (Texas Student Publications). A hacked version of UNIX from the U. of Illinois was installed, and the IMP was moved across campus to the Communications Building. Thus, a PDP-11/45 running UNIX became UTEXAS, the first ARPANET host on campus. The select few who knew about this would connect to the 11 via dialup modems and from there could venture out to the rest of the ARPANET.
 
