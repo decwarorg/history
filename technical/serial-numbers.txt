@@ -1,0 +1,19 @@
+discovered this website with info on many of the old systems
+
+https://sites.google.com/site/mthompsonorg/Home/pdp-10/pdp-10-serial-numbers 
+
+Here are some of possible special interest, in serial number order...
+687 TOPS-10 Institut fur Informatik Hamburg, Germany KI10
+690 TOPS-10 University of Texas Austin, TX KI10
+1059 TOPS-10 University of Louisville Louisville, KY KL1090
+1114 TOPS-10 Texas St. Purc. Austin, Texas KL10B CPU1?
+1360 TOPS-10 Texas St. Purc., Austin, TX KL1099D CPU0?
+2403 TOPS-10 (MARS::) Southwest Texas University, San Marcos, TX KL 1095
+2908 TOPS-10 (SATURN::) Southwest Texas University, San Marcos, TX KL1095
+
+from https://sites.google.com/site/mthompsonorg/Home/pdp-10/pdp-10-serial-numbers 
+690 TOPS-10 University of Texas Austin, TX KI10
+1114 TOPS-10 Texas St. Purc. Austin, Texas KL10B CPU1?
+1360 TOPS-10 Texas St. Purc., Austin, TX KL1099D CPU0?
+2403 TOPS-10 (MARS::) Southwest Texas University, San Marcos, TX KL 1095
+2908 TOPS-10 (SATURN::) Southwest Texas University, San Marcos, TX KL1095
