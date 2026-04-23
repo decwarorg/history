@@ -1,0 +1,29 @@
+
+From: Richard Denney <rich.denney53@gmail.com>
+Date: Wed, Apr 22, 2026 at 3:40 PM
+Subject: Re: Quick note about a new type of experimental Org post
+To: Noah H Smith <noahhsmith@utexas.edu>
+
+btw in case you didn't know, Rich Cohen was a big "ai" kind of guy on campus working on automatic theorem proving (as I recall)
+
+On 4/22/2026 8:36 AM, Richard Denney wrote:
+Had to go back and get "AIs" quick summary of Pat Hayes paper in terms of what was going on back in the day, and why his paper was "controversial" .. at SLB the "scruffies" were kind of in control, Reid Smith being a big proponent .. I remember a talk at Ridgefield where Reid was talking and PH in the audience asked him a question about set theory, and Reid was like .. yeah, well that's a good question .. put Reid in his place :-)
+
+In the context of Artificial Intelligence, "
+In Defense of Logic
+" refers to a seminal 1977 paper by Patrick J. Hayes that addressed a growing rift in the field during the late 1960s and 70s. At the time, AI researchers were divided between two competing philosophies: 
+Logicists ("Neats"): Led by figures like John McCarthy, this group believed AI should be built on formal mathematical logic and the manipulation of explicit facts.
+Proceduralists ("Scruffies"): This group argued that intelligence is too messy for rigid logic and instead favored "procedural" knowledge—essentially instructions or code—embedded in systems like PLANNER or KRL
+
+On 4/22/2026 8:31 AM, Richard Denney wrote:
+I didn't work on dipmeter advisor  .. it was already there when I got there. As I recall Dave Barstow was doing work on it or similar things. You can google him, but here's a brief summary I got .. Schlumberger went on a major AI oriented hiring scheme; I was just an AI application flunky but there were some big AI-ish names in the bunch .. just googling here
+
+David R. Barstow is a computer scientist known for his work in Artificial Intelligence, particularly in automatic programming and knowledge-based systems. Published extensively on Artificial Intelligence at Schlumberger, program synthesis, and knowledge engineering.
+
+Elaine Kant is an American computer scientist known for her work in artificial intelligence, program synthesis, and computational finance. (Elaine still lives here in the hood as far as I know)
+
+Reid Smith .. https://www.reidgsmith.com/
+
+And even Pat Hayes who was kind of one of my "heroes" at the time with his paper "In defense of logic" .. he was working up at the Connecticut Ridgefield office .. Pat Hayes has a BA in mathematics from Cambridge University and a PhD in Artificial Intelligence from Edinburgh.
+
+So it was a cool place to be
