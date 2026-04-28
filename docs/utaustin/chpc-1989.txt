@@ -1,0 +1,180 @@
+
+
+
+
+
+
+
+                         University of Texas System Center
+                           for High Performance Computing
+
+
+            _A_d_d_r_e_s_s:
+            UT System CHPC
+            Balcones Research Center
+            10100 Burnet Rd
+            Austin, TX 78758-4497
+
+            _E-_m_a_i_l: g.smith@chpc.utexas.edu
+
+            _P_h_o_n_e: (512) 471-2472
+
+
+            _D_e_s_c_r_i_p_t_i_o_n
+
+            The CHPC provides access to a  CRAY X-MP/24, currently  run-
+            ning  the COS 1.16 operating system.  Pre- and post-job pro-
+            cessing, including access service for  interactive  jobs  is
+            provided  by  a  VAX  8600, currently running VMS 5.1.  File
+            service is provided by an IBM 4381, currently running MVS/XA
+            2.2.0 and DFHSM.
+
+                 In October of  1988,  a  second  CRAY,  the  CRAY  X-MP
+            EA/14se  was installed with the UNICOS 4.0 operating system,
+            to provide users with a migration vehicle to  UNIX.   Simul-
+            taneously, a CONVEX C120 was installed to provide UNIX-based
+            access service to both the new CRAY  X-MP  EA/14se  and  the
+            earlier-installed CRAY X-MP/24.  The IBM 4381 currently pro-
+            vides file service for the UNICOS CRAY  that  now  runs  the
+            UNICOS  5.0  operating system.  VMS-based access service for
+            the UNICOS CRAY is provided by the VAX 8600.
+
+                 The UT System Board of Regents  has  approved  a  major
+            expansion  of  the  CHPC facility, possibly to begin in Sep-
+            tember of 1990.
+
+            _N_e_t_w_o_r_k _A_c_c_e_s_s
+
+            The VAX 8600 and CONVEX C120 are on the  Internet  as  hosts
+            chpc.utexas.edu and mermes.chpc.utexas.edu respectively.
+            _________________________
+            The information in this section is provided  in  accor-
+            dance  with the copyright notice appearing at the front
+            of this guide.
+
+
+
+
+            28 November 1989            NNSC       Section 1.15,  Page 1
+
+
+
+
+
+
+
+
+            _W_h_o _C_a_n _U_s_e _T_h_e _C_e_n_t_e_r
+
+            The center is available to researchers within The University
+            of  Texas  System,  including  the  following  academic com-
+            ponents:
+            The University of Texas at Arlington
+            The University of Texas at Austin
+            The University of Texas at Dallas
+            The University of Texas at El Paso
+            The University of Texas-Pan American
+            The University of Texas-Pan American at Brownsville
+            The University of Texas of the Permian Basin
+            The University of Texas at San Antonio
+            The University of Texas Institute of Texan Cultures
+              at San Antonio
+            The University of Texas at Tyler
+
+            and the following health component institutions:
+
+            The University of Texas Southwestern Medical Center at Dallas
+            The University of Texas Medical Branch at Galveston
+            The University of Texas Health Science Center at Houston
+            The University of Texas Health Science Center at San Antonio
+            The University of Texas M.D. Anderson Cancer Center
+            The University of Texas Health Center at Tyler
+
+            Special arrangements to use  the  supercomputing  facilities
+            are possible, as for example with Sematech and MCC.
+
+            _M_i_s_c_e_l_l_a_n_o_u_s _I_n_f_o_r_m_a_t_i_o_n
+
+            The adminstrative staff members at the center are:
+
+            Director: Dr. James Almond (j.almond@chpc.utexas.edu)
+
+            Associate  Director,  Technical  Services:  Mr.  Gary  Smith
+            (g.smith@chpc.utexas.edu)
+
+            Associate Director, Applications Research  and  Development:
+            Dr. Matthew Witten (m.witten@chpc.utexas.edu)
+
+            Assistant  Director,  User  Services:  Mr.   Luther   Keeler
+            (l.keeler@chpc.utexas.edu)
+
+            Manager,    Computing    Services:    Mr.    Dean     Nobles
+            (d.nobles@chpc.utexas.edu)
+
+            Manager,  Administrative   Services:   Mrs.   Janet   McCord
+
+
+
+            28 November 1989            NNSC       Section 1.15,  Page 2
+
+
+
+
+
+
+
+
+            (j.mccord@chpc.utexas.edu)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            28 November 1989            NNSC       Section 1.15,  Page 3
+
+
