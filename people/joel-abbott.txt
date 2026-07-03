@@ -1,4 +1,36 @@
 
+Noah Smith<noahhsmith@gmail.com>
+1:35 PM (now) 
+to DecwarOrg
+Joel, thanks for these notes! Have copypasted them over to our history repo, as always, things are building up there:)
+Here's a little addition about Bill Stoll.
+We have a linkedin profile for Bill - https://www.linkedin.com/in/bill-stoll-79707a2a/ 
+And we have (some) source code for uniwar - https://gitlab.com/decwar/uniwar 
+Adding these notes to our history repo as well!:)
+
+abbott.joel<abbott.joel@gmail.com>
+unread,
+Jul 2, 2026, 3:59:47 PM (21 hours ago) 
+to Eric Freeman, Noah Smith, DecwarOrg
+Yeah not sure what happened to Mark.  I know he switched to VMS on Vaxes, and he posted to a Miatas group. 
+
+There is also Sean Casey and Bill Stoll from Lexington.
+
+Sean loved to code MACRO-10.  He created a really good group chat program, the name is escaping me at the moment.  Of course Mark would run “dude” to another PPN before using Sean’s chat program.  Not sure what happened to Sean. 
+
+I am not sure how much Bill used the DEC-10, but he was definitely influenced by DECWAR as he wrote a clone called uniwar on unix (sockets and shared memory, not sure).  He got a job at AT&T in the 80s.  He might have connections.
+
+I forgot about Hans Fiedler.  Yeah he was definitely a key DEC-10 person in Louisville.   If you found him, you might find others, including what happened to Mark. 
+
+abbott.joel<abbott.joel@gmail.com>
+Jul 1, 2026, 11:44:42 AM (2 days ago) 
+to Noah Smith, DecwarOrg
+yeah Mark ran the Louisville DEC10.  he definitely had the decwar source code as he made some minor changes.  he was a notorious for not trusting any code he didn’t write. So he wrote a program called “dude” which would change his PPN to some a PPN with no access to any files or privileges before running any non-system program.  DEC10 version of “su”.
+
+he would be a good person to talk to. 
+
+i’ve not been able to track him down
+
 abbott.joel<abbott.joel@gmail.com>
 Jul 1, 2026, 11:44:42 AM (18 hours ago) 
 to Noah Smith, DecwarOrg
