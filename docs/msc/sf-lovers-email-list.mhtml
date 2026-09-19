@@ -1,0 +1,323 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://elists.isoc.org/pipermail/internet-history/2012-March/002098.html
+Subject: [ih] Fw: sf-lovers
+Date: Sat, 19 Sep 2026 10:18:44 +0200
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--xFN9DpuCTCjwrpJDM7eNwzRXKLuYfhFWHpd5wOMrbJ----"
+
+
+------MultipartBoundary--xFN9DpuCTCjwrpJDM7eNwzRXKLuYfhFWHpd5wOMrbJ----
+Content-Type: text/html
+Content-ID: <frame-215B3A9D0F76F759046ACE6160C99E8D@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://elists.isoc.org/pipermail/internet-history/2012-March/002098.html
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html><head>=
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dwindows-1=
+252"><link rel=3D"stylesheet" type=3D"text/css" href=3D"cid:css-e62c6664-18=
+12-42e7-bb98-850d48313590@mhtml.blink" />
+   <title> [ih] Fw: sf-lovers
+   </title>
+   <link rel=3D"Index" href=3D"https://elists.isoc.org/pipermail/internet-h=
+istory/2012-March/index.html">
+   <link rel=3D"made" href=3D"mailto:internet-history%40elists.isoc.org?Sub=
+ject=3DRe%3A%20%5Bih%5D%20Fw%3A%20sf-lovers&amp;In-Reply-To=3D%3C2012030806=
+0525.2A7D818C108%40mercury.lcs.mit.edu%3E">
+   <meta name=3D"robots" content=3D"index,nofollow">
+  =20
+  =20
+   <link rel=3D"Previous" href=3D"https://elists.isoc.org/pipermail/interne=
+t-history/2012-March/002097.html">
+   <link rel=3D"Next" href=3D"https://elists.isoc.org/pipermail/internet-hi=
+story/2012-March/002099.html">
+ </head>
+ <body bgcolor=3D"#ffffff">
+   <h1>[ih] Fw: sf-lovers</h1>
+    <b>Noel Chiappa</b>=20
+    <a href=3D"mailto:internet-history%40elists.isoc.org?Subject=3DRe%3A%20=
+%5Bih%5D%20Fw%3A%20sf-lovers&amp;In-Reply-To=3D%3C20120308060525.2A7D818C10=
+8%40mercury.lcs.mit.edu%3E" title=3D"[ih] Fw: sf-lovers">jnc at mercury.lcs=
+.mit.edu
+       </a><br>
+    <i>Wed Mar  7 22:05:25 PST 2012</i>
+    <p></p><ul>
+        <li>Previous message (by thread): <a href=3D"https://elists.isoc.or=
+g/pipermail/internet-history/2012-March/002097.html">[ih] Fw: sf-lovers
+</a></li>
+        <li>Next message (by thread): <a href=3D"https://elists.isoc.org/pi=
+permail/internet-history/2012-March/002099.html">[ih] Fw: sf-lovers
+</a></li>
+         <li> <b>Messages sorted by:</b>=20
+              <a href=3D"https://elists.isoc.org/pipermail/internet-history=
+/2012-March/date.html#2098">[ date ]</a>
+              <a href=3D"https://elists.isoc.org/pipermail/internet-history=
+/2012-March/thread.html#2098">[ thread ]</a>
+              <a href=3D"https://elists.isoc.org/pipermail/internet-history=
+/2012-March/subject.html#2098">[ subject ]</a>
+              <a href=3D"https://elists.isoc.org/pipermail/internet-history=
+/2012-March/author.html#2098">[ author ]</a>
+         </li>
+       </ul>
+    <hr> =20
+<!--beginarticle-->
+<pre>    &gt; From: Alex McKenzie &lt;<a href=3D"https://elists.isoc.org/ma=
+ilman/listinfo/internet-history">amckenzie3 at yahoo.com</a>&gt;
+
+    &gt; I received this request, but I know nothing at all about the sf-lo=
+vers
+    &gt; mailing list. If any of you can help please reply directly to
+    &gt; Christopher Leslie.
+
+Well, I'm not an _authoritative_ source on SF-LOVERS, but I have a few usef=
+ul
+bits for Dr. Leslie - and with those to start with, I found a great deal mo=
+re.
+(I'm CC'ing the list, however, both in case this trips any memories for
+someone else, and to put the results of my researches online.)
+
+
+    &gt; From: Christopher Leslie &lt;<a href=3D"https://elists.isoc.org/ma=
+ilman/listinfo/internet-history">cleslie at poly.edu</a>&gt;
+
+    &gt; I am trying to find out a little bit about the ARPANET mailing lis=
+t
+    &gt; sf-lovers
+
+SF-Lovers was apparently originally hosted on the timesharing computer at M=
+IT
+named MIT-AI (a PDP-10 running the Incompatible Timesharing System); and at
+some point (possibly?) on the similar MIT-MC machine.
+
+I say this because while looking around for online data I found a (possibly
+complete?) archive of early SF-Lovers list traffic at:
+
+  <a href=3D"http://keithlynch.net/sfl/">http://keithlynch.net/sfl/</a>
+
+starting in September, 1979. The earliest messages in the archive clearly
+indicate the list was at MIT-AI at that point.
+
+However, I also have a copy of the mailing alias database from the MIT-ML I=
+TS
+machine from sometime considerably later (I think, as it mentions Symbolics
+3600 Lisp Machines - it does not have an exact date, alas), which indicates
+that mail for "SF-Lovers" on that machine is to be sent to "<a href=3D"http=
+s://elists.isoc.org/mailman/listinfo/internet-history">SF-Lovers at MIT-MC<=
+/a>".
+
+But... The archive maintained by Mr. Lynch indicates that in November, 1981
+it moved to SU-SCORE (a machine at Stanford), and then later to Rutgers.
+However, as of the last message in that archive (December, 1988) it was sti=
+ll
+at Rutgers. So I'm not sure what the "<a href=3D"https://elists.isoc.org/ma=
+ilman/listinfo/internet-history">SF-Lovers at MIT-MC</a>" was all about.
+Possibly later still it moved there?
+
+Note that the early archive is not necessarily complete; it may just contai=
+n a
+few odd messages that people had saved, and were found and corralled into t=
+he
+arvhive. But it might be all of them - I just don't know.
+
+Those early machines were very short on disk space. (The MIT-AI machine had=
+ 8
+50MB hard drives, for a total of 400MB - shared between roughly a hundred
+users!) So, we weren't able to archive a lot of what went on - although tho=
+se
+os us interested in the history now sure wish we had been able to!
+
+
+    &gt; I cannot get a hard date on when sf-lovers started, and which coll=
+ege
+    &gt; it originated from, but in asking around I have heard that 1976 mi=
+ght
+    &gt; be the right date.
+
+According to this message:
+
+  Date: 14 JAN 1980 0451-EST
+  From: DUFFEY at MIT-AI (Roger D. Duffey, II)
+  Subject: Here I am, and here I remain
+  To: SF-LOVERS-AI at MIT-AI, sf-lovers-dm at MIT-DMS
+  To: sf-lovers-ml at MIT-ML, sf-lovers-mc at MIT-MC
+
+  SF-LOVERS has exhibited a phenomenal growth in both the number of
+  subscribers and the volume of mail handled since it began in September.
+
+from the first archive:
+
+  <a href=3D"http://keithlynch.net/sfl/sflv1">http://keithlynch.net/sfl/sfl=
+v1</a>
+
+it seems to have been started in September 1979 (which is also the date on
+the earliest messages in that archive). Given that this is a contemporaneou=
+s
+record, I'm inclined to believe it, unless some strong proof (e.g. an earli=
+er
+message) can be found.
+
+There is also some dicussion of SF-Lovers here:
+
+  <a href=3D"http://memex.org/community-memory.html">http://memex.org/commu=
+nity-memory.html</a>
+
+and this message:
+
+  From: Richard Brodie=20
+  Subject: CM&gt; Mailing lists: SF-LOVERS.
+  Date: Fri, 28 Jun 1996 23:29:32 -0700
+
+  I started the SF-LOVERS mailing list in September 1979 by telneting from =
+my
+  Alto at Xerox my first week on the job. It started as a public list on th=
+e
+  MIT-ITS systems
+
+in this archive:
+
+  <a href=3D"http://memex.org/cm-archive4.html">http://memex.org/cm-archive=
+4.html</a>
+
+also gives September, 1979. So I'd say that's pretty definitive.. :-)
+
+
+    &gt; Can you describe how similar sf-lovers was to what we think of a
+    &gt; mailing list today?
+
+It was exactly like a mailing list today, except that when digesting came i=
+n,
+it was done manually (as was all the subscription maintainence, etc).
+
+The archive maintained by Mr. Lynch seems to indicate that in January 1980,
+the traffic volume was so high it was changed from a direct distribution li=
+st
+to a digest (see message of 14 JAN 1980).
+
+
+    &gt; I have also heard that using ARPANET came under scrutiny from Cong=
+ress
+    &gt; because of sf-lovers, and for a while the message group was banned=
+.
+    &gt; ... I cannot find any news reports, and I also contacted holders o=
+f
+    &gt; Senator Proxmire's papers to see if ARPANET was given one of his
+    &gt; infamous awards, but I am coming upq empty. Do you have any detail=
+s
+    &gt; about this incident?
+
+I can't say for sure, but perhaps this message:
+
+  Date: Fri, 1 Apr 88 08:59:51 EST
+  From: <a href=3D"https://elists.isoc.org/mailman/listinfo/internet-histor=
+y">sfl at elbereth.rutgers.edu</a> (SF-LOVERS)
+  Subject: LAST ISSUE
+
+  Well folks, as Ralph Kramden has often said: "I've got a BIIIIIIIG MOUTH!=
+!"
+  It seems that in the last year, there has been so much media attention in
+  magazines like Omni, Locus, IEEE Potentials, ACM Communications, Time,
+  Newsweek and others about SF-LOVERS, that it has attracted the attention =
+of
+  "The Powers that Be" in Washington.
+
+which can be found in this archive:
+
+  <a href=3D"http://keithlynch.net/sfl/sflv13">http://keithlynch.net/sfl/sf=
+lv13</a>
+
+is the source of this? Note the date....
+
+I do recall these were some problems with an early non-technical mailing li=
+st
+(wine lovers, I think?), but someone else will have to look into this issue=
+ -
+I've used my quota of time on this!
+
+
+    &gt; There is quite a bit of information about sf-lovers when it is por=
+ted
+    &gt; over to Usenet, but I am more interested in this early part of the=
+ story.
+
+You're quite lucky to have this much!
+
+Not only was a lot not saved (as I explained above), but much of what was
+saved has suffered 'bit rot' in the years since.
+
+At one point, the ITS machines' file systems were online (at its.os.org), b=
+ut
+they don't seem to be there anymore. I started out tonight by looking high =
+and
+low on the network for them (since I was pretty sure SF-Lovers started on a=
+n
+ITS machine, and I expected I'd be able to find a lot by looking on them), =
+but
+I couldn't find any remnants. It was pure luck that I stumbled over the cop=
+y
+of the SF-Lovers archive at Keith Lynch's site.
+
+Alas, a lot of the time when we look for early material, it's just not ther=
+e
+any more... :-(
+
+
+    &gt; If you have any information, or if you could direct me to someone =
+who
+    &gt; might know, I would greatly appreciate it.
+
+Hope this was useful.
+
+If you read the complete archive, it should prove a rich mine (both for the
+SF-related content, and the administrivia about how the list was run, etc,
+etc).
+
+You can also try doing web searches for the string '"SF-Lovers" "MIT-AI"' -
+that's how I turned up the archives above, but there might be more I didn't
+get to.
+
+And you might want to make a copy of the archive, and make it available on
+your website, just in case the copy maintained by Mr. Lynch goes away - it
+seems to be the only copy around at this point.
+
+	Noel
+
+</pre>
+
+<!--endarticle-->
+    <hr>
+    <p></p><ul>
+        <!--threads-->
+	<li>Previous message (by thread): <a href=3D"https://elists.isoc.org/piper=
+mail/internet-history/2012-March/002097.html">[ih] Fw: sf-lovers
+</a></li>
+	<li>Next message (by thread): <a href=3D"https://elists.isoc.org/pipermail=
+/internet-history/2012-March/002099.html">[ih] Fw: sf-lovers
+</a></li>
+         <li> <b>Messages sorted by:</b>=20
+              <a href=3D"https://elists.isoc.org/pipermail/internet-history=
+/2012-March/date.html#2098">[ date ]</a>
+              <a href=3D"https://elists.isoc.org/pipermail/internet-history=
+/2012-March/thread.html#2098">[ thread ]</a>
+              <a href=3D"https://elists.isoc.org/pipermail/internet-history=
+/2012-March/subject.html#2098">[ subject ]</a>
+              <a href=3D"https://elists.isoc.org/pipermail/internet-history=
+/2012-March/author.html#2098">[ author ]</a>
+         </li>
+       </ul>
+
+<hr>
+<a href=3D"https://elists.isoc.org/mailman/listinfo/internet-history">More =
+information about the Internet-history
+mailing list</a><br>
+
+</body></html>
+------MultipartBoundary--xFN9DpuCTCjwrpJDM7eNwzRXKLuYfhFWHpd5wOMrbJ----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-e62c6664-1812-42e7-bb98-850d48313590@mhtml.blink
+
+@charset "windows-1252";
+
+pre { white-space: pre-wrap; }
+------MultipartBoundary--xFN9DpuCTCjwrpJDM7eNwzRXKLuYfhFWHpd5wOMrbJ------
