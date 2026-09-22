@@ -1,0 +1,8 @@
+
+@Trailmyx is the most consistent recent voice. He posted today about playing it on a TTY/paper terminal and previously described beating a DEC-10 sysop so badly that his password was changed.
+
+@gaussie posted in April 2026 about having hardware that could run it (ITS vs. other PDP-10 OSes).
+
+@monaderc has referenced fond memories of it and asked whether something “runs DecWar.”
+
+Occasional one-offs appear from other retro enthusiasts (e.g., @toddhisattva comparing it to “SECWAR”).
