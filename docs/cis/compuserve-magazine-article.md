@@ -1,4 +1,8 @@
 
+https://archive.org/details/TODAYV01N04/page/n25/mode/2up
+
+
+
 ![test](../images/decwar-cis-3.png)
 
 https://web.archive.org/web/20160303222308/http://www.gsbrown.org/compuserve/decwars-1982-04/
