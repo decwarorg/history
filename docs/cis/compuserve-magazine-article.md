@@ -1,6 +1,7 @@
 
-https://archive.org/details/TODAYV01N04/page/n25/mode/2up
+https://archive.org/details/TODAYV01N04/page/n25/mode/2up april 1982
 
+https://archive.org/details/TODAYV02N01/page/n29/mode/2up megawars sep/oct 1982
 
 
 ![test](../images/decwar-cis-3.png)
