@@ -48,3 +48,4 @@ a.out
 .DS_*
 octave-workspace
 *.pyc
+history.code-workspace
